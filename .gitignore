@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+
+.pytest_cache/
+
+# Overpass responses (re-fetched by scripts/)
+cache/
+scripts/__pycache__/

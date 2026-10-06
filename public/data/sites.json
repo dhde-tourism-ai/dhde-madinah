@@ -1,0 +1,307 @@
+{
+ "source": "DHDE Madinah heritage-sites prototype (dhde-ai-demo/medina), MRDA site list; OpenStreetMap coordinates where found",
+ "status": "real",
+ "sites": [
+  {
+   "id": "haram",
+   "num": 0,
+   "name": "Masjid an-Nabawi (central area)",
+   "name_ar": "المسجد النبوي (المنطقة المركزية)",
+   "cluster": "center",
+   "lat": 24.46865,
+   "lon": 39.61117,
+   "typical_visit_min": 95,
+   "desc": "The Prophet's Mosque and the hotel district around it. Almost every visitor starts and ends here; the goal is to draw them from here to the historic sites.",
+   "desc_ar": "المسجد النبوي والمنطقة الفندقية المحيطة به. يبدأ منه كل زائر تقريبًا وينتهي إليه؛ والهدف جذب الزوار منه إلى المواقع التاريخية.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Green_Dome_of_Al-Masjed_Al-Nabawi.jpg/960px-Green_Dome_of_Al-Masjed_Al-Nabawi.jpg",
+    "credit": "آرمین, CC0, via Wikimedia Commons"
+   },
+   "coord_source": "osm",
+   "pilot_phase": null,
+   "open_air": false,
+   "short": "Haram",
+   "short_ar": "الحرم"
+  },
+  {
+   "id": "jabal-ayr",
+   "num": 1,
+   "name": "Jabal Ayr",
+   "name_ar": "جبل عير",
+   "cluster": "outlier",
+   "lat": 24.37363,
+   "lon": 39.58165,
+   "desc": "A mountain south of the city, linked in early accounts to the Battle of Uhud. 8 to 17 km from every other site, so it runs as its own itinerary rather than a stop on a cluster loop.",
+   "desc_ar": "جبل يقع جنوب المدينة، ترتبط به روايات مبكرة عن غزوة أحد. يبعد من ٨ إلى ١٧ كم عن باقي المواقع، لذا يُدرج كمسار مستقل وليس كمحطة ضمن مجموعة.",
+   "photo": null,
+   "typical_visit_min": 30,
+   "coord_source": "osm",
+   "pilot_phase": null,
+   "open_air": true,
+   "short": "Jabal Ayr",
+   "short_ar": "جبل عير"
+  },
+  {
+   "id": "uhud",
+   "num": 2,
+   "name": "Summit of Mount Uhud",
+   "name_ar": "قمة جبل أحد",
+   "cluster": "B",
+   "lat": 24.50372,
+   "lon": 39.61283,
+   "desc": "The summit overlooking the Battle of Uhud site, paired with Sayyid al-Shuhada Square 2.76 km away.",
+   "desc_ar": "القمة المطلة على موقع غزوة أحد، وتقترن بميدان سيد الشهداء على بعد ٢.٧٦ كم.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Mount_Uhud.JPG",
+    "credit": "Adiput, public domain, via Wikimedia Commons"
+   },
+   "typical_visit_min": 40,
+   "coord_source": "prototype",
+   "pilot_phase": null,
+   "open_air": true,
+   "short": "Uhud summit",
+   "short_ar": "قمة أحد"
+  },
+  {
+   "id": "shuhada",
+   "num": 3,
+   "name": "Sayyid al-Shuhada Square",
+   "name_ar": "ميدان سيد الشهداء",
+   "cluster": "B",
+   "lat": 24.50347,
+   "lon": 39.61275,
+   "desc": "Memorial square for the martyrs of Uhud, next to the Uhud cemetery.",
+   "desc_ar": "ميدان تذكاري لشهداء أحد، بجوار مقبرة شهداء أحد.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/%D9%85%D9%82%D8%A8%D8%B1%D8%A9_%D8%B4%D9%87%D8%AF%D8%A7%D8%A1_%D8%A3%D8%AD%D8%AF.jpg",
+    "credit": "M sh, CC BY-SA 4.0, via Wikimedia Commons"
+   },
+   "typical_visit_min": 25,
+   "coord_source": "osm",
+   "pilot_phase": 1,
+   "open_air": true,
+   "short": "Sayyid al-Shuhada",
+   "short_ar": "سيد الشهداء"
+  },
+  {
+   "id": "faqir-well",
+   "num": 4,
+   "name": "Al-Faqir Well (Salman Al-Farsi Well)",
+   "name_ar": "بئر الفقير (بئر سلمان الفارسي)",
+   "cluster": "A",
+   "lat": 24.44557,
+   "lon": 39.62444,
+   "desc": "A historic well associated with Salman Al-Farsi, part of the central cluster of wells near Quba, 480 m from Gharas Well.",
+   "desc_ar": "بئر تاريخية ترتبط بسلمان الفارسي، ضمن المجموعة الوسطى للآبار قرب قباء، وتبعد ٤٨٠ مترًا عن بئر غرس.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Madina_trip_84.jpg",
+    "credit": "Ashashyou, CC BY-SA 4.0, via Wikimedia Commons"
+   },
+   "typical_visit_min": 15,
+   "coord_source": "prototype",
+   "pilot_phase": null,
+   "open_air": true,
+   "short": "Faqir Well",
+   "short_ar": "بئر الفقير"
+  },
+  {
+   "id": "gharas-well",
+   "num": 5,
+   "name": "Gharas Well",
+   "name_ar": "بئر غرس",
+   "cluster": "A",
+   "lat": 24.44252,
+   "lon": 39.623,
+   "desc": "One of the historic wells of the early Islamic era, near Quba Mosque.",
+   "desc_ar": "إحدى الآبار التاريخية من صدر الإسلام، بالقرب من مسجد قباء.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/%D8%A8%D8%A6%D8%B1_%D8%BA%D8%B1%D8%B3.jpg",
+    "credit": "Ayman ZouLghina, CC BY-SA 4.0, via Wikimedia Commons"
+   },
+   "typical_visit_min": 15,
+   "coord_source": "prototype",
+   "pilot_phase": null,
+   "open_air": true,
+   "short": "Gharas Well",
+   "short_ar": "بئر غرس"
+  },
+  {
+   "id": "safiya",
+   "num": 6,
+   "name": "Al-Safiya Museum and Garden",
+   "name_ar": "متحف وحديقة الصافية",
+   "cluster": "A",
+   "lat": 24.46376,
+   "lon": 39.61099,
+   "desc": "A heritage museum and garden in the Quba district, 430 m from the Prophet’s Biography Museum.",
+   "desc_ar": "متحف وحديقة تراثية في حي قباء، وتبعد ٤٣٠ مترًا عن متحف السيرة النبوية.",
+   "photo": null,
+   "typical_visit_min": 35,
+   "coord_source": "osm",
+   "pilot_phase": null,
+   "open_air": false,
+   "short": "Al-Safiya",
+   "short_ar": "الصافية"
+  },
+  {
+   "id": "biography-museum",
+   "num": 7,
+   "name": "International Fair and Museum of the Prophet's Biography and Islamic Civilization",
+   "name_ar": "المعرض والمتحف الدولي للسيرة النبوية والحضارة الإسلامية",
+   "cluster": "A",
+   "lat": 24.45955,
+   "lon": 39.60728,
+   "desc": "A large indoor exhibition on the Prophet’s biography and Islamic civilization; the highest illustrative capacity of the ten sites.",
+   "desc_ar": "معرض داخلي كبير عن السيرة النبوية والحضارة الإسلامية؛ يمتلك أعلى سعة توضيحية بين المواقع العشرة.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Prophet%27s_Biography_Exhibition_and_Museum_Headquarters%2C_ICESCO_%282023%29.jpg",
+    "credit": "Saudi Press Agency, CC BY-SA 4.0, via Wikimedia Commons"
+   },
+   "typical_visit_min": 50,
+   "coord_source": "prototype",
+   "pilot_phase": null,
+   "open_air": false,
+   "short": "Seerah Museum",
+   "short_ar": "متحف السيرة"
+  },
+  {
+   "id": "qiblatain",
+   "num": 8,
+   "name": "Masjid Al-Qiblatain",
+   "name_ar": "مسجد القبلتين",
+   "cluster": "Asat",
+   "lat": 24.48416,
+   "lon": 39.57881,
+   "desc": "The Mosque of the Two Qiblas, where the direction of prayer changed from Jerusalem to Makkah. A satellite of Cluster A, 3.48 km from its nearest neighbor.",
+   "desc_ar": "مسجد القبلتين، حيث تحوّل اتجاه القبلة من بيت المقدس إلى مكة المكرمة. موقع تابع للمجموعة أ، ويبعد ٣.٤٨ كم عن أقرب موقع له.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Masjid_al-Qiblatain.jpg",
+    "credit": "Aiman titi, CC BY-SA 3.0, via Wikimedia Commons"
+   },
+   "typical_visit_min": 30,
+   "coord_source": "osm",
+   "pilot_phase": 2,
+   "open_air": false,
+   "short": "Qiblatain",
+   "short_ar": "القبلتين"
+  },
+  {
+   "id": "quba",
+   "num": 9,
+   "name": "Quba Mosque",
+   "name_ar": "مسجد قباء",
+   "cluster": "A",
+   "lat": 24.43936,
+   "lon": 39.61726,
+   "desc": "The first mosque built in Islam, and the busiest anchor of the central cluster.",
+   "desc_ar": "أول مسجد بُني في الإسلام، وأكثر مواقع المجموعة الوسطى ازدحامًا.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Quba_Mosque.jpg",
+    "credit": "Tubi719, CC BY-SA 4.0, via Wikimedia Commons"
+   },
+   "typical_visit_min": 40,
+   "coord_source": "osm",
+   "pilot_phase": 1,
+   "open_air": false,
+   "short": "Quba",
+   "short_ar": "قباء"
+  },
+  {
+   "id": "al-hayy",
+   "num": 10,
+   "name": "Al-Hayy Project",
+   "name_ar": "مشروع الحي",
+   "cluster": "A",
+   "lat": 24.44918,
+   "lon": 39.59521,
+   "desc": "A neighborhood heritage redevelopment project near the central cluster.",
+   "desc_ar": "مشروع لإعادة إحياء التراث في حي سكني قريب من المجموعة الوسطى.",
+   "photo": null,
+   "typical_visit_min": 25,
+   "coord_source": "prototype",
+   "pilot_phase": null,
+   "open_air": false,
+   "short": "Al-Hayy",
+   "short_ar": "الحي"
+  },
+  {
+   "id": "al-khandaq",
+   "num": 11,
+   "name": "Al-Khandaq (Seven Mosques)",
+   "name_ar": "الخندق (المساجد السبعة)",
+   "cluster": "B",
+   "lat": 24.4771,
+   "lon": 39.5951,
+   "typical_visit_min": 22,
+   "desc": "The site of the Battle of the Trench, with the small Seven Mosques and al-Fath Mosque. A pilot site in the STC request; too close to other cells for the network to separate, so Wi-Fi counts help here.",
+   "desc_ar": "موقع غزوة الخندق، ويضم المساجد السبعة ومسجد الفتح. موقع تجريبي في طلب بيانات STC؛ قريب جدًا من خلايا أخرى، لذا تساعد عدادات الواي فاي هنا.",
+   "photo": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Mosque_of_Ali_ibn_Abi_Talib_at_the_Seven_Mosques%2C_Madinah%2C_Saudi_Arabia_%282%29.jpg/960px-Mosque_of_Ali_ibn_Abi_Talib_at_the_Seven_Mosques%2C_Madinah%2C_Saudi_Arabia_%282%29.jpg",
+    "credit": "Richard Mortel, CC BY 2.0, via Wikimedia Commons"
+   },
+   "coord_source": "osm",
+   "pilot_phase": 2,
+   "open_air": true,
+   "short": "Al-Khandaq",
+   "short_ar": "الخندق"
+  }
+ ],
+ "origins": [
+  {
+   "id": "haram",
+   "label": "Al-Haram hotel district (Masjid an-Nabawi)",
+   "label_ar": "حي الحرم الفندقي (المسجد النبوي)",
+   "lat": 24.4672,
+   "lon": 39.6112
+  },
+  {
+   "id": "quba-hotels",
+   "label": "Quba district hotels",
+   "label_ar": "فنادق حي قباء",
+   "lat": 24.443,
+   "lon": 39.6165
+  },
+  {
+   "id": "airport-rd",
+   "label": "Airport Road hotel district",
+   "label_ar": "حي فنادق طريق المطار",
+   "lat": 24.497,
+   "lon": 39.654
+  },
+  {
+   "id": "airport",
+   "label": "Prince Mohammad Bin Abdulaziz Airport (MED)",
+   "label_ar": "مطار الأمير محمد بن عبدالعزيز",
+   "lat": 24.5536,
+   "lon": 39.7051
+  },
+  {
+   "id": "rail-station",
+   "label": "Haramain High-Speed Rail Station",
+   "label_ar": "محطة قطار الحرمين السريع",
+   "lat": 24.4531,
+   "lon": 39.6607
+  },
+  {
+   "id": "bus-terminal",
+   "label": "Central bus station (coach terminal)",
+   "label_ar": "محطة الحافلات المركزية",
+   "lat": 24.4785,
+   "lon": 39.5751
+  },
+  {
+   "id": "markaziya",
+   "label": "Markaziya (central district) hotels",
+   "label_ar": "فنادق المنطقة المركزية",
+   "lat": 24.4715,
+   "lon": 39.6055
+  },
+  {
+   "id": "taibah-u",
+   "label": "Taibah University (Al-Jamiah campus)",
+   "label_ar": "جامعة طيبة (الحرم الجامعي)",
+   "lat": 24.5247,
+   "lon": 39.5952
+  }
+ ]
+}
