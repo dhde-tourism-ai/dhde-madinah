@@ -29,6 +29,7 @@ ENDPOINTS = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
 ]
 UA = {"User-Agent": "dhde-madinah-dashboard/1.0 (open-data build script)"}
 
@@ -60,10 +61,10 @@ def overpass(query, cache_name, timeout=300):
         with open(path, encoding="utf-8") as f:
             return json.load(f)
     last = None
-    for attempt in range(6):
+    for attempt in range(10):
         url = ENDPOINTS[attempt % len(ENDPOINTS)]
         try:
-            t = timeout if "overpass-api.de" in url else 60
+            t = timeout if "overpass-api.de" in url else 120
             r = requests.post(url, data={"data": query}, headers=UA, timeout=t)
             if r.status_code == 200:
                 data = r.json()

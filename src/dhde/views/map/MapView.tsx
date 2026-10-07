@@ -47,7 +47,7 @@ import { SiteCards } from './layers/SiteCards'
 import { Declutter } from './Declutter'
 import { CoachesLayer } from './layers/CoachesLayer'
 import type { CoachItem } from './canvas/CoachCanvas'
-import { BusinessLayer, ClusterLayer, CrowdLayer, WalkLayer } from './layers/MadinahLayers'
+import { BusinessLayer, ClusterLayer, CrowdLayer, ShadeLayer, WalkLayer } from './layers/MadinahLayers'
 import type { MadinahExtras } from './layers/MadinahLayers'
 import { VehicleHover } from './layers/VehicleHover'
 
@@ -386,7 +386,8 @@ export default function MapView({ registry, dashboard, economics, economicsError
             {layerOn('density') && <DensityLayer nodes={nodes} frame={frame} />}
             {layerOn('traffic') && <TrafficLayer live={live} routes={routes} t={t} paused={paused} />}
             {layerOn('trips') && <FlowLayer live={live} routes={routes} t={t} paused={paused} />}
-            {layerOn('flow') && extras && <CrowdLayer extras={extras} frame={frame} />}
+            {layerOn('shade') && extras && <ShadeLayer extras={extras} frame={frame} date={live.days[day]?.date ?? live.start} hour={t % 24} />}
+            {layerOn('flow') && extras && <CrowdLayer extras={extras} frame={frame} date={live.days[day]?.date ?? live.start} hour={t % 24} />}
             {layerOn('walk') && extras && <WalkLayer extras={extras} frame={frame} />}
             {layerOn('sentiment') && <SentimentLayer nodes={nodes} frame={frame} />}
           </>
@@ -448,10 +449,27 @@ export default function MapView({ registry, dashboard, economics, economicsError
             <span className={`ss-tag ${observed ? 'live' : 'fc'}`}>{observed ? tr('LIVE', 'مباشر') : tr('FORECAST', 'توقع')}</span>
             <span className="ss-time">{timeLabel(live, t, lang)}</span>
             {top ? (
-              <span className="ss-msg">
+              <button
+                className="ss-msg ss-ticker-btn"
+                title={tr(top.en, top.ja)}
+                onClick={() => {
+                  setRightTab('nudges')
+                  if (narrow) setSheet('nudges')
+                }}
+              >
                 <span className={`ss-sev${top.sev === 'crit' ? ' blink' : ''}`} style={{ background: SEV_COLOUR[top.sev] }} aria-hidden="true"></span>
-                {tr(top.en, top.ja)}
-              </span>
+                <span className="ss-ticker">
+                  {/* Long alerts scroll; the text is doubled so the loop is seamless. */}
+                  {tr(top.en, top.ja).length > 64 ? (
+                    <span className="ss-ticker-inner scroll" style={{ animationDuration: `${Math.max(14, tr(top.en, top.ja).length / 7)}s` }}>
+                      <span>{tr(top.en, top.ja)}</span>
+                      <span aria-hidden="true">{tr(top.en, top.ja)}</span>
+                    </span>
+                  ) : (
+                    <span className="ss-ticker-inner">{tr(top.en, top.ja)}</span>
+                  )}
+                </span>
+              </button>
             ) : (
               <span className="ss-msg">
                 <span className="ss-sev" style={{ background: '#0ca30c' }} aria-hidden="true"></span>

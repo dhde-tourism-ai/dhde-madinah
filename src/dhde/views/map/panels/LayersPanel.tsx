@@ -154,6 +154,19 @@ export function LayersPanel(p: Props) {
         </div>
       </>
     ),
+    shade: (
+      <>
+        <div className="lg-row">
+          <span className="lg-sq" style={{ background: 'rgba(5,8,15,0.6)' }}></span>
+          {t('Building shadow this hour', 'ظل المباني في هذه الساعة')}
+        </div>
+        <div className="lg-row">
+          <span className="lg-line" style={{ borderColor: '#ec835a' }}></span>
+          {t('Site mostly in full sun in the heat', 'موقع معظمه تحت الشمس في الحر')}
+        </div>
+        <p className="lg-note">{t('Press play to watch the shadows swing through the day.', 'اضغط تشغيل لمشاهدة الظلال تتحرك خلال اليوم.')}</p>
+      </>
+    ),
     business: (
       <>
         {[

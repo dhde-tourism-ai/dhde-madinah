@@ -14,7 +14,8 @@ import { go } from '../lib/route'
 import { Loading } from '../components/ui'
 import { useLang } from '../lib/i18n'
 import { hhmmToHours, PRAYERS, prayersFor } from '../lib/data'
-import type { MadinahExtras } from '../dhde/views/map/layers/MadinahLayers'
+import type { MadinahExtras, SiteArea } from '../dhde/views/map/layers/MadinahLayers'
+import type { Building } from '../dhde/lib/shade'
 
 /**
  * The oversight map: the DHDE map (same UI as dhde-app) on Madinah data, with every
@@ -27,6 +28,8 @@ export default function OversightView({ data, selected }: { data: AppData; selec
   const live = useJsonResource<LiveData>('live_demo.json')
   const routes = useJsonResource<RoutesFile>('routes.json')
   const market = useJsonResource<MarketVoiceData>('market_voice_demo.json')
+  const areas = useJsonResource<{ sites: Record<string, SiteArea> }>('site_areas.json')
+  const buildings = useJsonResource<{ sites: Record<string, Building[]> }>('buildings.json')
   const ctx = useOperatorCtx(data)
   const st = useOperatorState()
 
@@ -42,8 +45,11 @@ export default function OversightView({ data, selected }: { data: AppData; selec
   }, [ctx, st, live.data])
 
   const extras = useMemo<MadinahExtras | null>(
-    () => (data.sites ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois } : null),
-    [data.sites, data.isochrones, data.pois],
+    () =>
+      data.sites
+        ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois, areas: areas.data?.sites ?? null, buildings: buildings.data?.sites ?? null }
+        : null,
+    [data.sites, data.isochrones, data.pois, areas.data, buildings.data],
   )
   const prayersOn = (date: string) => {
     const p = prayersFor(data, date)

@@ -14,11 +14,35 @@ import type { CrowdSite } from '../canvas/CrowdCanvas'
 import type { NodeFrame } from '../../../lib/live'
 import { useLang } from '../../../lib/i18n'
 import type { IsochronesFile, LatLon, PoisFile, Site } from '../../../../types/data'
+import { ShadeCanvas } from '../canvas/ShadeCanvas'
+import { shadeShare, shadowsFor } from '../../../lib/shade'
+import type { Building, Ring, Shadow } from '../../../lib/shade'
+import { compass, sunAt } from '../../../lib/sun'
+import type { Sun } from '../../../lib/sun'
+
+export interface SiteArea {
+  kind: string
+  area_m2: number
+  area: Ring
+  gates: { lat: number; lon: number; kind: string; name: string }[]
+}
 
 export interface MadinahExtras {
   sites: Site[]
   isochrones: IsochronesFile | null
   pois: PoisFile | null
+  /** OSM footprint per site and its drop-off points (site_areas.json). */
+  areas: Record<string, SiteArea> | null
+  /** Buildings near each site, for shadows (buildings.json). */
+  buildings: Record<string, Building[]> | null
+}
+
+/** Sun and shadows for a date and fractional hour, per site (memoised by the caller). */
+export function shadowsAt(extras: MadinahExtras, date: string, hour: number): { sun: Sun; bySite: Record<string, Shadow[]> } {
+  const sun = sunAt(date, hour)
+  const bySite: Record<string, Shadow[]> = {}
+  for (const s of extras.sites) bySite[s.id] = extras.buildings?.[s.id] ? shadowsFor(extras.buildings[s.id], sun) : []
+  return { sun, bySite }
 }
 
 export const CLUSTER_STYLE: Record<string, { colour: string; en: string; ar: string; tag: string }> = {
@@ -62,19 +86,28 @@ function gatesFor(s: Site, iso: IsochronesFile | null): [number, number][] {
   return out
 }
 
-export function CrowdLayer({ extras, frame }: { extras: MadinahExtras; frame: Record<string, NodeFrame> }) {
+export function CrowdLayer({ extras, frame, date, hour }: { extras: MadinahExtras; frame: Record<string, NodeFrame>; date: string; hour: number }) {
   const canvas = useLeafletLayer(() => new CrowdCanvas())
+  const shade = useMemo(() => shadowsAt(extras, date, hour + 0.5), [extras, date, hour])
   const sites = useMemo<CrowdSite[]>(
     () =>
-      extras.sites.map((s) => ({
-        id: s.id,
-        lat: s.lat,
-        lon: s.lon,
-        zoneM: ZONE_M[s.id] ?? 120,
-        dwellMin: s.typical_visit_min,
-        gates: gatesFor(s, extras.isochrones),
-      })),
-    [extras],
+      extras.sites.map((s) => {
+        const a = extras.areas?.[s.id]
+        const temp = frame[s.id]?.weather.temp ?? 30
+        return {
+          id: s.id,
+          lat: s.lat,
+          lon: s.lon,
+          zoneM: ZONE_M[s.id] ?? 120,
+          dwellMin: s.typical_visit_min,
+          // arrive from real drop-off points (car parks, bus stops) where known
+          gates: a && a.gates.length >= 2 ? a.gates.map((g) => [g.lat, g.lon] as [number, number]) : gatesFor(s, extras.isochrones),
+          area: a?.area,
+          shadows: shade.bySite[s.id],
+          hot: temp >= 32 && shade.sun.elevation > 5,
+        }
+      }),
+    [extras, shade, frame],
   )
   useEffect(() => {
     const counts: Record<string, number> = {}
@@ -267,6 +300,50 @@ export function BusinessLayer({ extras, hour, prayers }: { extras: MadinahExtras
               <div className="tip-sub">{t('Place: OpenStreetMap (real). Busyness: typical-day curve (demo).', 'المكان: OpenStreetMap (حقيقي). الازدحام: منحنى يوم نموذجي (تجريبي).')}</div>
             </Tooltip>
           </CircleMarker>
+        )
+      })}
+    </>
+  )
+}
+
+/* ---------------------------------------------------------------- sun and shade */
+
+export function ShadeLayer({ extras, date, hour, frame }: { extras: MadinahExtras; date: string; hour: number; frame: Record<string, NodeFrame> }) {
+  const { t } = useLang()
+  const canvas = useLeafletLayer(() => new ShadeCanvas())
+  const shade = useMemo(() => shadowsAt(extras, date, hour + 0.5), [extras, date, hour])
+  useEffect(() => {
+    canvas.setData(Object.values(shade.bySite).flat(), shade.sun)
+  }, [canvas, shade])
+  const sun = shade.sun
+  const [dirEn, dirAr] = compass(sun.azimuth)
+  return (
+    <>
+      {extras.sites.map((s) => {
+        const a = extras.areas?.[s.id]
+        if (!a) return null
+        const share = sun.elevation > 1 ? shadeShare(a.area, shade.bySite[s.id] ?? []) : 1
+        const temp = frame[s.id]?.weather.temp ?? null
+        const exposed = sun.elevation > 1 && share < 0.25 && (temp ?? 0) >= 35
+        return (
+          <Polygon
+            key={s.id}
+            positions={a.area}
+            pathOptions={{ color: exposed ? '#ec835a' : '#ffd166', weight: exposed ? 2 : 1.2, dashArray: exposed ? undefined : '3 4', fillOpacity: 0 }}
+          >
+            <Tooltip sticky className="map-tip">
+              <strong>
+                {t(s.short, s.short_ar)} · {t('shade now', 'الظل الآن')} {Math.round(share * 100)}%
+              </strong>
+              <div className="tip-row">
+                {sun.elevation > 1
+                  ? t(`Sun from the ${dirEn}, ${Math.round(sun.elevation)}° high${temp != null ? `, ${Math.round(temp)}°C` : ''}.`, `الشمس من ${dirAr}، بارتفاع ${Math.round(sun.elevation)}°${temp != null ? `، ${Math.round(temp)}°` : ''}.`)
+                  : t('Sun below the horizon: the whole site is in shade.', 'الشمس تحت الأفق: الموقع كله في الظل.')}
+              </div>
+              {exposed && <div className="tip-row warn-text">{t('Mostly in full sun in the heat: a priority for shade canopies and rest points.', 'معظمه تحت الشمس في الحر: أولوية للمظلات ونقاط الاستراحة.')}</div>}
+              <div className="tip-sub">{t('Shadows from OpenStreetMap buildings (heights mapped or estimated) and the sun position for this hour.', 'الظلال من مباني OpenStreetMap (ارتفاعات مسجلة أو مقدرة) وموقع الشمس لهذه الساعة.')}</div>
+            </Tooltip>
+          </Polygon>
         )
       })}
     </>

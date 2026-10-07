@@ -888,6 +888,57 @@ input[type='range'] {
   white-space: nowrap;
 }
 
+/* The live strip's alert: one line, long text scrolls like a ticker; click opens the nudges. */
+.status-strip .ss-msg,
+.status-strip .ss-msg.ss-ticker-btn {
+  white-space: nowrap;
+  max-height: none;
+  line-height: 1.4;
+}
+.ss-ticker-btn {
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  flex: 1;
+  text-align: start;
+}
+.ss-ticker {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 24px), transparent 100%);
+}
+.ss-ticker-inner {
+  display: inline-block;
+  white-space: nowrap;
+}
+.ss-ticker-inner.scroll {
+  display: inline-flex;
+  gap: 64px;
+  padding-inline-start: 12px;
+  animation: dhde-ticker linear infinite;
+}
+.ss-ticker-btn:hover .ss-ticker-inner.scroll,
+.ss-ticker-btn:focus-visible .ss-ticker-inner.scroll {
+  animation-play-state: paused;
+}
+@keyframes dhde-ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 32px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ss-ticker-inner.scroll {
+    animation: none;
+  }
+}
+
 /* red (critical, high-priority) alerts pulse until dealt with */
 @keyframes dhde-alert-pulse {
   0%,

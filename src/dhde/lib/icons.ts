@@ -40,6 +40,7 @@ export const ICON_PATHS = {
   car: '<path d="M5 16V11l2-5h10l2 5v5M5 16h14M5 16v2M19 16v2"/><circle cx="8" cy="13.5" r=".8"/><circle cx="16" cy="13.5" r=".8"/>',
   walk: '<circle cx="13" cy="4.5" r="1.8"/><path d="m9 21 2.5-6 3 3V21M8 11l2.5-3.5 3.5 1 2 3.5 2.5 1M11.5 15l1-6.5"/>',
   spend: '<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>',
+  shade: '<path d="M3 11a9 9 0 0 1 18 0H3Z"/><path d="M12 11v10M8 21h8"/>',
 } as const
 
 export type IconName = keyof typeof ICON_PATHS

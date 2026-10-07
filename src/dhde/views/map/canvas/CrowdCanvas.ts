@@ -1,5 +1,7 @@
 import type L from 'leaflet'
 import { CanvasOverlay } from './CanvasOverlay'
+import { inShade, pointIn } from '../../../lib/shade'
+import type { Ring, Shadow } from '../../../lib/shade'
 
 /**
  * People on foot at each site, the way a telecom feed would show them: visitors arrive
@@ -24,8 +26,13 @@ export interface CrowdSite {
   zoneM: number
   /** Typical minutes on site (telecom dwell median). */
   dwellMin: number
-  /** Entrances on the street network, [lat, lon]. */
+  /** Where visitors arrive from: car parks, bus and sightseeing stops (else street entrances). */
   gates: [number, number][]
+  /** The ground visitors use (OSM footprint; mountains: the slope paths). Circle of zoneM if absent. */
+  area?: Ring
+  /** Building shadows this hour, and whether it is hot enough that visitors seek them. */
+  shadows?: Shadow[]
+  hot?: boolean
 }
 
 interface Agent {
@@ -44,6 +51,16 @@ const mPerLat = 111320
 const mPerLon = (lat: number) => 111320 * Math.cos((lat * Math.PI) / 180)
 
 function inZone(s: CrowdSite, frac = 1): [number, number] {
+  if (s.area && s.area.length > 2) {
+    // In the heat, visitors look for shade: try a few spots and take a shaded one.
+    if (s.hot && s.shadows?.length) {
+      for (let k = 0; k < 8; k++) {
+        const p = pointIn(s.area)
+        if (inShade(p[0], p[1], s.shadows)) return p
+      }
+    }
+    return pointIn(s.area)
+  }
   const r = Math.sqrt(Math.random()) * s.zoneM * frac
   const a = Math.random() * Math.PI * 2
   return [s.lat + (Math.sin(a) * r) / mPerLat, s.lon + (Math.cos(a) * r) / mPerLon(s.lat)]
@@ -107,6 +124,9 @@ export class CrowdCanvas extends CanvasOverlay {
   /** Sites and how many dots each should hold this hour. */
   setData(sites: CrowdSite[], counts: Record<string, number>) {
     const first = this.sites.length === 0
+    // keep agents attached to the updated site objects (new shadows each hour)
+    const byId = new Map(sites.map((s) => [s.id, s]))
+    for (const a of this.agents) a.site = byId.get(a.site.id) ?? a.site
     this.sites = sites
     for (const s of sites) this.target.set(s.id, counts[s.id] ?? 0)
     // First fill: start mid-visit so the map isn't empty while the first arrivals walk in.
@@ -191,6 +211,17 @@ export class CrowdCanvas extends CanvasOverlay {
     ctx.strokeStyle = 'rgba(127,224,200,0.6)'
     for (const s of this.sites) {
       if ((this.target.get(s.id) ?? 0) <= 0) continue
+      if (s.area && s.area.length > 2) {
+        ctx.beginPath()
+        s.area.forEach((p, i) => {
+          const q = this.toCanvas(p)
+          if (i) ctx.lineTo(q.x, q.y)
+          else ctx.moveTo(q.x, q.y)
+        })
+        ctx.closePath()
+        ctx.stroke()
+        continue
+      }
       const c = this.toCanvas([s.lat, s.lon])
       const e = this.toCanvas([s.lat, s.lon + s.zoneM / mPerLon(s.lat)])
       ctx.beginPath()
