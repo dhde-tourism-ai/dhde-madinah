@@ -146,7 +146,7 @@ export default function SitesView({ data, selected }: { data: AppData; selected:
             </ul>
           </Card>
 
-          <Card title={t('Within a 10-minute walk', 'خلال ١٠ دقائق مشيًا')} sub={t('OpenStreetMap features inside the walking reach', 'معالم OpenStreetMap داخل نطاق المشي')} prov={poi ? 'real' : 'pending'}>
+          <Card title={t('Within 800 m', 'ضمن ٨٠٠ م')} sub={t('OpenStreetMap places within 800 m. Mapping in Madinah is incomplete, so these are lower bounds.', 'أماكن OpenStreetMap ضمن ٨٠٠ م. التغطية في المدينة غير مكتملة، فهي حدود دنيا.')} prov={poi ? 'real' : 'pending'}>
             {poi ? (
               <table className="tbl">
                 <tbody>
@@ -169,7 +169,7 @@ export default function SitesView({ data, selected }: { data: AppData; selected:
               <p className="muted">{t('Waiting for the open-data build.', 'بانتظار بناء البيانات المفتوحة.')}</p>
             )}
             {poi && (poi.shade ?? 0) < 3 && site.open_air && (
-              <p className="callout warn">{t('Few shade points within walking reach of an open-air site: a candidate for shade and rest points.', 'قلة نقاط الظل في نطاق المشي لموقع مكشوف: موقع مرشح لمظلات واستراحات.')}</p>
+              <p className="callout warn">{t('No shade or shelters mapped near this open-air site. Check on site: a likely candidate for shade and rest points.', 'لا توجد مظلات مسجلة قرب هذا الموقع المكشوف. يُتحقق ميدانيًا: موقع مرشح لمظلات واستراحات.')}</p>
             )}
           </Card>
 

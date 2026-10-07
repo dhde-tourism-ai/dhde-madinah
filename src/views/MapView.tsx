@@ -492,7 +492,7 @@ function SiteDrawer({ data, site, idx, day, onClose }: { data: AppData; site: Si
 
         <div className="drawer-section">
           <div className="eyebrow">
-            {t('Within a 10-minute walk', 'خلال ١٠ دقائق مشيًا')} {poi ? <Prov kind="real" /> : <Prov kind="pending" />}
+            {t('Within 800 m', 'ضمن ٨٠٠ م')} {poi ? <Prov kind="real" /> : <Prov kind="pending" />}
           </div>
           {poi ? (
             <div className="chip-row">
@@ -506,7 +506,7 @@ function SiteDrawer({ data, site, idx, day, onClose }: { data: AppData; site: Si
           ) : (
             <p className="muted">{t('Open data not loaded yet.', 'لم تُحمّل البيانات المفتوحة بعد.')}</p>
           )}
-          {reach?.['10'] && (
+          {reach?.['10'] != null && (
             <p className="muted small">
               {t('Walkable area in 10 minutes', 'المساحة الممكن مشيها في ١٠ دقائق')}: {fmtNum(reach['10'] / 1e6, lang, 2)} km²
             </p>

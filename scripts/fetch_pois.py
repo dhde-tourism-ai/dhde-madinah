@@ -8,12 +8,15 @@ Categories:
   services amenity=toilets|drinking_water|atm|pharmacy
   shade    amenity=shelter, leisure=park
   mosque   amenity=place_of_worship + religion=muslim
-Needs public/data/site_coords.json (run fetch_site_coords.py first).
+Needs public/data/sites.json (run build_sites.py first).
 Output: public/data/pois.json {points:[{lat,lon,cat,name}], by_site:{id:{food,...,total}}}
 points are de-duplicated across sites, capped at 6000 (named first).
 Run: python scripts/fetch_pois.py
 """
-from common import overpass, write_out, load_sites, haversine, r5
+import json
+import os
+
+from common import OUT, overpass, write_out, haversine, r5
 
 R = 800
 CAP = 6000
@@ -37,7 +40,9 @@ def classify(t):
 
 
 def main():
-    sites = load_sites()
+    # the dashboard's own site list (sites.json), so every site shown gets counts
+    with open(os.path.join(OUT, "sites.json"), encoding="utf-8") as f:
+        sites = {x["id"]: (x["lat"], x["lon"]) for x in json.load(f)["sites"]}
     clauses = []
     for lat, lon in sites.values():
         a = "(around:%d,%f,%f)" % (R, lat, lon)
@@ -48,7 +53,7 @@ def main():
             "nwr[leisure=park]" + a,
             "nwr[amenity=place_of_worship][religion=muslim]" + a,
         ]
-    q = "[out:json][timeout:300];(%s);out center tags;" % ";".join(clauses)
+    q = "[out:json][timeout:300];(%s;);out center tags;" % ";".join(clauses)  # every statement in a union ends with ;
     d = overpass(q, "pois_sites")
     pts = {}
     for e in d["elements"]:
