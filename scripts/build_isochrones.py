@@ -53,6 +53,8 @@ out body;"""
             g.add_edge(a, b, w=haversine(la1, lo1, la2, lo2))
     if not g.number_of_nodes():
         return None
+    # start from the main street network, not an isolated courtyard or plaza path
+    g = g.subgraph(max(nx.connected_components(g), key=len)).copy()
     start = min(g.nodes, key=lambda n: haversine(lat, lon, *nodes[n]))
     snap = haversine(lat, lon, *nodes[start])
     dist = nx.single_source_dijkstra_path_length(g, start, cutoff=max(MINUTES) * SPEED_KMH * 1000 / 60, weight="w")

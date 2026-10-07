@@ -51,7 +51,8 @@ def main():
     p = os.path.join(DATA, "site_coords.json")
     if os.path.exists(p):
         with open(p, encoding="utf-8") as f:
-            coords = json.load(f)
+            raw = json.load(f)
+        coords = raw.get("sites", raw)  # file is {source, ..., sites:{id:{lat,lon,source}}}
     sites = EXTRA[:1] + proto["sites"] + EXTRA[1:]
     for s in sites:
         s.pop("status_note", None)

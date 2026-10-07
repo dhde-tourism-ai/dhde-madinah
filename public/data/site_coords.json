@@ -1,1 +1,148 @@
-{"source":"OpenStreetMap (Overpass API) + coordinates given in brief","fetched_at":"2026-10-06T08:28:24+00:00","status":"real","note":"OSM centre of the named feature where found; else given coords. al-hayy not found in OSM and omitted. uhud uses the given point (OSM 'Mount Uhud' is the summit, not the visitor area).","haram":{"lat":24.46865,"lon":39.61117,"source":"osm","osm":"way/461699097","osm_name":"المسجد النبوي"},"quba":{"lat":24.43936,"lon":39.61726,"source":"osm","osm":"relation/18051738","osm_name":"مسجد قباء"},"qiblatain":{"lat":24.48416,"lon":39.57881,"source":"osm","osm":"way/66510098","osm_name":"مسجد القبلتين"},"shuhada":{"lat":24.50347,"lon":39.61275,"source":"osm","osm":"way/444240031","osm_name":"مسجد سيد الشهداء"},"uhud":{"lat":24.50372,"lon":39.61283,"source":"given"},"jabal-ayr":{"lat":24.37363,"lon":39.58165,"source":"osm","osm":"node/1236691857","osm_name":"جبل عير"},"faqir-well":{"lat":24.44557,"lon":39.62444,"source":"given"},"gharas-well":{"lat":24.44252,"lon":39.623,"source":"given"},"safiya":{"lat":24.46376,"lon":39.61099,"source":"osm","osm":"way/1357107466","osm_name":"متحف وبستان الصافية"},"biography-museum":{"lat":24.45955,"lon":39.60728,"source":"given"},"al-khandaq":{"lat":24.4771,"lon":39.5951,"source":"osm","osm":"way/1544963301","osm_name":"Masjid Al-Sab'a"},"sites":{"haram":{"lat":24.46865,"lon":39.61117,"source":"osm","osm":"way/461699097","osm_name":"المسجد النبوي"},"quba":{"lat":24.43936,"lon":39.61726,"source":"osm","osm":"relation/18051738","osm_name":"مسجد قباء"},"qiblatain":{"lat":24.48416,"lon":39.57881,"source":"osm","osm":"way/66510098","osm_name":"مسجد القبلتين"},"shuhada":{"lat":24.50347,"lon":39.61275,"source":"osm","osm":"way/444240031","osm_name":"مسجد سيد الشهداء"},"uhud":{"lat":24.50372,"lon":39.61283,"source":"given"},"jabal-ayr":{"lat":24.37363,"lon":39.58165,"source":"osm","osm":"node/1236691857","osm_name":"جبل عير"},"faqir-well":{"lat":24.44557,"lon":39.62444,"source":"given"},"gharas-well":{"lat":24.44252,"lon":39.623,"source":"given"},"safiya":{"lat":24.46376,"lon":39.61099,"source":"osm","osm":"way/1357107466","osm_name":"متحف وبستان الصافية"},"biography-museum":{"lat":24.45955,"lon":39.60728,"source":"given"},"al-khandaq":{"lat":24.4771,"lon":39.5951,"source":"osm","osm":"way/1544963301","osm_name":"Masjid Al-Sab'a"}}}
+{
+ "source": "OpenStreetMap (Overpass API) + coordinates given in brief",
+ "fetched_at": "2026-10-06T08:28:24+00:00",
+ "status": "real",
+ "note": "OSM centre of the named feature where found; else given coords. al-hayy not found in OSM and omitted. uhud uses the given point (OSM 'Mount Uhud' is the summit, not the visitor area).",
+ "haram": {
+  "lat": 24.46865,
+  "lon": 39.61117,
+  "source": "osm",
+  "osm": "way/461699097",
+  "osm_name": "المسجد النبوي"
+ },
+ "quba": {
+  "lat": 24.43936,
+  "lon": 39.61726,
+  "source": "osm",
+  "osm": "relation/18051738",
+  "osm_name": "مسجد قباء"
+ },
+ "qiblatain": {
+  "lat": 24.48416,
+  "lon": 39.57881,
+  "source": "osm",
+  "osm": "way/66510098",
+  "osm_name": "مسجد القبلتين"
+ },
+ "shuhada": {
+  "lat": 24.50347,
+  "lon": 39.61275,
+  "source": "osm",
+  "osm": "way/444240031",
+  "osm_name": "مسجد سيد الشهداء"
+ },
+ "uhud": {
+  "lat": 24.50372,
+  "lon": 39.61283,
+  "source": "given"
+ },
+ "jabal-ayr": {
+  "lat": 24.37363,
+  "lon": 39.58165,
+  "source": "osm",
+  "osm": "node/1236691857",
+  "osm_name": "جبل عير"
+ },
+ "faqir-well": {
+  "lat": 24.44557,
+  "lon": 39.62444,
+  "source": "given"
+ },
+ "gharas-well": {
+  "lat": 24.44252,
+  "lon": 39.623,
+  "source": "given"
+ },
+ "safiya": {
+  "lat": 24.46376,
+  "lon": 39.61099,
+  "source": "osm",
+  "osm": "way/1357107466",
+  "osm_name": "متحف وبستان الصافية"
+ },
+ "biography-museum": {
+  "lat": 24.45955,
+  "lon": 39.60728,
+  "source": "given"
+ },
+ "al-khandaq": {
+  "lat": 24.4771,
+  "lon": 39.5951,
+  "source": "osm",
+  "osm": "way/1544963301",
+  "osm_name": "Masjid Al-Sab'a"
+ },
+ "sites": {
+  "haram": {
+   "lat": 24.46865,
+   "lon": 39.61117,
+   "source": "osm",
+   "osm": "way/461699097",
+   "osm_name": "المسجد النبوي"
+  },
+  "quba": {
+   "lat": 24.43936,
+   "lon": 39.61726,
+   "source": "osm",
+   "osm": "relation/18051738",
+   "osm_name": "مسجد قباء"
+  },
+  "qiblatain": {
+   "lat": 24.48416,
+   "lon": 39.57881,
+   "source": "osm",
+   "osm": "way/66510098",
+   "osm_name": "مسجد القبلتين"
+  },
+  "shuhada": {
+   "lat": 24.50347,
+   "lon": 39.61275,
+   "source": "osm",
+   "osm": "way/444240031",
+   "osm_name": "مسجد سيد الشهداء"
+  },
+  "uhud": {
+   "lat": 24.5216,
+   "lon": 39.62632,
+   "source": "osm",
+   "osm": "node (natural=peak)",
+   "osm_name": "قمة جبل أحد"
+  },
+  "jabal-ayr": {
+   "lat": 24.37363,
+   "lon": 39.58165,
+   "source": "osm",
+   "osm": "node/1236691857",
+   "osm_name": "جبل عير"
+  },
+  "faqir-well": {
+   "lat": 24.44557,
+   "lon": 39.62444,
+   "source": "given"
+  },
+  "gharas-well": {
+   "lat": 24.44252,
+   "lon": 39.623,
+   "source": "given"
+  },
+  "safiya": {
+   "lat": 24.46376,
+   "lon": 39.61099,
+   "source": "osm",
+   "osm": "way/1357107466",
+   "osm_name": "متحف وبستان الصافية"
+  },
+  "biography-museum": {
+   "lat": 24.45955,
+   "lon": 39.60728,
+   "source": "given"
+  },
+  "al-khandaq": {
+   "lat": 24.4771,
+   "lon": 39.5951,
+   "source": "osm",
+   "osm": "way/1544963301",
+   "osm_name": "Masjid Al-Sab'a"
+  }
+ }
+}

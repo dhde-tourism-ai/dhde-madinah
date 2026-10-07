@@ -47,8 +47,8 @@
    "name": "Summit of Mount Uhud",
    "name_ar": "قمة جبل أحد",
    "cluster": "B",
-   "lat": 24.50372,
-   "lon": 39.61283,
+   "lat": 24.5216,
+   "lon": 39.62632,
    "desc": "The summit overlooking the Battle of Uhud site, paired with Sayyid al-Shuhada Square 2.76 km away.",
    "desc_ar": "القمة المطلة على موقع غزوة أحد، وتقترن بميدان سيد الشهداء على بعد ٢.٧٦ كم.",
    "photo": {
@@ -56,7 +56,7 @@
     "credit": "Adiput, public domain, via Wikimedia Commons"
    },
    "typical_visit_min": 40,
-   "coord_source": "prototype",
+   "coord_source": "osm",
    "pilot_phase": null,
    "open_air": true,
    "short": "Uhud summit",
