@@ -20,6 +20,9 @@
    "coord_source": "osm",
    "pilot_phase": null,
    "open_air": false,
+   "capacity_per_slot": null,
+   "exposure": 0.2,
+   "satisfaction_base": 95,
    "short": "Haram",
    "short_ar": "الحرم"
   },
@@ -38,6 +41,9 @@
    "coord_source": "osm",
    "pilot_phase": null,
    "open_air": true,
+   "capacity_per_slot": 2,
+   "exposure": 0.95,
+   "satisfaction_base": 78,
    "short": "Jabal Ayr",
    "short_ar": "جبل عير"
   },
@@ -59,6 +65,9 @@
    "coord_source": "osm",
    "pilot_phase": null,
    "open_air": true,
+   "capacity_per_slot": 6,
+   "exposure": 0.85,
+   "satisfaction_base": 88,
    "short": "Uhud summit",
    "short_ar": "قمة أحد"
   },
@@ -80,6 +89,9 @@
    "coord_source": "osm",
    "pilot_phase": 1,
    "open_air": true,
+   "capacity_per_slot": 6,
+   "exposure": 0.6,
+   "satisfaction_base": 84,
    "short": "Sayyid al-Shuhada",
    "short_ar": "سيد الشهداء"
   },
@@ -101,6 +113,9 @@
    "coord_source": "prototype",
    "pilot_phase": null,
    "open_air": true,
+   "capacity_per_slot": 3,
+   "exposure": 0.5,
+   "satisfaction_base": 74,
    "short": "Faqir Well",
    "short_ar": "بئر الفقير"
   },
@@ -122,6 +137,9 @@
    "coord_source": "prototype",
    "pilot_phase": null,
    "open_air": true,
+   "capacity_per_slot": 3,
+   "exposure": 0.5,
+   "satisfaction_base": 75,
    "short": "Gharas Well",
    "short_ar": "بئر غرس"
   },
@@ -140,6 +158,9 @@
    "coord_source": "osm",
    "pilot_phase": null,
    "open_air": false,
+   "capacity_per_slot": 5,
+   "exposure": 0.25,
+   "satisfaction_base": 80,
    "short": "Al-Safiya",
    "short_ar": "الصافية"
   },
@@ -161,6 +182,9 @@
    "coord_source": "prototype",
    "pilot_phase": null,
    "open_air": false,
+   "capacity_per_slot": 8,
+   "exposure": 0.1,
+   "satisfaction_base": 90,
    "short": "Seerah Museum",
    "short_ar": "متحف السيرة"
   },
@@ -182,6 +206,9 @@
    "coord_source": "osm",
    "pilot_phase": 2,
    "open_air": false,
+   "capacity_per_slot": 6,
+   "exposure": 0.3,
+   "satisfaction_base": 92,
    "short": "Qiblatain",
    "short_ar": "القبلتين"
   },
@@ -203,6 +230,9 @@
    "coord_source": "osm",
    "pilot_phase": 1,
    "open_air": false,
+   "capacity_per_slot": 8,
+   "exposure": 0.35,
+   "satisfaction_base": 94,
    "short": "Quba",
    "short_ar": "قباء"
   },
@@ -221,6 +251,9 @@
    "coord_source": "prototype",
    "pilot_phase": null,
    "open_air": false,
+   "capacity_per_slot": 4,
+   "exposure": 0.4,
+   "satisfaction_base": 72,
    "short": "Al-Hayy",
    "short_ar": "الحي"
   },
@@ -242,6 +275,9 @@
    "coord_source": "osm",
    "pilot_phase": 2,
    "open_air": true,
+   "capacity_per_slot": 4,
+   "exposure": 0.6,
+   "satisfaction_base": 82,
    "short": "Al-Khandaq",
    "short_ar": "الخندق"
   }

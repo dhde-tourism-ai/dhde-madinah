@@ -20,6 +20,10 @@ export interface Site {
   coord_source: 'osm' | 'prototype'
   pilot_phase: number | null
   open_air: boolean
+  /** coach groups per hourly slot (operator view); null = not bookable */
+  capacity_per_slot: number | null
+  exposure: number
+  satisfaction_base: number
 }
 
 export interface SitesFile {

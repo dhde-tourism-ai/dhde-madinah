@@ -41,6 +41,15 @@ SHORT = {
     "safiya": ("Al-Safiya", "الصافية"), "biography-museum": ("Seerah Museum", "متحف السيرة"), "qiblatain": ("Qiblatain", "القبلتين"),
     "quba": ("Quba", "قباء"), "al-hayy": ("Al-Hayy", "الحي"), "al-khandaq": ("Al-Khandaq", "الخندق"),
 }
+# Operator figures from the Madinah prototype (MRDA brief): coach groups per hourly slot,
+# weather exposure (0-1) and a baseline satisfaction score. All illustrative until the
+# ministry publishes site capacities; the Haram is not bookable.
+CAPACITY = {"jabal-ayr": 2, "uhud": 6, "shuhada": 6, "faqir-well": 3, "gharas-well": 3, "safiya": 5,
+            "biography-museum": 8, "qiblatain": 6, "quba": 8, "al-hayy": 4, "al-khandaq": 4}
+EXPOSURE = {"jabal-ayr": 0.95, "uhud": 0.85, "shuhada": 0.6, "faqir-well": 0.5, "gharas-well": 0.5, "safiya": 0.25,
+            "biography-museum": 0.1, "qiblatain": 0.3, "quba": 0.35, "al-hayy": 0.4, "al-khandaq": 0.6, "haram": 0.2}
+SATISFACTION = {"jabal-ayr": 78, "uhud": 88, "shuhada": 84, "faqir-well": 74, "gharas-well": 75, "safiya": 80,
+                "biography-museum": 90, "qiblatain": 92, "quba": 94, "al-hayy": 72, "al-khandaq": 82, "haram": 95}
 OPEN_AIR = {"uhud", "shuhada", "faqir-well", "gharas-well", "jabal-ayr", "al-khandaq"}
 
 
@@ -62,6 +71,9 @@ def main():
         s["coord_source"] = "osm" if c and c.get("source") == "osm" else "prototype"
         s["pilot_phase"] = PILOT.get(s["id"])
         s["open_air"] = s["id"] in OPEN_AIR
+        s["capacity_per_slot"] = CAPACITY.get(s["id"])
+        s["exposure"] = EXPOSURE.get(s["id"], 0.4)
+        s["satisfaction_base"] = SATISFACTION.get(s["id"], 80)
         s["short"], s["short_ar"] = SHORT.get(s["id"], (s["name"], s["name_ar"]))
     out = {"source": proto["source"] + "; OpenStreetMap coordinates where found", "status": "real",
            "sites": sites, "origins": proto["origins"]}

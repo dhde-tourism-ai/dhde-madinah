@@ -7,7 +7,9 @@ import { parseHash } from './lib/route'
 import type { Route, ViewId } from './lib/route'
 
 const SummaryView = lazy(() => import('./views/SummaryView'))
-const MapView = lazy(() => import('./views/MapView'))
+const OversightView = lazy(() => import('./views/OversightView'))
+const OperatorView = lazy(() => import('./views/OperatorView'))
+const VerifyView = lazy(() => import('./views/VerifyView'))
 const SitesView = lazy(() => import('./views/SitesView'))
 const NetworksView = lazy(() => import('./views/NetworksView'))
 const StrategyView = lazy(() => import('./views/StrategyView'))
@@ -15,7 +17,8 @@ const DataView = lazy(() => import('./views/DataView'))
 
 const TABS: { id: ViewId; en: string; ar: string; icon: IconName }[] = [
   { id: 'summary', en: 'Summary', ar: 'الملخص', icon: 'home' },
-  { id: 'map', en: 'Map', ar: 'الخريطة', icon: 'map' },
+  { id: 'map', en: 'Oversight', ar: 'الإشراف', icon: 'map' },
+  { id: 'operator', en: 'Operator', ar: 'المشغل', icon: 'bus' },
   { id: 'sites', en: 'Sites', ar: 'المواقع', icon: 'nodes' },
   { id: 'networks', en: 'Networks', ar: 'الشبكات', icon: 'network' },
   { id: 'strategy', en: 'Strategy', ar: 'الاستراتيجية', icon: 'strategy' },
@@ -95,7 +98,9 @@ export default function App() {
         ) : (
           <Suspense fallback={loading}>
             {route.view === 'summary' && <SummaryView data={data} />}
-            {route.view === 'map' && <MapView data={data} selected={route.site} />}
+            {route.view === 'map' && <OversightView data={data} selected={route.site} />}
+            {route.view === 'operator' && <OperatorView data={data} />}
+            {route.view === 'verify' && <VerifyView data={data} payload={route.site} />}
             {route.view === 'sites' && <SitesView data={data} selected={route.site} />}
             {route.view === 'networks' && <NetworksView data={data} selected={route.site} />}
             {route.view === 'strategy' && <StrategyView data={data} />}

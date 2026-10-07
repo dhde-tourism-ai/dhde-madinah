@@ -1,0 +1,318 @@
+/**
+ * The team's three nudge loops, run over the (demo) live and market data:
+ *  #1 Demand alert: forecast well above / below normal for a node and day.
+ *  #2 Heat / weather route: 40 °C or more (or severe weather) at an open-air site → an indoor site + route.
+ *  #3 Over / under-booking: hotel occupancy vs the demand forecast.
+ * Pure functions; the Map view shows the result as a panel and map annotations.
+ */
+import type { LiveData } from '../types/live'
+import type { MarketVoiceData } from '../types/market'
+import type { RegistryNode } from '../types/nodes'
+import type { Sev } from './alerts'
+import { dailyArrivals, dayLabel, hourLabel } from './live'
+
+/**
+ * public/data/hotel_thresholds.json (scripts/build_hotel_thresholds.py): loop #3's
+ * occupancy levels per hotel area, from that area's own booking history. An area
+ * missing here keeps the demo rule (85% and demand +15%, or 40% or less).
+ */
+export interface HotelThresholds {
+  areas: Record<
+    string,
+    {
+      /** 90th percentile of past nights: at or above it the night is in the area's top 10%. */
+      tight_occ_pct: number
+      /** 10th percentile per weekday (Mon..Sun). */
+      slack_occ_pct: Record<string, number>
+      /** False where demand is the area's own hotel guests (Awara): both rules then use occupancy only. */
+      demand_check: boolean
+    }
+  >
+}
+
+export interface RouteLeg {
+  id: string
+  reverse?: boolean
+}
+
+export interface Nudge {
+  id: string
+  loop: 1 | 2 | 3
+  sev: Sev
+  /** Size of the deviation behind the nudge (ranks nudges of equal severity). */
+  magnitude: number
+  /** Triggered from real data (plus the forecast), not the demo. */
+  real?: boolean
+  node: string
+  day: number
+  /** Hour indices the nudge applies to. */
+  start: number
+  end: number
+  title_en: string
+  title_ja: string
+  /** Which signals triggered it. */
+  reason_en: string
+  reason_ja: string
+  action_en: string
+  action_ja: string
+  focus: [number, number]
+  /** Suggested route to draw (loop #2). */
+  route?: RouteLeg[]
+  route_label_en?: string
+  route_label_ja?: string
+}
+
+export const LOOP_LABEL: Record<Nudge['loop'], { en: string; ja: string }> = {
+  1: { en: 'Demand alert', ja: 'تنبيه الطلب' },
+  2: { en: 'Heat route', ja: 'مسار الحرارة' },
+  3: { en: 'Hotel balance', ja: 'توازن الفنادق' },
+}
+
+export type Priority = 'high' | 'medium' | 'low'
+
+/** Three urgency levels for government users; the map flag takes the priority's colour. */
+export const PRIORITY: Record<Priority, { colour: string; en: string; ja: string; hint_en: string; hint_ja: string }> = {
+  high: { colour: '#d03b3b', en: 'High priority', ja: 'أولوية عالية', hint_en: 'Act today: visitor safety or access is at risk (heat, road closure).', hint_ja: 'تصرف اليوم: سلامة الزوار أو الوصول معرضة للخطر (حرارة، إغلاق طرق).' },
+  medium: { colour: '#ec835a', en: 'Medium priority', ja: 'أولوية متوسطة', hint_en: 'Plan ahead: demand well above normal or hotels close to full.', hint_ja: 'خطط مسبقًا: طلب أعلى بكثير من المعتاد أو فنادق شبه ممتلئة.' },
+  low: { colour: '#3987e5', en: 'Low priority', ja: 'أولوية منخفضة', hint_en: 'Opportunity: a quiet day or empty rooms worth promoting.', hint_ja: 'فرصة: يوم هادئ أو غرف شاغرة تستحق الترويج.' },
+}
+
+export function priorityOf(sev: Sev): Priority {
+  return sev === 'crit' ? 'high' : sev === 'info' ? 'low' : 'medium'
+}
+
+/** A day this far above (or below) the node's normal day is a demand alert (loop #1). Shared with the Strategy 7-day card. */
+export const DEMAND_THRESHOLD = 0.35
+/** Open-air sites and the indoor alternative suggested in heat (loop #2), with the route to draw. */
+const COASTAL: Record<string, { site_en: string; site_ja: string; to: string; route: RouteLeg[] }> = {
+  uhud: {
+    site_en: 'the Seerah Museum (indoor, air-conditioned)',
+    site_ja: 'متحف السيرة النبوية (داخلي ومكيّف)',
+    to: 'biography-museum',
+    route: [{ id: 'shuhada-uhud', reverse: true }, { id: 'haram-shuhada', reverse: true }, { id: 'haram-museum' }],
+  },
+  shuhada: {
+    site_en: 'the Seerah Museum (indoor, air-conditioned)',
+    site_ja: 'متحف السيرة النبوية (داخلي ومكيّف)',
+    to: 'biography-museum',
+    route: [{ id: 'haram-shuhada', reverse: true }, { id: 'haram-museum' }],
+  },
+  'al-khandaq': {
+    site_en: 'the Seerah Museum (indoor, air-conditioned)',
+    site_ja: 'متحف السيرة النبوية (داخلي ومكيّف)',
+    to: 'biography-museum',
+    route: [{ id: 'haram-khandaq', reverse: true }, { id: 'haram-museum' }],
+  },
+  'faqir-well': {
+    site_en: 'Quba Mosque and al-Safiya museum (shaded, indoor)',
+    site_ja: 'مسجد قباء ومتحف الصافية (مظلل وداخلي)',
+    to: 'quba',
+    route: [{ id: 'quba-wells', reverse: true }],
+  },
+}
+
+function nm(reg: RegistryNode[], id: string, lang: 'en' | 'ja') {
+  const n = reg.find((r) => r.id === id)
+  if (!n) return id
+  return lang === 'ja' ? n.name_ja : n.name.replace(' East Entrance', '')
+}
+
+/** "Normal" daily visitors: mean real visitors_est over the history when available, else 2025 annual ÷ 365, else the window's mean forecast. */
+function normalDaily(live: LiveData, id: string): number {
+  const real = live.node_meta?.[id]?.normal_daily
+  if (real) return real
+  const a = live.nodes[id]?.annual_visitors_2025
+  if (a) return a / 365
+  const d = dailyArrivals(live, id)
+  return d.reduce((s, x) => s + x.predicted, 0) / Math.max(1, d.length)
+}
+
+export function computeNudges(
+  live: LiveData,
+  market: MarketVoiceData | null,
+  reg: RegistryNode[],
+  fromDay: number,
+  thresholds?: HotelThresholds | null,
+): Nudge[] {
+  const out: Nudge[] = []
+  const pos = (id: string): [number, number] => {
+    const n = reg.find((r) => r.id === id)
+    return n ? [n.lat, n.lon] : [24.4672, 39.6111]
+  }
+
+  // #1 Demand alerts
+  for (const id of Object.keys(live.nodes)) {
+    if (live.node_meta?.[id]?.no_estimate) continue
+    const normal = normalDaily(live, id)
+    for (const { d, predicted } of dailyArrivals(live, id)) {
+      if (d < fromDay) continue
+      const pct = predicted / normal - 1
+      if (Math.abs(pct) < DEMAND_THRESHOLD) continue
+      const day = live.days[d]
+      const up = pct > 0
+      const p = `${up ? '+' : ''}${Math.round(pct * 100)}%`
+      // No model forecast for this day (Eiheiji, or past the model's 7 days): say it's rough.
+      const rough = live.node_meta?.[id]?.forecast_source_daily?.[d] === 'naive'
+      out.push({
+        id: `n1-${id}-${d}`,
+        loop: 1,
+        sev: up ? (pct >= 0.45 ? 'serious' : 'warn') : 'info',
+        magnitude: Math.abs(pct),
+        real: Boolean(live.node_meta?.[id]),
+        node: id,
+        day: d,
+        start: d * 24 + 9,
+        end: d * 24 + 17,
+        title_en: `${nm(reg, id, 'en')} ${dayLabel(live, d, 'en')}: ${p} vs normal${rough ? ' (rough estimate)' : ''}`,
+        title_ja: `${nm(reg, id, 'ja')}: ${p} مقارنة بالمعتاد`,
+        reason_en: `Forecast ${Math.round(predicted).toLocaleString('en-US')} visitors vs normal ${Math.round(normal).toLocaleString('en-US')}${live.node_meta?.[id] ? ' (90-day real average)' : ''} (${day.weekend ? 'weekend' : 'weekday'}${up ? '' : ', weather or weekday dip'}).${rough ? ' Rough estimate: no forecast model here, only the average of recent same weekdays.' : ''}`,
+        reason_ja: `المتوقع ${Math.round(predicted).toLocaleString('en-US')} زائر مقابل ${Math.round(normal).toLocaleString('en-US')} في يوم معتاد.`,
+        action_en: up ? 'Add staff and coach parking, open overflow shade; spread coach slots across the cluster.' : 'Suggest this site to Haram-only visitors this week (hotel lobbies, Nusuk, Wi-Fi welcome page).',
+        action_ja: up ? 'زد الموظفين ومواقف الحافلات، وافتح مظلات إضافية؛ ووزّع مواعيد الحافلات على مواقع المجموعة.' : 'اقترح هذا الموقع على زوار الحرم فقط هذا الأسبوع (ردهات الفنادق، نسك، صفحة الواي فاي).',
+        focus: pos(id),
+      })
+    }
+  }
+
+  // #2 Weather-route
+  for (const [id, alt] of Object.entries(COASTAL)) {
+    const n = live.nodes[id]
+    if (!n) continue
+    let open: number | null = null
+    let peakMm = 0
+    let peakWind = 0
+    let peakTemp = 0
+    for (let i = fromDay * 24; i <= live.hours; i++) {
+      const mm = n.weather.precip_mm[i] ?? 0
+      const wind = n.weather.wind_ms[i] ?? 0
+      const temp = n.weather.temp_c[i] ?? 0
+      const severe = i < live.hours && (mm >= 8 || wind >= 13 || temp >= 40)
+      if (severe) {
+        if (open === null) open = i
+        peakMm = Math.max(peakMm, mm)
+        peakWind = Math.max(peakWind, wind)
+        peakTemp = Math.max(peakTemp, temp)
+      } else if (open !== null) {
+        const d = Math.floor(open / 24)
+        const alerts = live.weather_alerts.filter((a) => a.nodes.includes(id) && a.start <= i - 1 && a.end >= open!)
+        // Real when every hour of the window has real hourly weather (observed, or the
+        // JMA-model forecast) rather than the daily-based or demo curve.
+        const src = n.weather.hourly_source
+        let real = Boolean(src)
+        for (let h = open; real && h <= i - 1; h++) real = Boolean(src?.[h])
+        out.push({
+          id: `n2-${id}-${open}`,
+          loop: 2,
+          sev: 'crit',
+          real,
+          magnitude: peakMm / 10 + peakWind / 15 + Math.max(0, peakTemp - 38) / 4,
+          node: id,
+          day: d,
+          start: open,
+          end: i - 1,
+          title_en: `${nm(reg, id, 'en')} ${dayLabel(live, d, 'en')} ${hourLabel(open)}–${hourLabel(i)}: ${peakTemp >= 40 ? `heat ${Math.round(peakTemp)}°C` : 'severe weather'}`,
+          title_ja: `${nm(reg, id, 'ja')} ${hourLabel(open)}–${hourLabel(i)}: ${peakTemp >= 40 ? `حرارة ${Math.round(peakTemp)}°` : 'طقس شديد'}`,
+          reason_en: peakTemp >= 40 ? `Up to ${Math.round(peakTemp)}°C at an open-air site with little shade (Open-Meteo forecast).` : `Rain up to ${peakMm.toFixed(0)} mm/h, wind ${peakWind.toFixed(0)} m/s${alerts.length ? '; ' + alerts.map((a) => a.title_en.toLowerCase()).join(', ') : ''}.`,
+          reason_ja: peakTemp >= 40 ? `حتى ${Math.round(peakTemp)}° في موقع مكشوف قليل الظل (توقعات Open-Meteo).` : `أمطار حتى ${peakMm.toFixed(0)} مم/س، ورياح ${peakWind.toFixed(0)} م/ث.`,
+          action_en: `Move coach slots to before 10:00 or after Asr, open shade and water points, and suggest ${alt.site_en} meanwhile.`,
+          action_ja: `انقل مواعيد الحافلات إلى ما قبل العاشرة أو بعد العصر، وافتح نقاط الظل والماء، واقترح ${alt.site_ja} في الأثناء.`,
+          focus: pos(id),
+          route: alt.route,
+          route_label_en: `Suggested: ${nm(reg, alt.to, 'en')}`,
+          route_label_ja: `المقترح: ${nm(reg, alt.to, 'ja')}`,
+        })
+        open = null
+        peakMm = 0
+        peakWind = 0
+        peakTemp = 0
+      }
+    }
+  }
+
+  // #3 Over / under-booking
+  if (market) {
+    const centralHotels = market.hotels.find((h) => h.id === 'central')
+    for (const h of market.hotels) {
+      const normal = normalDaily(live, h.node)
+      const daily = dailyArrivals(live, h.node)
+      h.occupancy_pct.forEach((occ, d) => {
+        if (d < fromDay) return
+        const ratio = (daily[d]?.predicted ?? normal) / normal
+        const nights = `${dayLabel(live, d, 'en')} night`
+        // Real thresholds: the area's top 10% of nights (plus demand +35%, as loop #1), or its
+        // bottom 10% for that weekday while day visitors are at or above normal. Where demand is the
+        // area's own hotel guests (demand_check false) both rules use occupancy only.
+        const th = thresholds?.areas[h.id]
+        const dow = live.days[d]?.dow
+        const slackAt = th && dow ? th.slack_occ_pct[dow] : undefined
+        const tight = th ? occ >= th.tight_occ_pct && (!th.demand_check || ratio >= 1 + DEMAND_THRESHOLD) : occ >= 85 && ratio >= 1.15
+        const slack = th && slackAt !== undefined ? occ <= slackAt && (!th.demand_check || ratio >= 1) : occ <= 40
+        const tightWhy = th ? ` The top 10% of nights here start at ${th.tight_occ_pct}%.` : ''
+        const tightWhyJa = th ? `この地域の上位10%の夜は${th.tight_occ_pct}%以上。` : ''
+        const slackWhy = th && slackAt !== undefined ? ` The quietest 10% of ${dow} nights here are ${slackAt}% or less.` : ''
+        const slackWhyJa = th && slackAt !== undefined ? `この地域の${dow}の下位10%は${slackAt}%以下。` : ''
+        if (tight) {
+          const alt = h.id === 'central' ? market.hotels.find((x) => x.id === 'airport-rd') : centralHotels
+          out.push({
+            id: `n3-${h.id}-${d}`,
+            loop: 3,
+            sev: 'serious',
+            magnitude: occ / 100 + (ratio - 1),
+            real: Boolean(h.real_days?.[d]),
+            node: h.node,
+            day: d,
+            start: d * 24 + 15,
+            end: d * 24 + 23,
+            title_en: `${h.name}: ${occ}% booked for ${nights}`,
+            title_ja: `${h.name_ja}: ${occ}% محجوز`,
+            reason_en: th && !th.demand_check
+              ? `Occupancy ${occ}% (${h.rooms_left[d]} rooms left).${tightWhy}`
+              : `Occupancy ${occ}% (${h.rooms_left[d]} rooms left) while demand at ${nm(reg, h.node, 'en')} is ${Math.round((ratio - 1) * 100)}% above normal.${tightWhy}`,
+            reason_ja: th && !th.demand_check
+              ? `稼働率${occ}%（残り${h.rooms_left[d]}室）。${tightWhyJa}`
+              : `稼働率${occ}%（残り${h.rooms_left[d]}室）、${nm(reg, h.node, 'ja')}の需要は平常比+${Math.round((ratio - 1) * 100)}%。${tightWhyJa}`,
+            action_en: `Redirect overflow to ${alt?.name ?? 'nearby hotels'} (${alt ? alt.rooms_left[d] : '?'} rooms left) with a shuttle to the Haram.`,
+            action_ja: `حوّل الفائض إلى ${alt?.name_ja ?? 'الفنادق القريبة'} (${alt ? alt.rooms_left[d] : '?'} غرفة متاحة).`,
+            focus: [h.lat, h.lon],
+          })
+        } else if (slack) {
+          out.push({
+            id: `n3u-${h.id}-${d}`,
+            loop: 3,
+            sev: 'info',
+            magnitude: (100 - occ) / 100,
+            real: Boolean(h.real_days?.[d]),
+            node: h.node,
+            day: d,
+            start: d * 24 + 10,
+            end: d * 24 + 20,
+            title_en: `${h.name}: only ${occ}% booked for ${nights}`,
+            title_ja: `${h.name_ja}: ${occ}% فقط محجوز`,
+            reason_en: `${h.rooms_left[d]} rooms free; ${nm(reg, h.node, 'en')} expects ${Math.round(daily[d]?.predicted ?? 0).toLocaleString('en-US')} day visitors (${ratio >= 1 ? 'at or above' : 'below'} normal).${slackWhy}`,
+            reason_ja: `空室${h.rooms_left[d]}室、${nm(reg, h.node, 'ja')}の日帰り客は${Math.round(daily[d]?.predicted ?? 0).toLocaleString('en-US')}人の見込み。${slackWhyJa}`,
+            action_en: 'Offer an extra night with a historic-sites tour to pilgrims arriving on the Haramain from Makkah.',
+            action_ja: 'اعرض ليلة إضافية مع جولة في المواقع التاريخية على المعتمرين القادمين بقطار الحرمين من مكة.',
+            focus: [h.lat, h.lon],
+          })
+        }
+      })
+    }
+  }
+
+  const rank: Record<Sev, number> = { crit: 3, serious: 2, warn: 1, info: 0 }
+  return out.sort((a, b) => a.day - b.day || rank[b.sev] - rank[a.sev] || a.start - b.start)
+}
+
+const SEV_RANK: Record<Sev, number> = { crit: 3, serious: 2, warn: 1, info: 0 }
+
+/** The top `n` nudges per day, ranked by severity then size of deviation; output keeps day order. */
+export function topPerDay(nudges: Nudge[], n = 3): Nudge[] {
+  const byDay = new Map<number, Nudge[]>()
+  for (const x of nudges) byDay.set(x.day, [...(byDay.get(x.day) ?? []), x])
+  const out: Nudge[] = []
+  for (const day of [...byDay.keys()].sort((a, b) => a - b)) {
+    const ranked = byDay.get(day)!.sort((a, b) => SEV_RANK[b.sev] - SEV_RANK[a.sev] || b.magnitude - a.magnitude)
+    out.push(...ranked.slice(0, n))
+  }
+  return out
+}

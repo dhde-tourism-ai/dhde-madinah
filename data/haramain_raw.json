@@ -1,0 +1,8633 @@
+{
+ "08/10/2026|Madinah->Makkah": [
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:30",
+   "arr_date": "08/10/2026",
+   "arr": "08:55",
+   "train_no": "00061",
+   "calls": [
+    [
+     "Madinah",
+     "06:30"
+    ],
+    [
+     "KAEC",
+     "07:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:21"
+    ],
+    [
+     "Makkah",
+     "08:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "07:50",
+   "arr_date": "08/10/2026",
+   "arr": "10:10",
+   "train_no": "01073",
+   "calls": [
+    [
+     "Madinah",
+     "07:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:35"
+    ],
+    [
+     "Makkah",
+     "10:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "08:30",
+   "arr_date": "08/10/2026",
+   "arr": "10:55",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:21"
+    ],
+    [
+     "Makkah",
+     "10:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:30",
+   "arr_date": "08/10/2026",
+   "arr": "11:50",
+   "train_no": "01091",
+   "calls": [
+    [
+     "Madinah",
+     "09:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:15"
+    ],
+    [
+     "Makkah",
+     "11:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "10:30",
+   "arr_date": "08/10/2026",
+   "arr": "12:50",
+   "train_no": "01101",
+   "calls": [
+    [
+     "Madinah",
+     "10:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:15"
+    ],
+    [
+     "Makkah",
+     "12:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:30",
+   "arr_date": "08/10/2026",
+   "arr": "13:55",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:21"
+    ],
+    [
+     "Makkah",
+     "13:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:50",
+   "arr_date": "08/10/2026",
+   "arr": "14:10",
+   "train_no": "01113",
+   "calls": [
+    [
+     "Madinah",
+     "11:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:35"
+    ],
+    [
+     "Makkah",
+     "14:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:30",
+   "arr_date": "08/10/2026",
+   "arr": "14:50",
+   "train_no": "01121",
+   "calls": [
+    [
+     "Madinah",
+     "12:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:15"
+    ],
+    [
+     "Makkah",
+     "14:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:50",
+   "arr_date": "08/10/2026",
+   "arr": "15:05",
+   "train_no": "03123",
+   "calls": [
+    [
+     "Madinah",
+     "12:50"
+    ],
+    [
+     "Makkah",
+     "15:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:20",
+   "arr_date": "08/10/2026",
+   "arr": "15:40",
+   "train_no": "01135",
+   "calls": [
+    [
+     "Madinah",
+     "13:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:05"
+    ],
+    [
+     "Makkah",
+     "15:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:30",
+   "arr_date": "08/10/2026",
+   "arr": "15:50",
+   "train_no": "01131",
+   "calls": [
+    [
+     "Madinah",
+     "13:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:15"
+    ],
+    [
+     "Makkah",
+     "15:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:50",
+   "arr_date": "08/10/2026",
+   "arr": "16:05",
+   "train_no": "03133",
+   "calls": [
+    [
+     "Madinah",
+     "13:50"
+    ],
+    [
+     "Makkah",
+     "16:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "14:30",
+   "arr_date": "08/10/2026",
+   "arr": "16:55",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:21"
+    ],
+    [
+     "Makkah",
+     "16:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "14:50",
+   "arr_date": "08/10/2026",
+   "arr": "17:05",
+   "train_no": "03143",
+   "calls": [
+    [
+     "Madinah",
+     "14:50"
+    ],
+    [
+     "Makkah",
+     "17:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:30",
+   "arr_date": "08/10/2026",
+   "arr": "17:50",
+   "train_no": "01151",
+   "calls": [
+    [
+     "Madinah",
+     "15:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:15"
+    ],
+    [
+     "Makkah",
+     "17:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:50",
+   "arr_date": "08/10/2026",
+   "arr": "18:05",
+   "train_no": "03153",
+   "calls": [
+    [
+     "Madinah",
+     "15:50"
+    ],
+    [
+     "Makkah",
+     "18:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:30",
+   "arr_date": "08/10/2026",
+   "arr": "18:50",
+   "train_no": "01161",
+   "calls": [
+    [
+     "Madinah",
+     "16:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:15"
+    ],
+    [
+     "Makkah",
+     "18:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:50",
+   "arr_date": "08/10/2026",
+   "arr": "19:05",
+   "train_no": "03163",
+   "calls": [
+    [
+     "Madinah",
+     "16:50"
+    ],
+    [
+     "Makkah",
+     "19:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:20",
+   "arr_date": "08/10/2026",
+   "arr": "19:40",
+   "train_no": "01175",
+   "calls": [
+    [
+     "Madinah",
+     "17:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:05"
+    ],
+    [
+     "Makkah",
+     "19:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:30",
+   "arr_date": "08/10/2026",
+   "arr": "19:50",
+   "train_no": "01171",
+   "calls": [
+    [
+     "Madinah",
+     "17:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:15"
+    ],
+    [
+     "Makkah",
+     "19:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:30",
+   "arr_date": "08/10/2026",
+   "arr": "20:50",
+   "train_no": "01181",
+   "calls": [
+    [
+     "Madinah",
+     "18:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:15"
+    ],
+    [
+     "Makkah",
+     "20:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:30",
+   "arr_date": "08/10/2026",
+   "arr": "21:55",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:21"
+    ],
+    [
+     "Makkah",
+     "21:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:50",
+   "arr_date": "08/10/2026",
+   "arr": "22:10",
+   "train_no": "01193",
+   "calls": [
+    [
+     "Madinah",
+     "19:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:35"
+    ],
+    [
+     "Makkah",
+     "22:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:30",
+   "arr_date": "08/10/2026",
+   "arr": "22:50",
+   "train_no": "01201",
+   "calls": [
+    [
+     "Madinah",
+     "20:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:15"
+    ],
+    [
+     "Makkah",
+     "22:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:50",
+   "arr_date": "08/10/2026",
+   "arr": "23:10",
+   "train_no": "01203",
+   "calls": [
+    [
+     "Madinah",
+     "20:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:35"
+    ],
+    [
+     "Makkah",
+     "23:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "21:30",
+   "arr_date": "08/10/2026",
+   "arr": "23:55",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:21"
+    ],
+    [
+     "Makkah",
+     "23:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "21:50",
+   "arr_date": "09/10/2026",
+   "arr": "00:10",
+   "train_no": "01213",
+   "calls": [
+    [
+     "Madinah",
+     "21:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:35"
+    ],
+    [
+     "Makkah",
+     "00:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "22:30",
+   "arr_date": "09/10/2026",
+   "arr": "00:55",
+   "train_no": "00221",
+   "calls": [
+    [
+     "Madinah",
+     "22:30"
+    ],
+    [
+     "KAEC",
+     "23:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "00:21"
+    ],
+    [
+     "Makkah",
+     "00:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:30",
+   "arr_date": "09/10/2026",
+   "arr": "01:50",
+   "train_no": "01231",
+   "calls": [
+    [
+     "Madinah",
+     "23:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "01:15"
+    ],
+    [
+     "Makkah",
+     "01:50"
+    ]
+   ]
+  }
+ ],
+ "08/10/2026|Makkah->Madinah": [
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:00",
+   "arr_date": "08/10/2026",
+   "arr": "08:25",
+   "train_no": "00060",
+   "calls": [
+    [
+     "Makkah",
+     "06:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "06:32"
+    ],
+    [
+     "KAEC",
+     "07:07"
+    ],
+    [
+     "Madinah",
+     "08:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "07:00",
+   "arr_date": "08/10/2026",
+   "arr": "09:20",
+   "train_no": "01070",
+   "calls": [
+    [
+     "Makkah",
+     "07:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "07:32"
+    ],
+    [
+     "Madinah",
+     "09:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "07:20",
+   "arr_date": "08/10/2026",
+   "arr": "09:40",
+   "train_no": "01072",
+   "calls": [
+    [
+     "Makkah",
+     "07:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "07:52"
+    ],
+    [
+     "Madinah",
+     "09:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "08:00",
+   "arr_date": "08/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "Makkah",
+     "08:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:32"
+    ],
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:00",
+   "arr_date": "08/10/2026",
+   "arr": "11:20",
+   "train_no": "01090",
+   "calls": [
+    [
+     "Makkah",
+     "09:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:32"
+    ],
+    [
+     "Madinah",
+     "11:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "10:00",
+   "arr_date": "08/10/2026",
+   "arr": "12:20",
+   "train_no": "01100",
+   "calls": [
+    [
+     "Makkah",
+     "10:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:32"
+    ],
+    [
+     "Madinah",
+     "12:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:00",
+   "arr_date": "08/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "Makkah",
+     "11:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:32"
+    ],
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:20",
+   "arr_date": "08/10/2026",
+   "arr": "13:40",
+   "train_no": "01112",
+   "calls": [
+    [
+     "Makkah",
+     "11:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:52"
+    ],
+    [
+     "Madinah",
+     "13:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:00",
+   "arr_date": "08/10/2026",
+   "arr": "14:20",
+   "train_no": "01120",
+   "calls": [
+    [
+     "Makkah",
+     "12:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:32"
+    ],
+    [
+     "Madinah",
+     "14:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:00",
+   "arr_date": "08/10/2026",
+   "arr": "15:20",
+   "train_no": "01130",
+   "calls": [
+    [
+     "Makkah",
+     "13:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:32"
+    ],
+    [
+     "Madinah",
+     "15:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:45",
+   "arr_date": "08/10/2026",
+   "arr": "16:05",
+   "train_no": "01136",
+   "calls": [
+    [
+     "Makkah",
+     "13:45"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:17"
+    ],
+    [
+     "Madinah",
+     "16:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "14:00",
+   "arr_date": "08/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "Makkah",
+     "14:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:32"
+    ],
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "14:20",
+   "arr_date": "08/10/2026",
+   "arr": "16:35",
+   "train_no": "03142",
+   "calls": [
+    [
+     "Makkah",
+     "14:20"
+    ],
+    [
+     "Madinah",
+     "16:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:00",
+   "arr_date": "08/10/2026",
+   "arr": "17:20",
+   "train_no": "01150",
+   "calls": [
+    [
+     "Makkah",
+     "15:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:32"
+    ],
+    [
+     "Madinah",
+     "17:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:20",
+   "arr_date": "08/10/2026",
+   "arr": "17:35",
+   "train_no": "03152",
+   "calls": [
+    [
+     "Makkah",
+     "15:20"
+    ],
+    [
+     "Madinah",
+     "17:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:00",
+   "arr_date": "08/10/2026",
+   "arr": "18:20",
+   "train_no": "01160",
+   "calls": [
+    [
+     "Makkah",
+     "16:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:32"
+    ],
+    [
+     "Madinah",
+     "18:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:20",
+   "arr_date": "08/10/2026",
+   "arr": "18:35",
+   "train_no": "03162",
+   "calls": [
+    [
+     "Makkah",
+     "16:20"
+    ],
+    [
+     "Madinah",
+     "18:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:00",
+   "arr_date": "08/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "Makkah",
+     "17:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:32"
+    ],
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:45",
+   "arr_date": "08/10/2026",
+   "arr": "20:05",
+   "train_no": "01176",
+   "calls": [
+    [
+     "Makkah",
+     "17:45"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:17"
+    ],
+    [
+     "Madinah",
+     "20:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:00",
+   "arr_date": "08/10/2026",
+   "arr": "20:20",
+   "train_no": "01180",
+   "calls": [
+    [
+     "Makkah",
+     "18:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:32"
+    ],
+    [
+     "Madinah",
+     "20:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:20",
+   "arr_date": "08/10/2026",
+   "arr": "20:40",
+   "train_no": "01182",
+   "calls": [
+    [
+     "Makkah",
+     "18:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:52"
+    ],
+    [
+     "Madinah",
+     "20:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:00",
+   "arr_date": "08/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "Makkah",
+     "19:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:32"
+    ],
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:20",
+   "arr_date": "08/10/2026",
+   "arr": "21:40",
+   "train_no": "01192",
+   "calls": [
+    [
+     "Makkah",
+     "19:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:52"
+    ],
+    [
+     "Madinah",
+     "21:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:00",
+   "arr_date": "08/10/2026",
+   "arr": "22:20",
+   "train_no": "01200",
+   "calls": [
+    [
+     "Makkah",
+     "20:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:32"
+    ],
+    [
+     "Madinah",
+     "22:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "21:00",
+   "arr_date": "08/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "Makkah",
+     "21:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:32"
+    ],
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "22:00",
+   "arr_date": "09/10/2026",
+   "arr": "00:20",
+   "train_no": "01220",
+   "calls": [
+    [
+     "Makkah",
+     "22:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:32"
+    ],
+    [
+     "Madinah",
+     "00:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "22:20",
+   "arr_date": "09/10/2026",
+   "arr": "00:45",
+   "train_no": "00222",
+   "calls": [
+    [
+     "Makkah",
+     "22:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:52"
+    ],
+    [
+     "KAEC",
+     "23:27"
+    ],
+    [
+     "Madinah",
+     "00:45"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:00",
+   "arr_date": "09/10/2026",
+   "arr": "01:20",
+   "train_no": "01230",
+   "calls": [
+    [
+     "Makkah",
+     "23:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:32"
+    ],
+    [
+     "Madinah",
+     "01:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:20",
+   "arr_date": "09/10/2026",
+   "arr": "01:40",
+   "train_no": "01232",
+   "calls": [
+    [
+     "Makkah",
+     "23:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:52"
+    ],
+    [
+     "Madinah",
+     "01:40"
+    ]
+   ]
+  }
+ ],
+ "08/10/2026|Madinah->Jeddah (Al-Sulimaniyah)": [
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:30",
+   "arr_date": "08/10/2026",
+   "arr": "08:17",
+   "train_no": "00061",
+   "calls": [
+    [
+     "Madinah",
+     "06:30"
+    ],
+    [
+     "KAEC",
+     "07:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "07:50",
+   "arr_date": "08/10/2026",
+   "arr": "09:31",
+   "train_no": "01073",
+   "calls": [
+    [
+     "Madinah",
+     "07:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "08:30",
+   "arr_date": "08/10/2026",
+   "arr": "10:17",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:30",
+   "arr_date": "08/10/2026",
+   "arr": "11:11",
+   "train_no": "01091",
+   "calls": [
+    [
+     "Madinah",
+     "09:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "10:30",
+   "arr_date": "08/10/2026",
+   "arr": "12:11",
+   "train_no": "01101",
+   "calls": [
+    [
+     "Madinah",
+     "10:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:30",
+   "arr_date": "08/10/2026",
+   "arr": "13:17",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:50",
+   "arr_date": "08/10/2026",
+   "arr": "13:31",
+   "train_no": "01113",
+   "calls": [
+    [
+     "Madinah",
+     "11:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:30",
+   "arr_date": "08/10/2026",
+   "arr": "14:11",
+   "train_no": "01121",
+   "calls": [
+    [
+     "Madinah",
+     "12:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:20",
+   "arr_date": "08/10/2026",
+   "arr": "15:01",
+   "train_no": "01135",
+   "calls": [
+    [
+     "Madinah",
+     "13:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:01"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:30",
+   "arr_date": "08/10/2026",
+   "arr": "15:11",
+   "train_no": "01131",
+   "calls": [
+    [
+     "Madinah",
+     "13:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "14:30",
+   "arr_date": "08/10/2026",
+   "arr": "16:17",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:30",
+   "arr_date": "08/10/2026",
+   "arr": "17:11",
+   "train_no": "01151",
+   "calls": [
+    [
+     "Madinah",
+     "15:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:30",
+   "arr_date": "08/10/2026",
+   "arr": "18:11",
+   "train_no": "01161",
+   "calls": [
+    [
+     "Madinah",
+     "16:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:20",
+   "arr_date": "08/10/2026",
+   "arr": "19:01",
+   "train_no": "01175",
+   "calls": [
+    [
+     "Madinah",
+     "17:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:01"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:30",
+   "arr_date": "08/10/2026",
+   "arr": "19:11",
+   "train_no": "01171",
+   "calls": [
+    [
+     "Madinah",
+     "17:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:30",
+   "arr_date": "08/10/2026",
+   "arr": "20:11",
+   "train_no": "01181",
+   "calls": [
+    [
+     "Madinah",
+     "18:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:30",
+   "arr_date": "08/10/2026",
+   "arr": "21:17",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:50",
+   "arr_date": "08/10/2026",
+   "arr": "21:31",
+   "train_no": "01193",
+   "calls": [
+    [
+     "Madinah",
+     "19:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:30",
+   "arr_date": "08/10/2026",
+   "arr": "22:11",
+   "train_no": "01201",
+   "calls": [
+    [
+     "Madinah",
+     "20:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:50",
+   "arr_date": "08/10/2026",
+   "arr": "22:31",
+   "train_no": "01203",
+   "calls": [
+    [
+     "Madinah",
+     "20:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "21:30",
+   "arr_date": "08/10/2026",
+   "arr": "23:17",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "21:50",
+   "arr_date": "08/10/2026",
+   "arr": "23:31",
+   "train_no": "01213",
+   "calls": [
+    [
+     "Madinah",
+     "21:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "22:30",
+   "arr_date": "09/10/2026",
+   "arr": "00:17",
+   "train_no": "00221",
+   "calls": [
+    [
+     "Madinah",
+     "22:30"
+    ],
+    [
+     "KAEC",
+     "23:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "00:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:30",
+   "arr_date": "09/10/2026",
+   "arr": "01:11",
+   "train_no": "01231",
+   "calls": [
+    [
+     "Madinah",
+     "23:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "01:11"
+    ]
+   ]
+  }
+ ],
+ "08/10/2026|Jeddah (Al-Sulimaniyah)->Madinah": [
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:32",
+   "arr_date": "08/10/2026",
+   "arr": "08:25",
+   "train_no": "00060",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "06:32"
+    ],
+    [
+     "KAEC",
+     "07:07"
+    ],
+    [
+     "Madinah",
+     "08:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "07:32",
+   "arr_date": "08/10/2026",
+   "arr": "09:20",
+   "train_no": "01070",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "07:32"
+    ],
+    [
+     "Madinah",
+     "09:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "07:52",
+   "arr_date": "08/10/2026",
+   "arr": "09:40",
+   "train_no": "01072",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "07:52"
+    ],
+    [
+     "Madinah",
+     "09:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "08:32",
+   "arr_date": "08/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:32"
+    ],
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:32",
+   "arr_date": "08/10/2026",
+   "arr": "11:20",
+   "train_no": "01090",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:32"
+    ],
+    [
+     "Madinah",
+     "11:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "10:32",
+   "arr_date": "08/10/2026",
+   "arr": "12:20",
+   "train_no": "01100",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:32"
+    ],
+    [
+     "Madinah",
+     "12:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:32",
+   "arr_date": "08/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:32"
+    ],
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:52",
+   "arr_date": "08/10/2026",
+   "arr": "13:40",
+   "train_no": "01112",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:52"
+    ],
+    [
+     "Madinah",
+     "13:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:32",
+   "arr_date": "08/10/2026",
+   "arr": "14:20",
+   "train_no": "01120",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:32"
+    ],
+    [
+     "Madinah",
+     "14:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:32",
+   "arr_date": "08/10/2026",
+   "arr": "15:20",
+   "train_no": "01130",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:32"
+    ],
+    [
+     "Madinah",
+     "15:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "14:17",
+   "arr_date": "08/10/2026",
+   "arr": "16:05",
+   "train_no": "01136",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:17"
+    ],
+    [
+     "Madinah",
+     "16:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "14:32",
+   "arr_date": "08/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:32"
+    ],
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:32",
+   "arr_date": "08/10/2026",
+   "arr": "17:20",
+   "train_no": "01150",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:32"
+    ],
+    [
+     "Madinah",
+     "17:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:32",
+   "arr_date": "08/10/2026",
+   "arr": "18:20",
+   "train_no": "01160",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:32"
+    ],
+    [
+     "Madinah",
+     "18:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:32",
+   "arr_date": "08/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:32"
+    ],
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:17",
+   "arr_date": "08/10/2026",
+   "arr": "20:05",
+   "train_no": "01176",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:17"
+    ],
+    [
+     "Madinah",
+     "20:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:32",
+   "arr_date": "08/10/2026",
+   "arr": "20:20",
+   "train_no": "01180",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:32"
+    ],
+    [
+     "Madinah",
+     "20:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:52",
+   "arr_date": "08/10/2026",
+   "arr": "20:40",
+   "train_no": "01182",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:52"
+    ],
+    [
+     "Madinah",
+     "20:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:32",
+   "arr_date": "08/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:32"
+    ],
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:52",
+   "arr_date": "08/10/2026",
+   "arr": "21:40",
+   "train_no": "01192",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:52"
+    ],
+    [
+     "Madinah",
+     "21:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:32",
+   "arr_date": "08/10/2026",
+   "arr": "22:20",
+   "train_no": "01200",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:32"
+    ],
+    [
+     "Madinah",
+     "22:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "21:32",
+   "arr_date": "08/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:32"
+    ],
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "22:32",
+   "arr_date": "09/10/2026",
+   "arr": "00:20",
+   "train_no": "01220",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:32"
+    ],
+    [
+     "Madinah",
+     "00:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "22:52",
+   "arr_date": "09/10/2026",
+   "arr": "00:45",
+   "train_no": "00222",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:52"
+    ],
+    [
+     "KAEC",
+     "23:27"
+    ],
+    [
+     "Madinah",
+     "00:45"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:32",
+   "arr_date": "09/10/2026",
+   "arr": "01:20",
+   "train_no": "01230",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:32"
+    ],
+    [
+     "Madinah",
+     "01:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:52",
+   "arr_date": "09/10/2026",
+   "arr": "01:40",
+   "train_no": "01232",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:52"
+    ],
+    [
+     "Madinah",
+     "01:40"
+    ]
+   ]
+  }
+ ],
+ "08/10/2026|Madinah->Jeddah Airport (KAIA)": [
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:00",
+   "arr_date": "08/10/2026",
+   "arr": "07:54",
+   "train_no": "07061",
+   "calls": [
+    [
+     "Madinah",
+     "06:00"
+    ],
+    [
+     "KAEC",
+     "07:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "07:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:00",
+   "arr_date": "08/10/2026",
+   "arr": "10:54",
+   "train_no": "07091",
+   "calls": [
+    [
+     "Madinah",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "10:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "10:00",
+   "arr_date": "08/10/2026",
+   "arr": "11:54",
+   "train_no": "07101",
+   "calls": [
+    [
+     "Madinah",
+     "10:00"
+    ],
+    [
+     "KAEC",
+     "11:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "11:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:00",
+   "arr_date": "08/10/2026",
+   "arr": "13:54",
+   "train_no": "07121",
+   "calls": [
+    [
+     "Madinah",
+     "12:00"
+    ],
+    [
+     "KAEC",
+     "13:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "13:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:00",
+   "arr_date": "08/10/2026",
+   "arr": "14:48",
+   "train_no": "08131",
+   "calls": [
+    [
+     "Madinah",
+     "13:00"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "14:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:00",
+   "arr_date": "08/10/2026",
+   "arr": "16:54",
+   "train_no": "07151",
+   "calls": [
+    [
+     "Madinah",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "16:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:00",
+   "arr_date": "08/10/2026",
+   "arr": "17:54",
+   "train_no": "07161",
+   "calls": [
+    [
+     "Madinah",
+     "16:00"
+    ],
+    [
+     "KAEC",
+     "17:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "17:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:00",
+   "arr_date": "08/10/2026",
+   "arr": "18:54",
+   "train_no": "07171",
+   "calls": [
+    [
+     "Madinah",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "18:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:00",
+   "arr_date": "08/10/2026",
+   "arr": "19:54",
+   "train_no": "07181",
+   "calls": [
+    [
+     "Madinah",
+     "18:00"
+    ],
+    [
+     "KAEC",
+     "19:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "19:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:00",
+   "arr_date": "08/10/2026",
+   "arr": "20:48",
+   "train_no": "08191",
+   "calls": [
+    [
+     "Madinah",
+     "19:00"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "20:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:00",
+   "arr_date": "08/10/2026",
+   "arr": "21:54",
+   "train_no": "07201",
+   "calls": [
+    [
+     "Madinah",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "21:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:00",
+   "arr_date": "09/10/2026",
+   "arr": "00:48",
+   "train_no": "08231",
+   "calls": [
+    [
+     "Madinah",
+     "23:00"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "00:48"
+    ]
+   ]
+  }
+ ],
+ "08/10/2026|Jeddah Airport (KAIA)->Madinah": [
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:00",
+   "arr_date": "08/10/2026",
+   "arr": "07:54",
+   "train_no": "07060",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "06:00"
+    ],
+    [
+     "KAEC",
+     "06:36"
+    ],
+    [
+     "Madinah",
+     "07:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:00",
+   "arr_date": "08/10/2026",
+   "arr": "10:54",
+   "train_no": "07090",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "09:36"
+    ],
+    [
+     "Madinah",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "10:00",
+   "arr_date": "08/10/2026",
+   "arr": "11:54",
+   "train_no": "07100",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "10:00"
+    ],
+    [
+     "KAEC",
+     "10:36"
+    ],
+    [
+     "Madinah",
+     "11:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:00",
+   "arr_date": "08/10/2026",
+   "arr": "13:54",
+   "train_no": "07120",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "12:00"
+    ],
+    [
+     "KAEC",
+     "12:36"
+    ],
+    [
+     "Madinah",
+     "13:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "13:00",
+   "arr_date": "08/10/2026",
+   "arr": "14:48",
+   "train_no": "08130",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "13:00"
+    ],
+    [
+     "Madinah",
+     "14:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:00",
+   "arr_date": "08/10/2026",
+   "arr": "16:54",
+   "train_no": "07150",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "15:36"
+    ],
+    [
+     "Madinah",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:00",
+   "arr_date": "08/10/2026",
+   "arr": "17:54",
+   "train_no": "07160",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "16:00"
+    ],
+    [
+     "KAEC",
+     "16:36"
+    ],
+    [
+     "Madinah",
+     "17:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:00",
+   "arr_date": "08/10/2026",
+   "arr": "18:54",
+   "train_no": "07170",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "17:36"
+    ],
+    [
+     "Madinah",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:00",
+   "arr_date": "08/10/2026",
+   "arr": "19:54",
+   "train_no": "07180",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "18:00"
+    ],
+    [
+     "KAEC",
+     "18:36"
+    ],
+    [
+     "Madinah",
+     "19:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:00",
+   "arr_date": "08/10/2026",
+   "arr": "20:48",
+   "train_no": "08190",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "19:00"
+    ],
+    [
+     "Madinah",
+     "20:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:00",
+   "arr_date": "08/10/2026",
+   "arr": "21:54",
+   "train_no": "07200",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "20:36"
+    ],
+    [
+     "Madinah",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:00",
+   "arr_date": "09/10/2026",
+   "arr": "00:48",
+   "train_no": "08230",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "23:00"
+    ],
+    [
+     "Madinah",
+     "00:48"
+    ]
+   ]
+  }
+ ],
+ "08/10/2026|Madinah->KAEC": [
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:00",
+   "arr_date": "08/10/2026",
+   "arr": "07:10",
+   "train_no": "07061",
+   "calls": [
+    [
+     "Madinah",
+     "06:00"
+    ],
+    [
+     "KAEC",
+     "07:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:30",
+   "arr_date": "08/10/2026",
+   "arr": "07:40",
+   "train_no": "00061",
+   "calls": [
+    [
+     "Madinah",
+     "06:30"
+    ],
+    [
+     "KAEC",
+     "07:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "08:30",
+   "arr_date": "08/10/2026",
+   "arr": "09:40",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:00",
+   "arr_date": "08/10/2026",
+   "arr": "10:10",
+   "train_no": "07091",
+   "calls": [
+    [
+     "Madinah",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "10:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "10:00",
+   "arr_date": "08/10/2026",
+   "arr": "11:10",
+   "train_no": "07101",
+   "calls": [
+    [
+     "Madinah",
+     "10:00"
+    ],
+    [
+     "KAEC",
+     "11:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "11:30",
+   "arr_date": "08/10/2026",
+   "arr": "12:40",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:00",
+   "arr_date": "08/10/2026",
+   "arr": "13:10",
+   "train_no": "07121",
+   "calls": [
+    [
+     "Madinah",
+     "12:00"
+    ],
+    [
+     "KAEC",
+     "13:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "14:30",
+   "arr_date": "08/10/2026",
+   "arr": "15:40",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:00",
+   "arr_date": "08/10/2026",
+   "arr": "16:10",
+   "train_no": "07151",
+   "calls": [
+    [
+     "Madinah",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "16:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:00",
+   "arr_date": "08/10/2026",
+   "arr": "17:10",
+   "train_no": "07161",
+   "calls": [
+    [
+     "Madinah",
+     "16:00"
+    ],
+    [
+     "KAEC",
+     "17:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:00",
+   "arr_date": "08/10/2026",
+   "arr": "18:10",
+   "train_no": "07171",
+   "calls": [
+    [
+     "Madinah",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "18:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:00",
+   "arr_date": "08/10/2026",
+   "arr": "19:10",
+   "train_no": "07181",
+   "calls": [
+    [
+     "Madinah",
+     "18:00"
+    ],
+    [
+     "KAEC",
+     "19:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "19:30",
+   "arr_date": "08/10/2026",
+   "arr": "20:40",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:00",
+   "arr_date": "08/10/2026",
+   "arr": "21:10",
+   "train_no": "07201",
+   "calls": [
+    [
+     "Madinah",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "21:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "21:30",
+   "arr_date": "08/10/2026",
+   "arr": "22:40",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "22:30",
+   "arr_date": "08/10/2026",
+   "arr": "23:40",
+   "train_no": "00221",
+   "calls": [
+    [
+     "Madinah",
+     "22:30"
+    ],
+    [
+     "KAEC",
+     "23:40"
+    ]
+   ]
+  }
+ ],
+ "08/10/2026|KAEC->Madinah": [
+  {
+   "dep_date": "08/10/2026",
+   "dep": "06:36",
+   "arr_date": "08/10/2026",
+   "arr": "07:54",
+   "train_no": "07060",
+   "calls": [
+    [
+     "KAEC",
+     "06:36"
+    ],
+    [
+     "Madinah",
+     "07:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "07:07",
+   "arr_date": "08/10/2026",
+   "arr": "08:25",
+   "train_no": "00060",
+   "calls": [
+    [
+     "KAEC",
+     "07:07"
+    ],
+    [
+     "Madinah",
+     "08:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:07",
+   "arr_date": "08/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "09:36",
+   "arr_date": "08/10/2026",
+   "arr": "10:54",
+   "train_no": "07090",
+   "calls": [
+    [
+     "KAEC",
+     "09:36"
+    ],
+    [
+     "Madinah",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "10:36",
+   "arr_date": "08/10/2026",
+   "arr": "11:54",
+   "train_no": "07100",
+   "calls": [
+    [
+     "KAEC",
+     "10:36"
+    ],
+    [
+     "Madinah",
+     "11:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:07",
+   "arr_date": "08/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "12:36",
+   "arr_date": "08/10/2026",
+   "arr": "13:54",
+   "train_no": "07120",
+   "calls": [
+    [
+     "KAEC",
+     "12:36"
+    ],
+    [
+     "Madinah",
+     "13:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:07",
+   "arr_date": "08/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "15:36",
+   "arr_date": "08/10/2026",
+   "arr": "16:54",
+   "train_no": "07150",
+   "calls": [
+    [
+     "KAEC",
+     "15:36"
+    ],
+    [
+     "Madinah",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "16:36",
+   "arr_date": "08/10/2026",
+   "arr": "17:54",
+   "train_no": "07160",
+   "calls": [
+    [
+     "KAEC",
+     "16:36"
+    ],
+    [
+     "Madinah",
+     "17:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "17:36",
+   "arr_date": "08/10/2026",
+   "arr": "18:54",
+   "train_no": "07170",
+   "calls": [
+    [
+     "KAEC",
+     "17:36"
+    ],
+    [
+     "Madinah",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:07",
+   "arr_date": "08/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "18:36",
+   "arr_date": "08/10/2026",
+   "arr": "19:54",
+   "train_no": "07180",
+   "calls": [
+    [
+     "KAEC",
+     "18:36"
+    ],
+    [
+     "Madinah",
+     "19:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:07",
+   "arr_date": "08/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "20:36",
+   "arr_date": "08/10/2026",
+   "arr": "21:54",
+   "train_no": "07200",
+   "calls": [
+    [
+     "KAEC",
+     "20:36"
+    ],
+    [
+     "Madinah",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "22:07",
+   "arr_date": "08/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "08/10/2026",
+   "dep": "23:27",
+   "arr_date": "09/10/2026",
+   "arr": "00:45",
+   "train_no": "00222",
+   "calls": [
+    [
+     "KAEC",
+     "23:27"
+    ],
+    [
+     "Madinah",
+     "00:45"
+    ]
+   ]
+  }
+ ],
+ "09/10/2026|Madinah->Makkah": [
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:30",
+   "arr_date": "09/10/2026",
+   "arr": "10:55",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:21"
+    ],
+    [
+     "Makkah",
+     "10:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:50",
+   "arr_date": "09/10/2026",
+   "arr": "11:10",
+   "train_no": "01083",
+   "calls": [
+    [
+     "Madinah",
+     "08:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:35"
+    ],
+    [
+     "Makkah",
+     "11:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:30",
+   "arr_date": "09/10/2026",
+   "arr": "11:50",
+   "train_no": "01091",
+   "calls": [
+    [
+     "Madinah",
+     "09:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:15"
+    ],
+    [
+     "Makkah",
+     "11:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "10:30",
+   "arr_date": "09/10/2026",
+   "arr": "12:50",
+   "train_no": "01101",
+   "calls": [
+    [
+     "Madinah",
+     "10:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:15"
+    ],
+    [
+     "Makkah",
+     "12:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:30",
+   "arr_date": "09/10/2026",
+   "arr": "13:55",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:21"
+    ],
+    [
+     "Makkah",
+     "13:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:50",
+   "arr_date": "09/10/2026",
+   "arr": "14:10",
+   "train_no": "01113",
+   "calls": [
+    [
+     "Madinah",
+     "11:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:35"
+    ],
+    [
+     "Makkah",
+     "14:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "12:30",
+   "arr_date": "09/10/2026",
+   "arr": "14:50",
+   "train_no": "01121",
+   "calls": [
+    [
+     "Madinah",
+     "12:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:15"
+    ],
+    [
+     "Makkah",
+     "14:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "12:50",
+   "arr_date": "09/10/2026",
+   "arr": "15:05",
+   "train_no": "03123",
+   "calls": [
+    [
+     "Madinah",
+     "12:50"
+    ],
+    [
+     "Makkah",
+     "15:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "13:20",
+   "arr_date": "09/10/2026",
+   "arr": "15:40",
+   "train_no": "01135",
+   "calls": [
+    [
+     "Madinah",
+     "13:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:05"
+    ],
+    [
+     "Makkah",
+     "15:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "13:30",
+   "arr_date": "09/10/2026",
+   "arr": "15:50",
+   "train_no": "01131",
+   "calls": [
+    [
+     "Madinah",
+     "13:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:15"
+    ],
+    [
+     "Makkah",
+     "15:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "14:30",
+   "arr_date": "09/10/2026",
+   "arr": "16:55",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:21"
+    ],
+    [
+     "Makkah",
+     "16:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:30",
+   "arr_date": "09/10/2026",
+   "arr": "17:50",
+   "train_no": "01151",
+   "calls": [
+    [
+     "Madinah",
+     "15:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:15"
+    ],
+    [
+     "Makkah",
+     "17:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:50",
+   "arr_date": "09/10/2026",
+   "arr": "18:05",
+   "train_no": "03153",
+   "calls": [
+    [
+     "Madinah",
+     "15:50"
+    ],
+    [
+     "Makkah",
+     "18:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "16:30",
+   "arr_date": "09/10/2026",
+   "arr": "18:50",
+   "train_no": "01161",
+   "calls": [
+    [
+     "Madinah",
+     "16:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:15"
+    ],
+    [
+     "Makkah",
+     "18:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "16:50",
+   "arr_date": "09/10/2026",
+   "arr": "19:05",
+   "train_no": "03163",
+   "calls": [
+    [
+     "Madinah",
+     "16:50"
+    ],
+    [
+     "Makkah",
+     "19:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:30",
+   "arr_date": "09/10/2026",
+   "arr": "19:50",
+   "train_no": "01171",
+   "calls": [
+    [
+     "Madinah",
+     "17:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:15"
+    ],
+    [
+     "Makkah",
+     "19:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:50",
+   "arr_date": "09/10/2026",
+   "arr": "20:05",
+   "train_no": "03173",
+   "calls": [
+    [
+     "Madinah",
+     "17:50"
+    ],
+    [
+     "Makkah",
+     "20:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "18:30",
+   "arr_date": "09/10/2026",
+   "arr": "20:50",
+   "train_no": "01181",
+   "calls": [
+    [
+     "Madinah",
+     "18:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:15"
+    ],
+    [
+     "Makkah",
+     "20:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:30",
+   "arr_date": "09/10/2026",
+   "arr": "21:55",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:21"
+    ],
+    [
+     "Makkah",
+     "21:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:50",
+   "arr_date": "09/10/2026",
+   "arr": "22:10",
+   "train_no": "01193",
+   "calls": [
+    [
+     "Madinah",
+     "19:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:35"
+    ],
+    [
+     "Makkah",
+     "22:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:30",
+   "arr_date": "09/10/2026",
+   "arr": "22:50",
+   "train_no": "01201",
+   "calls": [
+    [
+     "Madinah",
+     "20:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:15"
+    ],
+    [
+     "Makkah",
+     "22:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:50",
+   "arr_date": "09/10/2026",
+   "arr": "23:10",
+   "train_no": "01203",
+   "calls": [
+    [
+     "Madinah",
+     "20:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:35"
+    ],
+    [
+     "Makkah",
+     "23:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "21:30",
+   "arr_date": "09/10/2026",
+   "arr": "23:55",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:21"
+    ],
+    [
+     "Makkah",
+     "23:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:30",
+   "arr_date": "10/10/2026",
+   "arr": "00:55",
+   "train_no": "00221",
+   "calls": [
+    [
+     "Madinah",
+     "22:30"
+    ],
+    [
+     "KAEC",
+     "23:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "00:21"
+    ],
+    [
+     "Makkah",
+     "00:55"
+    ]
+   ]
+  }
+ ],
+ "09/10/2026|Makkah->Madinah": [
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:00",
+   "arr_date": "09/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "Makkah",
+     "08:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:32"
+    ],
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:20",
+   "arr_date": "09/10/2026",
+   "arr": "10:40",
+   "train_no": "01082",
+   "calls": [
+    [
+     "Makkah",
+     "08:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:52"
+    ],
+    [
+     "Madinah",
+     "10:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:00",
+   "arr_date": "09/10/2026",
+   "arr": "11:20",
+   "train_no": "01090",
+   "calls": [
+    [
+     "Makkah",
+     "09:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:32"
+    ],
+    [
+     "Madinah",
+     "11:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:20",
+   "arr_date": "09/10/2026",
+   "arr": "11:45",
+   "train_no": "00092",
+   "calls": [
+    [
+     "Makkah",
+     "09:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:52"
+    ],
+    [
+     "KAEC",
+     "10:27"
+    ],
+    [
+     "Madinah",
+     "11:45"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "10:00",
+   "arr_date": "09/10/2026",
+   "arr": "12:20",
+   "train_no": "01100",
+   "calls": [
+    [
+     "Makkah",
+     "10:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:32"
+    ],
+    [
+     "Madinah",
+     "12:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:00",
+   "arr_date": "09/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "Makkah",
+     "11:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:32"
+    ],
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "12:00",
+   "arr_date": "09/10/2026",
+   "arr": "14:20",
+   "train_no": "01120",
+   "calls": [
+    [
+     "Makkah",
+     "12:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:32"
+    ],
+    [
+     "Madinah",
+     "14:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "13:00",
+   "arr_date": "09/10/2026",
+   "arr": "15:20",
+   "train_no": "01130",
+   "calls": [
+    [
+     "Makkah",
+     "13:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:32"
+    ],
+    [
+     "Madinah",
+     "15:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "14:00",
+   "arr_date": "09/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "Makkah",
+     "14:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:32"
+    ],
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "14:20",
+   "arr_date": "09/10/2026",
+   "arr": "16:35",
+   "train_no": "03142",
+   "calls": [
+    [
+     "Makkah",
+     "14:20"
+    ],
+    [
+     "Madinah",
+     "16:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:00",
+   "arr_date": "09/10/2026",
+   "arr": "17:20",
+   "train_no": "01150",
+   "calls": [
+    [
+     "Makkah",
+     "15:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:32"
+    ],
+    [
+     "Madinah",
+     "17:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:20",
+   "arr_date": "09/10/2026",
+   "arr": "17:35",
+   "train_no": "03152",
+   "calls": [
+    [
+     "Makkah",
+     "15:20"
+    ],
+    [
+     "Madinah",
+     "17:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "16:00",
+   "arr_date": "09/10/2026",
+   "arr": "18:20",
+   "train_no": "01160",
+   "calls": [
+    [
+     "Makkah",
+     "16:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:32"
+    ],
+    [
+     "Madinah",
+     "18:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "16:20",
+   "arr_date": "09/10/2026",
+   "arr": "18:35",
+   "train_no": "03162",
+   "calls": [
+    [
+     "Makkah",
+     "16:20"
+    ],
+    [
+     "Madinah",
+     "18:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:00",
+   "arr_date": "09/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "Makkah",
+     "17:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:32"
+    ],
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:20",
+   "arr_date": "09/10/2026",
+   "arr": "19:35",
+   "train_no": "03172",
+   "calls": [
+    [
+     "Makkah",
+     "17:20"
+    ],
+    [
+     "Madinah",
+     "19:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:45",
+   "arr_date": "09/10/2026",
+   "arr": "20:05",
+   "train_no": "01176",
+   "calls": [
+    [
+     "Makkah",
+     "17:45"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:17"
+    ],
+    [
+     "Madinah",
+     "20:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "18:00",
+   "arr_date": "09/10/2026",
+   "arr": "20:20",
+   "train_no": "01180",
+   "calls": [
+    [
+     "Makkah",
+     "18:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:32"
+    ],
+    [
+     "Madinah",
+     "20:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:00",
+   "arr_date": "09/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "Makkah",
+     "19:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:32"
+    ],
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:00",
+   "arr_date": "09/10/2026",
+   "arr": "22:20",
+   "train_no": "01200",
+   "calls": [
+    [
+     "Makkah",
+     "20:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:32"
+    ],
+    [
+     "Madinah",
+     "22:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:20",
+   "arr_date": "09/10/2026",
+   "arr": "22:40",
+   "train_no": "01202",
+   "calls": [
+    [
+     "Makkah",
+     "20:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:52"
+    ],
+    [
+     "Madinah",
+     "22:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "21:00",
+   "arr_date": "09/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "Makkah",
+     "21:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:32"
+    ],
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:00",
+   "arr_date": "10/10/2026",
+   "arr": "00:20",
+   "train_no": "01220",
+   "calls": [
+    [
+     "Makkah",
+     "22:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:32"
+    ],
+    [
+     "Madinah",
+     "00:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:20",
+   "arr_date": "10/10/2026",
+   "arr": "00:45",
+   "train_no": "00222",
+   "calls": [
+    [
+     "Makkah",
+     "22:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:52"
+    ],
+    [
+     "KAEC",
+     "23:27"
+    ],
+    [
+     "Madinah",
+     "00:45"
+    ]
+   ]
+  }
+ ],
+ "09/10/2026|Madinah->Jeddah (Al-Sulimaniyah)": [
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:30",
+   "arr_date": "09/10/2026",
+   "arr": "10:17",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:50",
+   "arr_date": "09/10/2026",
+   "arr": "10:31",
+   "train_no": "01083",
+   "calls": [
+    [
+     "Madinah",
+     "08:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:30",
+   "arr_date": "09/10/2026",
+   "arr": "11:11",
+   "train_no": "01091",
+   "calls": [
+    [
+     "Madinah",
+     "09:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "10:30",
+   "arr_date": "09/10/2026",
+   "arr": "12:11",
+   "train_no": "01101",
+   "calls": [
+    [
+     "Madinah",
+     "10:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:30",
+   "arr_date": "09/10/2026",
+   "arr": "13:17",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:50",
+   "arr_date": "09/10/2026",
+   "arr": "13:31",
+   "train_no": "01113",
+   "calls": [
+    [
+     "Madinah",
+     "11:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "12:30",
+   "arr_date": "09/10/2026",
+   "arr": "14:11",
+   "train_no": "01121",
+   "calls": [
+    [
+     "Madinah",
+     "12:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "13:20",
+   "arr_date": "09/10/2026",
+   "arr": "15:01",
+   "train_no": "01135",
+   "calls": [
+    [
+     "Madinah",
+     "13:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:01"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "13:30",
+   "arr_date": "09/10/2026",
+   "arr": "15:11",
+   "train_no": "01131",
+   "calls": [
+    [
+     "Madinah",
+     "13:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "14:30",
+   "arr_date": "09/10/2026",
+   "arr": "16:17",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:30",
+   "arr_date": "09/10/2026",
+   "arr": "17:11",
+   "train_no": "01151",
+   "calls": [
+    [
+     "Madinah",
+     "15:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "16:30",
+   "arr_date": "09/10/2026",
+   "arr": "18:11",
+   "train_no": "01161",
+   "calls": [
+    [
+     "Madinah",
+     "16:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:30",
+   "arr_date": "09/10/2026",
+   "arr": "19:11",
+   "train_no": "01171",
+   "calls": [
+    [
+     "Madinah",
+     "17:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "18:30",
+   "arr_date": "09/10/2026",
+   "arr": "20:11",
+   "train_no": "01181",
+   "calls": [
+    [
+     "Madinah",
+     "18:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:30",
+   "arr_date": "09/10/2026",
+   "arr": "21:17",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:50",
+   "arr_date": "09/10/2026",
+   "arr": "21:31",
+   "train_no": "01193",
+   "calls": [
+    [
+     "Madinah",
+     "19:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:30",
+   "arr_date": "09/10/2026",
+   "arr": "22:11",
+   "train_no": "01201",
+   "calls": [
+    [
+     "Madinah",
+     "20:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:50",
+   "arr_date": "09/10/2026",
+   "arr": "22:31",
+   "train_no": "01203",
+   "calls": [
+    [
+     "Madinah",
+     "20:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "21:30",
+   "arr_date": "09/10/2026",
+   "arr": "23:17",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:30",
+   "arr_date": "10/10/2026",
+   "arr": "00:17",
+   "train_no": "00221",
+   "calls": [
+    [
+     "Madinah",
+     "22:30"
+    ],
+    [
+     "KAEC",
+     "23:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "00:17"
+    ]
+   ]
+  }
+ ],
+ "09/10/2026|Jeddah (Al-Sulimaniyah)->Madinah": [
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:32",
+   "arr_date": "09/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:32"
+    ],
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:52",
+   "arr_date": "09/10/2026",
+   "arr": "10:40",
+   "train_no": "01082",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:52"
+    ],
+    [
+     "Madinah",
+     "10:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:32",
+   "arr_date": "09/10/2026",
+   "arr": "11:20",
+   "train_no": "01090",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:32"
+    ],
+    [
+     "Madinah",
+     "11:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:52",
+   "arr_date": "09/10/2026",
+   "arr": "11:45",
+   "train_no": "00092",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:52"
+    ],
+    [
+     "KAEC",
+     "10:27"
+    ],
+    [
+     "Madinah",
+     "11:45"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "10:32",
+   "arr_date": "09/10/2026",
+   "arr": "12:20",
+   "train_no": "01100",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:32"
+    ],
+    [
+     "Madinah",
+     "12:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:32",
+   "arr_date": "09/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:32"
+    ],
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "12:32",
+   "arr_date": "09/10/2026",
+   "arr": "14:20",
+   "train_no": "01120",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:32"
+    ],
+    [
+     "Madinah",
+     "14:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "13:32",
+   "arr_date": "09/10/2026",
+   "arr": "15:20",
+   "train_no": "01130",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:32"
+    ],
+    [
+     "Madinah",
+     "15:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "14:32",
+   "arr_date": "09/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:32"
+    ],
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:32",
+   "arr_date": "09/10/2026",
+   "arr": "17:20",
+   "train_no": "01150",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:32"
+    ],
+    [
+     "Madinah",
+     "17:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "16:32",
+   "arr_date": "09/10/2026",
+   "arr": "18:20",
+   "train_no": "01160",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:32"
+    ],
+    [
+     "Madinah",
+     "18:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:32",
+   "arr_date": "09/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:32"
+    ],
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "18:17",
+   "arr_date": "09/10/2026",
+   "arr": "20:05",
+   "train_no": "01176",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:17"
+    ],
+    [
+     "Madinah",
+     "20:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "18:32",
+   "arr_date": "09/10/2026",
+   "arr": "20:20",
+   "train_no": "01180",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:32"
+    ],
+    [
+     "Madinah",
+     "20:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:32",
+   "arr_date": "09/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:32"
+    ],
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:32",
+   "arr_date": "09/10/2026",
+   "arr": "22:20",
+   "train_no": "01200",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:32"
+    ],
+    [
+     "Madinah",
+     "22:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:52",
+   "arr_date": "09/10/2026",
+   "arr": "22:40",
+   "train_no": "01202",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:52"
+    ],
+    [
+     "Madinah",
+     "22:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "21:32",
+   "arr_date": "09/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:32"
+    ],
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:32",
+   "arr_date": "10/10/2026",
+   "arr": "00:20",
+   "train_no": "01220",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:32"
+    ],
+    [
+     "Madinah",
+     "00:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:52",
+   "arr_date": "10/10/2026",
+   "arr": "00:45",
+   "train_no": "00222",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:52"
+    ],
+    [
+     "KAEC",
+     "23:27"
+    ],
+    [
+     "Madinah",
+     "00:45"
+    ]
+   ]
+  }
+ ],
+ "09/10/2026|Madinah->Jeddah Airport (KAIA)": [
+  {
+   "dep_date": "09/10/2026",
+   "dep": "00:00",
+   "arr_date": "09/10/2026",
+   "arr": "01:54",
+   "train_no": "07001",
+   "calls": [
+    [
+     "Madinah",
+     "00:00"
+    ],
+    [
+     "KAEC",
+     "01:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "01:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:00",
+   "arr_date": "09/10/2026",
+   "arr": "09:54",
+   "train_no": "07081",
+   "calls": [
+    [
+     "Madinah",
+     "08:00"
+    ],
+    [
+     "KAEC",
+     "09:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "09:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:00",
+   "arr_date": "09/10/2026",
+   "arr": "10:54",
+   "train_no": "07091",
+   "calls": [
+    [
+     "Madinah",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "10:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:00",
+   "arr_date": "09/10/2026",
+   "arr": "12:54",
+   "train_no": "07111",
+   "calls": [
+    [
+     "Madinah",
+     "11:00"
+    ],
+    [
+     "KAEC",
+     "12:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "12:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "13:00",
+   "arr_date": "09/10/2026",
+   "arr": "14:48",
+   "train_no": "08131",
+   "calls": [
+    [
+     "Madinah",
+     "13:00"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "14:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:00",
+   "arr_date": "09/10/2026",
+   "arr": "16:54",
+   "train_no": "07151",
+   "calls": [
+    [
+     "Madinah",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "16:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:00",
+   "arr_date": "09/10/2026",
+   "arr": "18:54",
+   "train_no": "07171",
+   "calls": [
+    [
+     "Madinah",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "18:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:00",
+   "arr_date": "09/10/2026",
+   "arr": "20:48",
+   "train_no": "08191",
+   "calls": [
+    [
+     "Madinah",
+     "19:00"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "20:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:00",
+   "arr_date": "09/10/2026",
+   "arr": "21:54",
+   "train_no": "07201",
+   "calls": [
+    [
+     "Madinah",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "21:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:00",
+   "arr_date": "09/10/2026",
+   "arr": "23:54",
+   "train_no": "07221",
+   "calls": [
+    [
+     "Madinah",
+     "22:00"
+    ],
+    [
+     "KAEC",
+     "23:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "23:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "23:00",
+   "arr_date": "10/10/2026",
+   "arr": "00:48",
+   "train_no": "08231",
+   "calls": [
+    [
+     "Madinah",
+     "23:00"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "00:48"
+    ]
+   ]
+  }
+ ],
+ "09/10/2026|Jeddah Airport (KAIA)->Madinah": [
+  {
+   "dep_date": "09/10/2026",
+   "dep": "00:00",
+   "arr_date": "09/10/2026",
+   "arr": "01:48",
+   "train_no": "08000",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "00:00"
+    ],
+    [
+     "Madinah",
+     "01:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:00",
+   "arr_date": "09/10/2026",
+   "arr": "09:54",
+   "train_no": "07080",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "08:00"
+    ],
+    [
+     "KAEC",
+     "08:36"
+    ],
+    [
+     "Madinah",
+     "09:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:00",
+   "arr_date": "09/10/2026",
+   "arr": "10:54",
+   "train_no": "07090",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "09:36"
+    ],
+    [
+     "Madinah",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:00",
+   "arr_date": "09/10/2026",
+   "arr": "12:54",
+   "train_no": "07110",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "11:00"
+    ],
+    [
+     "KAEC",
+     "11:36"
+    ],
+    [
+     "Madinah",
+     "12:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "13:00",
+   "arr_date": "09/10/2026",
+   "arr": "14:48",
+   "train_no": "08130",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "13:00"
+    ],
+    [
+     "Madinah",
+     "14:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:00",
+   "arr_date": "09/10/2026",
+   "arr": "16:54",
+   "train_no": "07150",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "15:36"
+    ],
+    [
+     "Madinah",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:00",
+   "arr_date": "09/10/2026",
+   "arr": "18:54",
+   "train_no": "07170",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "17:36"
+    ],
+    [
+     "Madinah",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:00",
+   "arr_date": "09/10/2026",
+   "arr": "20:48",
+   "train_no": "08190",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "19:00"
+    ],
+    [
+     "Madinah",
+     "20:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:00",
+   "arr_date": "09/10/2026",
+   "arr": "21:54",
+   "train_no": "07200",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "20:36"
+    ],
+    [
+     "Madinah",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:00",
+   "arr_date": "09/10/2026",
+   "arr": "23:54",
+   "train_no": "07220",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "22:00"
+    ],
+    [
+     "KAEC",
+     "22:36"
+    ],
+    [
+     "Madinah",
+     "23:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "23:00",
+   "arr_date": "10/10/2026",
+   "arr": "00:48",
+   "train_no": "08230",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "23:00"
+    ],
+    [
+     "Madinah",
+     "00:48"
+    ]
+   ]
+  }
+ ],
+ "09/10/2026|Madinah->KAEC": [
+  {
+   "dep_date": "09/10/2026",
+   "dep": "00:00",
+   "arr_date": "09/10/2026",
+   "arr": "01:10",
+   "train_no": "07001",
+   "calls": [
+    [
+     "Madinah",
+     "00:00"
+    ],
+    [
+     "KAEC",
+     "01:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:00",
+   "arr_date": "09/10/2026",
+   "arr": "09:10",
+   "train_no": "07081",
+   "calls": [
+    [
+     "Madinah",
+     "08:00"
+    ],
+    [
+     "KAEC",
+     "09:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:30",
+   "arr_date": "09/10/2026",
+   "arr": "09:40",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:00",
+   "arr_date": "09/10/2026",
+   "arr": "10:10",
+   "train_no": "07091",
+   "calls": [
+    [
+     "Madinah",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "10:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:00",
+   "arr_date": "09/10/2026",
+   "arr": "12:10",
+   "train_no": "07111",
+   "calls": [
+    [
+     "Madinah",
+     "11:00"
+    ],
+    [
+     "KAEC",
+     "12:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:30",
+   "arr_date": "09/10/2026",
+   "arr": "12:40",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "14:30",
+   "arr_date": "09/10/2026",
+   "arr": "15:40",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:00",
+   "arr_date": "09/10/2026",
+   "arr": "16:10",
+   "train_no": "07151",
+   "calls": [
+    [
+     "Madinah",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "16:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:00",
+   "arr_date": "09/10/2026",
+   "arr": "18:10",
+   "train_no": "07171",
+   "calls": [
+    [
+     "Madinah",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "18:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "19:30",
+   "arr_date": "09/10/2026",
+   "arr": "20:40",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:00",
+   "arr_date": "09/10/2026",
+   "arr": "21:10",
+   "train_no": "07201",
+   "calls": [
+    [
+     "Madinah",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "21:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "21:30",
+   "arr_date": "09/10/2026",
+   "arr": "22:40",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:00",
+   "arr_date": "09/10/2026",
+   "arr": "23:10",
+   "train_no": "07221",
+   "calls": [
+    [
+     "Madinah",
+     "22:00"
+    ],
+    [
+     "KAEC",
+     "23:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:30",
+   "arr_date": "09/10/2026",
+   "arr": "23:40",
+   "train_no": "00221",
+   "calls": [
+    [
+     "Madinah",
+     "22:30"
+    ],
+    [
+     "KAEC",
+     "23:40"
+    ]
+   ]
+  }
+ ],
+ "09/10/2026|KAEC->Madinah": [
+  {
+   "dep_date": "09/10/2026",
+   "dep": "08:36",
+   "arr_date": "09/10/2026",
+   "arr": "09:54",
+   "train_no": "07080",
+   "calls": [
+    [
+     "KAEC",
+     "08:36"
+    ],
+    [
+     "Madinah",
+     "09:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:07",
+   "arr_date": "09/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "09:36",
+   "arr_date": "09/10/2026",
+   "arr": "10:54",
+   "train_no": "07090",
+   "calls": [
+    [
+     "KAEC",
+     "09:36"
+    ],
+    [
+     "Madinah",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "10:27",
+   "arr_date": "09/10/2026",
+   "arr": "11:45",
+   "train_no": "00092",
+   "calls": [
+    [
+     "KAEC",
+     "10:27"
+    ],
+    [
+     "Madinah",
+     "11:45"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "11:36",
+   "arr_date": "09/10/2026",
+   "arr": "12:54",
+   "train_no": "07110",
+   "calls": [
+    [
+     "KAEC",
+     "11:36"
+    ],
+    [
+     "Madinah",
+     "12:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "12:07",
+   "arr_date": "09/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:07",
+   "arr_date": "09/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "15:36",
+   "arr_date": "09/10/2026",
+   "arr": "16:54",
+   "train_no": "07150",
+   "calls": [
+    [
+     "KAEC",
+     "15:36"
+    ],
+    [
+     "Madinah",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "17:36",
+   "arr_date": "09/10/2026",
+   "arr": "18:54",
+   "train_no": "07170",
+   "calls": [
+    [
+     "KAEC",
+     "17:36"
+    ],
+    [
+     "Madinah",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "18:07",
+   "arr_date": "09/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:07",
+   "arr_date": "09/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "20:36",
+   "arr_date": "09/10/2026",
+   "arr": "21:54",
+   "train_no": "07200",
+   "calls": [
+    [
+     "KAEC",
+     "20:36"
+    ],
+    [
+     "Madinah",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:07",
+   "arr_date": "09/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "22:36",
+   "arr_date": "09/10/2026",
+   "arr": "23:54",
+   "train_no": "07220",
+   "calls": [
+    [
+     "KAEC",
+     "22:36"
+    ],
+    [
+     "Madinah",
+     "23:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "09/10/2026",
+   "dep": "23:27",
+   "arr_date": "10/10/2026",
+   "arr": "00:45",
+   "train_no": "00222",
+   "calls": [
+    [
+     "KAEC",
+     "23:27"
+    ],
+    [
+     "Madinah",
+     "00:45"
+    ]
+   ]
+  }
+ ],
+ "11/10/2026|Madinah->Makkah": [
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:30",
+   "arr_date": "11/10/2026",
+   "arr": "08:55",
+   "train_no": "00061",
+   "calls": [
+    [
+     "Madinah",
+     "06:30"
+    ],
+    [
+     "KAEC",
+     "07:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:21"
+    ],
+    [
+     "Makkah",
+     "08:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "08:30",
+   "arr_date": "11/10/2026",
+   "arr": "10:55",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:21"
+    ],
+    [
+     "Makkah",
+     "10:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:30",
+   "arr_date": "11/10/2026",
+   "arr": "11:50",
+   "train_no": "01091",
+   "calls": [
+    [
+     "Madinah",
+     "09:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:15"
+    ],
+    [
+     "Makkah",
+     "11:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:30",
+   "arr_date": "11/10/2026",
+   "arr": "12:50",
+   "train_no": "01101",
+   "calls": [
+    [
+     "Madinah",
+     "10:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:15"
+    ],
+    [
+     "Makkah",
+     "12:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:50",
+   "arr_date": "11/10/2026",
+   "arr": "13:10",
+   "train_no": "01103",
+   "calls": [
+    [
+     "Madinah",
+     "10:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:35"
+    ],
+    [
+     "Makkah",
+     "13:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "11:30",
+   "arr_date": "11/10/2026",
+   "arr": "13:55",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:21"
+    ],
+    [
+     "Makkah",
+     "13:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "11:50",
+   "arr_date": "11/10/2026",
+   "arr": "14:10",
+   "train_no": "01113",
+   "calls": [
+    [
+     "Madinah",
+     "11:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:35"
+    ],
+    [
+     "Makkah",
+     "14:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:30",
+   "arr_date": "11/10/2026",
+   "arr": "14:50",
+   "train_no": "01121",
+   "calls": [
+    [
+     "Madinah",
+     "12:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:15"
+    ],
+    [
+     "Makkah",
+     "14:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:20",
+   "arr_date": "11/10/2026",
+   "arr": "15:40",
+   "train_no": "01135",
+   "calls": [
+    [
+     "Madinah",
+     "13:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:05"
+    ],
+    [
+     "Makkah",
+     "15:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:30",
+   "arr_date": "11/10/2026",
+   "arr": "15:50",
+   "train_no": "01131",
+   "calls": [
+    [
+     "Madinah",
+     "13:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:15"
+    ],
+    [
+     "Makkah",
+     "15:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:50",
+   "arr_date": "11/10/2026",
+   "arr": "16:05",
+   "train_no": "03133",
+   "calls": [
+    [
+     "Madinah",
+     "13:50"
+    ],
+    [
+     "Makkah",
+     "16:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "14:30",
+   "arr_date": "11/10/2026",
+   "arr": "16:55",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:21"
+    ],
+    [
+     "Makkah",
+     "16:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "14:50",
+   "arr_date": "11/10/2026",
+   "arr": "17:05",
+   "train_no": "03143",
+   "calls": [
+    [
+     "Madinah",
+     "14:50"
+    ],
+    [
+     "Makkah",
+     "17:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:30",
+   "arr_date": "11/10/2026",
+   "arr": "17:50",
+   "train_no": "01151",
+   "calls": [
+    [
+     "Madinah",
+     "15:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:15"
+    ],
+    [
+     "Makkah",
+     "17:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:50",
+   "arr_date": "11/10/2026",
+   "arr": "18:05",
+   "train_no": "03153",
+   "calls": [
+    [
+     "Madinah",
+     "15:50"
+    ],
+    [
+     "Makkah",
+     "18:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "16:30",
+   "arr_date": "11/10/2026",
+   "arr": "18:50",
+   "train_no": "01161",
+   "calls": [
+    [
+     "Madinah",
+     "16:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:15"
+    ],
+    [
+     "Makkah",
+     "18:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "16:50",
+   "arr_date": "11/10/2026",
+   "arr": "19:05",
+   "train_no": "03163",
+   "calls": [
+    [
+     "Madinah",
+     "16:50"
+    ],
+    [
+     "Makkah",
+     "19:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:30",
+   "arr_date": "11/10/2026",
+   "arr": "19:50",
+   "train_no": "01171",
+   "calls": [
+    [
+     "Madinah",
+     "17:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:15"
+    ],
+    [
+     "Makkah",
+     "19:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:50",
+   "arr_date": "11/10/2026",
+   "arr": "20:05",
+   "train_no": "03173",
+   "calls": [
+    [
+     "Madinah",
+     "17:50"
+    ],
+    [
+     "Makkah",
+     "20:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "18:30",
+   "arr_date": "11/10/2026",
+   "arr": "20:50",
+   "train_no": "01181",
+   "calls": [
+    [
+     "Madinah",
+     "18:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:15"
+    ],
+    [
+     "Makkah",
+     "20:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:30",
+   "arr_date": "11/10/2026",
+   "arr": "21:55",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:21"
+    ],
+    [
+     "Makkah",
+     "21:55"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:50",
+   "arr_date": "11/10/2026",
+   "arr": "22:10",
+   "train_no": "01193",
+   "calls": [
+    [
+     "Madinah",
+     "19:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:35"
+    ],
+    [
+     "Makkah",
+     "22:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:30",
+   "arr_date": "11/10/2026",
+   "arr": "22:50",
+   "train_no": "01201",
+   "calls": [
+    [
+     "Madinah",
+     "20:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:15"
+    ],
+    [
+     "Makkah",
+     "22:50"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:50",
+   "arr_date": "11/10/2026",
+   "arr": "23:10",
+   "train_no": "01203",
+   "calls": [
+    [
+     "Madinah",
+     "20:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:35"
+    ],
+    [
+     "Makkah",
+     "23:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "21:30",
+   "arr_date": "11/10/2026",
+   "arr": "23:55",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:21"
+    ],
+    [
+     "Makkah",
+     "23:55"
+    ]
+   ]
+  }
+ ],
+ "11/10/2026|Makkah->Madinah": [
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:00",
+   "arr_date": "11/10/2026",
+   "arr": "08:25",
+   "train_no": "00060",
+   "calls": [
+    [
+     "Makkah",
+     "06:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "06:32"
+    ],
+    [
+     "KAEC",
+     "07:07"
+    ],
+    [
+     "Madinah",
+     "08:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "07:00",
+   "arr_date": "11/10/2026",
+   "arr": "09:20",
+   "train_no": "01070",
+   "calls": [
+    [
+     "Makkah",
+     "07:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "07:32"
+    ],
+    [
+     "Madinah",
+     "09:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "07:20",
+   "arr_date": "11/10/2026",
+   "arr": "09:40",
+   "train_no": "01072",
+   "calls": [
+    [
+     "Makkah",
+     "07:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "07:52"
+    ],
+    [
+     "Madinah",
+     "09:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "08:00",
+   "arr_date": "11/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "Makkah",
+     "08:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:32"
+    ],
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:00",
+   "arr_date": "11/10/2026",
+   "arr": "11:20",
+   "train_no": "01090",
+   "calls": [
+    [
+     "Makkah",
+     "09:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:32"
+    ],
+    [
+     "Madinah",
+     "11:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:00",
+   "arr_date": "11/10/2026",
+   "arr": "12:20",
+   "train_no": "01100",
+   "calls": [
+    [
+     "Makkah",
+     "10:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:32"
+    ],
+    [
+     "Madinah",
+     "12:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:20",
+   "arr_date": "11/10/2026",
+   "arr": "12:40",
+   "train_no": "01102",
+   "calls": [
+    [
+     "Makkah",
+     "10:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:52"
+    ],
+    [
+     "Madinah",
+     "12:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "11:00",
+   "arr_date": "11/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "Makkah",
+     "11:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:32"
+    ],
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:00",
+   "arr_date": "11/10/2026",
+   "arr": "14:20",
+   "train_no": "01120",
+   "calls": [
+    [
+     "Makkah",
+     "12:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:32"
+    ],
+    [
+     "Madinah",
+     "14:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:20",
+   "arr_date": "11/10/2026",
+   "arr": "14:35",
+   "train_no": "03122",
+   "calls": [
+    [
+     "Makkah",
+     "12:20"
+    ],
+    [
+     "Madinah",
+     "14:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:00",
+   "arr_date": "11/10/2026",
+   "arr": "15:20",
+   "train_no": "01130",
+   "calls": [
+    [
+     "Makkah",
+     "13:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:32"
+    ],
+    [
+     "Madinah",
+     "15:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "14:00",
+   "arr_date": "11/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "Makkah",
+     "14:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:32"
+    ],
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "14:20",
+   "arr_date": "11/10/2026",
+   "arr": "16:35",
+   "train_no": "03142",
+   "calls": [
+    [
+     "Makkah",
+     "14:20"
+    ],
+    [
+     "Madinah",
+     "16:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:00",
+   "arr_date": "11/10/2026",
+   "arr": "17:20",
+   "train_no": "01150",
+   "calls": [
+    [
+     "Makkah",
+     "15:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:32"
+    ],
+    [
+     "Madinah",
+     "17:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:20",
+   "arr_date": "11/10/2026",
+   "arr": "17:35",
+   "train_no": "03152",
+   "calls": [
+    [
+     "Makkah",
+     "15:20"
+    ],
+    [
+     "Madinah",
+     "17:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "16:00",
+   "arr_date": "11/10/2026",
+   "arr": "18:20",
+   "train_no": "01160",
+   "calls": [
+    [
+     "Makkah",
+     "16:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:32"
+    ],
+    [
+     "Madinah",
+     "18:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "16:20",
+   "arr_date": "11/10/2026",
+   "arr": "18:35",
+   "train_no": "03162",
+   "calls": [
+    [
+     "Makkah",
+     "16:20"
+    ],
+    [
+     "Madinah",
+     "18:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:00",
+   "arr_date": "11/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "Makkah",
+     "17:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:32"
+    ],
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:20",
+   "arr_date": "11/10/2026",
+   "arr": "19:35",
+   "train_no": "03172",
+   "calls": [
+    [
+     "Makkah",
+     "17:20"
+    ],
+    [
+     "Madinah",
+     "19:35"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:45",
+   "arr_date": "11/10/2026",
+   "arr": "20:05",
+   "train_no": "01176",
+   "calls": [
+    [
+     "Makkah",
+     "17:45"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:17"
+    ],
+    [
+     "Madinah",
+     "20:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "18:00",
+   "arr_date": "11/10/2026",
+   "arr": "20:20",
+   "train_no": "01180",
+   "calls": [
+    [
+     "Makkah",
+     "18:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:32"
+    ],
+    [
+     "Madinah",
+     "20:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:00",
+   "arr_date": "11/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "Makkah",
+     "19:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:32"
+    ],
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:00",
+   "arr_date": "11/10/2026",
+   "arr": "22:20",
+   "train_no": "01200",
+   "calls": [
+    [
+     "Makkah",
+     "20:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:32"
+    ],
+    [
+     "Madinah",
+     "22:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "21:00",
+   "arr_date": "11/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "Makkah",
+     "21:00"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:32"
+    ],
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "21:20",
+   "arr_date": "11/10/2026",
+   "arr": "23:40",
+   "train_no": "01212",
+   "calls": [
+    [
+     "Makkah",
+     "21:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:52"
+    ],
+    [
+     "Madinah",
+     "23:40"
+    ]
+   ]
+  }
+ ],
+ "11/10/2026|Madinah->Jeddah (Al-Sulimaniyah)": [
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:30",
+   "arr_date": "11/10/2026",
+   "arr": "08:17",
+   "train_no": "00061",
+   "calls": [
+    [
+     "Madinah",
+     "06:30"
+    ],
+    [
+     "KAEC",
+     "07:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "08:30",
+   "arr_date": "11/10/2026",
+   "arr": "10:17",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:30",
+   "arr_date": "11/10/2026",
+   "arr": "11:11",
+   "train_no": "01091",
+   "calls": [
+    [
+     "Madinah",
+     "09:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:30",
+   "arr_date": "11/10/2026",
+   "arr": "12:11",
+   "train_no": "01101",
+   "calls": [
+    [
+     "Madinah",
+     "10:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:50",
+   "arr_date": "11/10/2026",
+   "arr": "12:31",
+   "train_no": "01103",
+   "calls": [
+    [
+     "Madinah",
+     "10:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "11:30",
+   "arr_date": "11/10/2026",
+   "arr": "13:17",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "11:50",
+   "arr_date": "11/10/2026",
+   "arr": "13:31",
+   "train_no": "01113",
+   "calls": [
+    [
+     "Madinah",
+     "11:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:30",
+   "arr_date": "11/10/2026",
+   "arr": "14:11",
+   "train_no": "01121",
+   "calls": [
+    [
+     "Madinah",
+     "12:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:20",
+   "arr_date": "11/10/2026",
+   "arr": "15:01",
+   "train_no": "01135",
+   "calls": [
+    [
+     "Madinah",
+     "13:20"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:01"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:30",
+   "arr_date": "11/10/2026",
+   "arr": "15:11",
+   "train_no": "01131",
+   "calls": [
+    [
+     "Madinah",
+     "13:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "14:30",
+   "arr_date": "11/10/2026",
+   "arr": "16:17",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:30",
+   "arr_date": "11/10/2026",
+   "arr": "17:11",
+   "train_no": "01151",
+   "calls": [
+    [
+     "Madinah",
+     "15:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "16:30",
+   "arr_date": "11/10/2026",
+   "arr": "18:11",
+   "train_no": "01161",
+   "calls": [
+    [
+     "Madinah",
+     "16:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:30",
+   "arr_date": "11/10/2026",
+   "arr": "19:11",
+   "train_no": "01171",
+   "calls": [
+    [
+     "Madinah",
+     "17:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "18:30",
+   "arr_date": "11/10/2026",
+   "arr": "20:11",
+   "train_no": "01181",
+   "calls": [
+    [
+     "Madinah",
+     "18:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:30",
+   "arr_date": "11/10/2026",
+   "arr": "21:17",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:17"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:50",
+   "arr_date": "11/10/2026",
+   "arr": "21:31",
+   "train_no": "01193",
+   "calls": [
+    [
+     "Madinah",
+     "19:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:30",
+   "arr_date": "11/10/2026",
+   "arr": "22:11",
+   "train_no": "01201",
+   "calls": [
+    [
+     "Madinah",
+     "20:30"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:11"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:50",
+   "arr_date": "11/10/2026",
+   "arr": "22:31",
+   "train_no": "01203",
+   "calls": [
+    [
+     "Madinah",
+     "20:50"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "22:31"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "21:30",
+   "arr_date": "11/10/2026",
+   "arr": "23:17",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:43"
+    ],
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "23:17"
+    ]
+   ]
+  }
+ ],
+ "11/10/2026|Jeddah (Al-Sulimaniyah)->Madinah": [
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:32",
+   "arr_date": "11/10/2026",
+   "arr": "08:25",
+   "train_no": "00060",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "06:32"
+    ],
+    [
+     "KAEC",
+     "07:07"
+    ],
+    [
+     "Madinah",
+     "08:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "07:32",
+   "arr_date": "11/10/2026",
+   "arr": "09:20",
+   "train_no": "01070",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "07:32"
+    ],
+    [
+     "Madinah",
+     "09:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "07:52",
+   "arr_date": "11/10/2026",
+   "arr": "09:40",
+   "train_no": "01072",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "07:52"
+    ],
+    [
+     "Madinah",
+     "09:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "08:32",
+   "arr_date": "11/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "08:32"
+    ],
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:32",
+   "arr_date": "11/10/2026",
+   "arr": "11:20",
+   "train_no": "01090",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "09:32"
+    ],
+    [
+     "Madinah",
+     "11:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:32",
+   "arr_date": "11/10/2026",
+   "arr": "12:20",
+   "train_no": "01100",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:32"
+    ],
+    [
+     "Madinah",
+     "12:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:52",
+   "arr_date": "11/10/2026",
+   "arr": "12:40",
+   "train_no": "01102",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "10:52"
+    ],
+    [
+     "Madinah",
+     "12:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "11:32",
+   "arr_date": "11/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "11:32"
+    ],
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:32",
+   "arr_date": "11/10/2026",
+   "arr": "14:20",
+   "train_no": "01120",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "12:32"
+    ],
+    [
+     "Madinah",
+     "14:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:32",
+   "arr_date": "11/10/2026",
+   "arr": "15:20",
+   "train_no": "01130",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "13:32"
+    ],
+    [
+     "Madinah",
+     "15:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "14:32",
+   "arr_date": "11/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "14:32"
+    ],
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:32",
+   "arr_date": "11/10/2026",
+   "arr": "17:20",
+   "train_no": "01150",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "15:32"
+    ],
+    [
+     "Madinah",
+     "17:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "16:32",
+   "arr_date": "11/10/2026",
+   "arr": "18:20",
+   "train_no": "01160",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "16:32"
+    ],
+    [
+     "Madinah",
+     "18:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:32",
+   "arr_date": "11/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "17:32"
+    ],
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "18:17",
+   "arr_date": "11/10/2026",
+   "arr": "20:05",
+   "train_no": "01176",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:17"
+    ],
+    [
+     "Madinah",
+     "20:05"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "18:32",
+   "arr_date": "11/10/2026",
+   "arr": "20:20",
+   "train_no": "01180",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "18:32"
+    ],
+    [
+     "Madinah",
+     "20:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:32",
+   "arr_date": "11/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "19:32"
+    ],
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:32",
+   "arr_date": "11/10/2026",
+   "arr": "22:20",
+   "train_no": "01200",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "20:32"
+    ],
+    [
+     "Madinah",
+     "22:20"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "21:32",
+   "arr_date": "11/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:32"
+    ],
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "21:52",
+   "arr_date": "11/10/2026",
+   "arr": "23:40",
+   "train_no": "01212",
+   "calls": [
+    [
+     "Jeddah (Al-Sulimaniyah)",
+     "21:52"
+    ],
+    [
+     "Madinah",
+     "23:40"
+    ]
+   ]
+  }
+ ],
+ "11/10/2026|Madinah->Jeddah Airport (KAIA)": [
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:00",
+   "arr_date": "11/10/2026",
+   "arr": "07:54",
+   "train_no": "07061",
+   "calls": [
+    [
+     "Madinah",
+     "06:00"
+    ],
+    [
+     "KAEC",
+     "07:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "07:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:00",
+   "arr_date": "11/10/2026",
+   "arr": "10:54",
+   "train_no": "07091",
+   "calls": [
+    [
+     "Madinah",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "10:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:00",
+   "arr_date": "11/10/2026",
+   "arr": "11:54",
+   "train_no": "07101",
+   "calls": [
+    [
+     "Madinah",
+     "10:00"
+    ],
+    [
+     "KAEC",
+     "11:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "11:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:00",
+   "arr_date": "11/10/2026",
+   "arr": "13:54",
+   "train_no": "07121",
+   "calls": [
+    [
+     "Madinah",
+     "12:00"
+    ],
+    [
+     "KAEC",
+     "13:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "13:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:00",
+   "arr_date": "11/10/2026",
+   "arr": "14:48",
+   "train_no": "08131",
+   "calls": [
+    [
+     "Madinah",
+     "13:00"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "14:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:00",
+   "arr_date": "11/10/2026",
+   "arr": "16:54",
+   "train_no": "07151",
+   "calls": [
+    [
+     "Madinah",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "16:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:00",
+   "arr_date": "11/10/2026",
+   "arr": "18:54",
+   "train_no": "07171",
+   "calls": [
+    [
+     "Madinah",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "18:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:00",
+   "arr_date": "11/10/2026",
+   "arr": "20:48",
+   "train_no": "08191",
+   "calls": [
+    [
+     "Madinah",
+     "19:00"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "20:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:00",
+   "arr_date": "11/10/2026",
+   "arr": "21:54",
+   "train_no": "07201",
+   "calls": [
+    [
+     "Madinah",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "21:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "22:00",
+   "arr_date": "11/10/2026",
+   "arr": "23:54",
+   "train_no": "07221",
+   "calls": [
+    [
+     "Madinah",
+     "22:00"
+    ],
+    [
+     "KAEC",
+     "23:11"
+    ],
+    [
+     "Jeddah Airport (KAIA)",
+     "23:54"
+    ]
+   ]
+  }
+ ],
+ "11/10/2026|Jeddah Airport (KAIA)->Madinah": [
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:00",
+   "arr_date": "11/10/2026",
+   "arr": "07:54",
+   "train_no": "07060",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "06:00"
+    ],
+    [
+     "KAEC",
+     "06:36"
+    ],
+    [
+     "Madinah",
+     "07:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:00",
+   "arr_date": "11/10/2026",
+   "arr": "10:54",
+   "train_no": "07090",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "09:36"
+    ],
+    [
+     "Madinah",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:00",
+   "arr_date": "11/10/2026",
+   "arr": "11:54",
+   "train_no": "07100",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "10:00"
+    ],
+    [
+     "KAEC",
+     "10:36"
+    ],
+    [
+     "Madinah",
+     "11:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:00",
+   "arr_date": "11/10/2026",
+   "arr": "13:54",
+   "train_no": "07120",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "12:00"
+    ],
+    [
+     "KAEC",
+     "12:36"
+    ],
+    [
+     "Madinah",
+     "13:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "13:00",
+   "arr_date": "11/10/2026",
+   "arr": "14:48",
+   "train_no": "08130",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "13:00"
+    ],
+    [
+     "Madinah",
+     "14:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:00",
+   "arr_date": "11/10/2026",
+   "arr": "16:54",
+   "train_no": "07150",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "15:36"
+    ],
+    [
+     "Madinah",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:00",
+   "arr_date": "11/10/2026",
+   "arr": "18:54",
+   "train_no": "07170",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "17:36"
+    ],
+    [
+     "Madinah",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:00",
+   "arr_date": "11/10/2026",
+   "arr": "20:48",
+   "train_no": "08190",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "19:00"
+    ],
+    [
+     "Madinah",
+     "20:48"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:00",
+   "arr_date": "11/10/2026",
+   "arr": "21:54",
+   "train_no": "07200",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "20:36"
+    ],
+    [
+     "Madinah",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "22:00",
+   "arr_date": "11/10/2026",
+   "arr": "23:54",
+   "train_no": "07220",
+   "calls": [
+    [
+     "Jeddah Airport (KAIA)",
+     "22:00"
+    ],
+    [
+     "KAEC",
+     "22:36"
+    ],
+    [
+     "Madinah",
+     "23:54"
+    ]
+   ]
+  }
+ ],
+ "11/10/2026|Madinah->KAEC": [
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:00",
+   "arr_date": "11/10/2026",
+   "arr": "07:10",
+   "train_no": "07061",
+   "calls": [
+    [
+     "Madinah",
+     "06:00"
+    ],
+    [
+     "KAEC",
+     "07:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:30",
+   "arr_date": "11/10/2026",
+   "arr": "07:40",
+   "train_no": "00061",
+   "calls": [
+    [
+     "Madinah",
+     "06:30"
+    ],
+    [
+     "KAEC",
+     "07:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "08:30",
+   "arr_date": "11/10/2026",
+   "arr": "09:40",
+   "train_no": "00081",
+   "calls": [
+    [
+     "Madinah",
+     "08:30"
+    ],
+    [
+     "KAEC",
+     "09:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:00",
+   "arr_date": "11/10/2026",
+   "arr": "10:10",
+   "train_no": "07091",
+   "calls": [
+    [
+     "Madinah",
+     "09:00"
+    ],
+    [
+     "KAEC",
+     "10:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:00",
+   "arr_date": "11/10/2026",
+   "arr": "11:10",
+   "train_no": "07101",
+   "calls": [
+    [
+     "Madinah",
+     "10:00"
+    ],
+    [
+     "KAEC",
+     "11:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "11:30",
+   "arr_date": "11/10/2026",
+   "arr": "12:40",
+   "train_no": "00111",
+   "calls": [
+    [
+     "Madinah",
+     "11:30"
+    ],
+    [
+     "KAEC",
+     "12:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:00",
+   "arr_date": "11/10/2026",
+   "arr": "13:10",
+   "train_no": "07121",
+   "calls": [
+    [
+     "Madinah",
+     "12:00"
+    ],
+    [
+     "KAEC",
+     "13:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "14:30",
+   "arr_date": "11/10/2026",
+   "arr": "15:40",
+   "train_no": "00141",
+   "calls": [
+    [
+     "Madinah",
+     "14:30"
+    ],
+    [
+     "KAEC",
+     "15:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:00",
+   "arr_date": "11/10/2026",
+   "arr": "16:10",
+   "train_no": "07151",
+   "calls": [
+    [
+     "Madinah",
+     "15:00"
+    ],
+    [
+     "KAEC",
+     "16:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:00",
+   "arr_date": "11/10/2026",
+   "arr": "18:10",
+   "train_no": "07171",
+   "calls": [
+    [
+     "Madinah",
+     "17:00"
+    ],
+    [
+     "KAEC",
+     "18:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "19:30",
+   "arr_date": "11/10/2026",
+   "arr": "20:40",
+   "train_no": "00191",
+   "calls": [
+    [
+     "Madinah",
+     "19:30"
+    ],
+    [
+     "KAEC",
+     "20:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:00",
+   "arr_date": "11/10/2026",
+   "arr": "21:10",
+   "train_no": "07201",
+   "calls": [
+    [
+     "Madinah",
+     "20:00"
+    ],
+    [
+     "KAEC",
+     "21:10"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "21:30",
+   "arr_date": "11/10/2026",
+   "arr": "22:40",
+   "train_no": "00211",
+   "calls": [
+    [
+     "Madinah",
+     "21:30"
+    ],
+    [
+     "KAEC",
+     "22:40"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "22:00",
+   "arr_date": "11/10/2026",
+   "arr": "23:10",
+   "train_no": "07221",
+   "calls": [
+    [
+     "Madinah",
+     "22:00"
+    ],
+    [
+     "KAEC",
+     "23:10"
+    ]
+   ]
+  }
+ ],
+ "11/10/2026|KAEC->Madinah": [
+  {
+   "dep_date": "11/10/2026",
+   "dep": "06:36",
+   "arr_date": "11/10/2026",
+   "arr": "07:54",
+   "train_no": "07060",
+   "calls": [
+    [
+     "KAEC",
+     "06:36"
+    ],
+    [
+     "Madinah",
+     "07:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "07:07",
+   "arr_date": "11/10/2026",
+   "arr": "08:25",
+   "train_no": "00060",
+   "calls": [
+    [
+     "KAEC",
+     "07:07"
+    ],
+    [
+     "Madinah",
+     "08:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:07",
+   "arr_date": "11/10/2026",
+   "arr": "10:25",
+   "train_no": "00080",
+   "calls": [
+    [
+     "KAEC",
+     "09:07"
+    ],
+    [
+     "Madinah",
+     "10:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "09:36",
+   "arr_date": "11/10/2026",
+   "arr": "10:54",
+   "train_no": "07090",
+   "calls": [
+    [
+     "KAEC",
+     "09:36"
+    ],
+    [
+     "Madinah",
+     "10:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "10:36",
+   "arr_date": "11/10/2026",
+   "arr": "11:54",
+   "train_no": "07100",
+   "calls": [
+    [
+     "KAEC",
+     "10:36"
+    ],
+    [
+     "Madinah",
+     "11:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:07",
+   "arr_date": "11/10/2026",
+   "arr": "13:25",
+   "train_no": "00110",
+   "calls": [
+    [
+     "KAEC",
+     "12:07"
+    ],
+    [
+     "Madinah",
+     "13:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "12:36",
+   "arr_date": "11/10/2026",
+   "arr": "13:54",
+   "train_no": "07120",
+   "calls": [
+    [
+     "KAEC",
+     "12:36"
+    ],
+    [
+     "Madinah",
+     "13:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:07",
+   "arr_date": "11/10/2026",
+   "arr": "16:25",
+   "train_no": "00140",
+   "calls": [
+    [
+     "KAEC",
+     "15:07"
+    ],
+    [
+     "Madinah",
+     "16:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "15:36",
+   "arr_date": "11/10/2026",
+   "arr": "16:54",
+   "train_no": "07150",
+   "calls": [
+    [
+     "KAEC",
+     "15:36"
+    ],
+    [
+     "Madinah",
+     "16:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "17:36",
+   "arr_date": "11/10/2026",
+   "arr": "18:54",
+   "train_no": "07170",
+   "calls": [
+    [
+     "KAEC",
+     "17:36"
+    ],
+    [
+     "Madinah",
+     "18:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "18:07",
+   "arr_date": "11/10/2026",
+   "arr": "19:25",
+   "train_no": "00170",
+   "calls": [
+    [
+     "KAEC",
+     "18:07"
+    ],
+    [
+     "Madinah",
+     "19:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:07",
+   "arr_date": "11/10/2026",
+   "arr": "21:25",
+   "train_no": "00190",
+   "calls": [
+    [
+     "KAEC",
+     "20:07"
+    ],
+    [
+     "Madinah",
+     "21:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "20:36",
+   "arr_date": "11/10/2026",
+   "arr": "21:54",
+   "train_no": "07200",
+   "calls": [
+    [
+     "KAEC",
+     "20:36"
+    ],
+    [
+     "Madinah",
+     "21:54"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "22:07",
+   "arr_date": "11/10/2026",
+   "arr": "23:25",
+   "train_no": "00210",
+   "calls": [
+    [
+     "KAEC",
+     "22:07"
+    ],
+    [
+     "Madinah",
+     "23:25"
+    ]
+   ]
+  },
+  {
+   "dep_date": "11/10/2026",
+   "dep": "22:36",
+   "arr_date": "11/10/2026",
+   "arr": "23:54",
+   "train_no": "07220",
+   "calls": [
+    [
+     "KAEC",
+     "22:36"
+    ],
+    [
+     "Madinah",
+     "23:54"
+    ]
+   ]
+  }
+ ]
+}

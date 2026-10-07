@@ -1,0 +1,1137 @@
+{
+ "source": "Saudi Arabia Railways, Haramain High Speed Railway timetable (https://sar.hhr.sa/timetable)",
+ "station": "Madinah",
+ "days": {
+  "weekday": {
+   "date": "11/10/2026",
+   "departures": [
+    {
+     "time": "06:00",
+     "to": "KAEC",
+     "train": "07061"
+    },
+    {
+     "time": "06:30",
+     "to": "KAEC",
+     "train": "00061"
+    },
+    {
+     "time": "08:30",
+     "to": "KAEC",
+     "train": "00081"
+    },
+    {
+     "time": "09:00",
+     "to": "KAEC",
+     "train": "07091"
+    },
+    {
+     "time": "09:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01091"
+    },
+    {
+     "time": "10:00",
+     "to": "KAEC",
+     "train": "07101"
+    },
+    {
+     "time": "10:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01101"
+    },
+    {
+     "time": "10:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01103"
+    },
+    {
+     "time": "11:30",
+     "to": "KAEC",
+     "train": "00111"
+    },
+    {
+     "time": "11:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01113"
+    },
+    {
+     "time": "12:00",
+     "to": "KAEC",
+     "train": "07121"
+    },
+    {
+     "time": "12:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01121"
+    },
+    {
+     "time": "13:00",
+     "to": "Jeddah Airport (KAIA)",
+     "train": "08131"
+    },
+    {
+     "time": "13:20",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01135"
+    },
+    {
+     "time": "13:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01131"
+    },
+    {
+     "time": "13:50",
+     "to": "Makkah",
+     "train": "03133"
+    },
+    {
+     "time": "14:30",
+     "to": "KAEC",
+     "train": "00141"
+    },
+    {
+     "time": "14:50",
+     "to": "Makkah",
+     "train": "03143"
+    },
+    {
+     "time": "15:00",
+     "to": "KAEC",
+     "train": "07151"
+    },
+    {
+     "time": "15:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01151"
+    },
+    {
+     "time": "15:50",
+     "to": "Makkah",
+     "train": "03153"
+    },
+    {
+     "time": "16:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01161"
+    },
+    {
+     "time": "16:50",
+     "to": "Makkah",
+     "train": "03163"
+    },
+    {
+     "time": "17:00",
+     "to": "KAEC",
+     "train": "07171"
+    },
+    {
+     "time": "17:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01171"
+    },
+    {
+     "time": "17:50",
+     "to": "Makkah",
+     "train": "03173"
+    },
+    {
+     "time": "18:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01181"
+    },
+    {
+     "time": "19:00",
+     "to": "Jeddah Airport (KAIA)",
+     "train": "08191"
+    },
+    {
+     "time": "19:30",
+     "to": "KAEC",
+     "train": "00191"
+    },
+    {
+     "time": "19:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01193"
+    },
+    {
+     "time": "20:00",
+     "to": "KAEC",
+     "train": "07201"
+    },
+    {
+     "time": "20:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01201"
+    },
+    {
+     "time": "20:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01203"
+    },
+    {
+     "time": "21:30",
+     "to": "KAEC",
+     "train": "00211"
+    },
+    {
+     "time": "22:00",
+     "to": "KAEC",
+     "train": "07221"
+    }
+   ],
+   "arrivals": [
+    {
+     "time": "07:54",
+     "from": "KAEC",
+     "train": "07060"
+    },
+    {
+     "time": "08:25",
+     "from": "KAEC",
+     "train": "00060"
+    },
+    {
+     "time": "09:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01070"
+    },
+    {
+     "time": "09:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01072"
+    },
+    {
+     "time": "10:25",
+     "from": "KAEC",
+     "train": "00080"
+    },
+    {
+     "time": "10:54",
+     "from": "KAEC",
+     "train": "07090"
+    },
+    {
+     "time": "11:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01090"
+    },
+    {
+     "time": "11:54",
+     "from": "KAEC",
+     "train": "07100"
+    },
+    {
+     "time": "12:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01100"
+    },
+    {
+     "time": "12:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01102"
+    },
+    {
+     "time": "13:25",
+     "from": "KAEC",
+     "train": "00110"
+    },
+    {
+     "time": "13:54",
+     "from": "KAEC",
+     "train": "07120"
+    },
+    {
+     "time": "14:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01120"
+    },
+    {
+     "time": "14:35",
+     "from": "Makkah",
+     "train": "03122"
+    },
+    {
+     "time": "14:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08130"
+    },
+    {
+     "time": "15:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01130"
+    },
+    {
+     "time": "16:25",
+     "from": "KAEC",
+     "train": "00140"
+    },
+    {
+     "time": "16:35",
+     "from": "Makkah",
+     "train": "03142"
+    },
+    {
+     "time": "16:54",
+     "from": "KAEC",
+     "train": "07150"
+    },
+    {
+     "time": "17:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01150"
+    },
+    {
+     "time": "17:35",
+     "from": "Makkah",
+     "train": "03152"
+    },
+    {
+     "time": "18:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01160"
+    },
+    {
+     "time": "18:35",
+     "from": "Makkah",
+     "train": "03162"
+    },
+    {
+     "time": "18:54",
+     "from": "KAEC",
+     "train": "07170"
+    },
+    {
+     "time": "19:25",
+     "from": "KAEC",
+     "train": "00170"
+    },
+    {
+     "time": "19:35",
+     "from": "Makkah",
+     "train": "03172"
+    },
+    {
+     "time": "20:05",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01176"
+    },
+    {
+     "time": "20:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01180"
+    },
+    {
+     "time": "20:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08190"
+    },
+    {
+     "time": "21:25",
+     "from": "KAEC",
+     "train": "00190"
+    },
+    {
+     "time": "21:54",
+     "from": "KAEC",
+     "train": "07200"
+    },
+    {
+     "time": "22:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01200"
+    },
+    {
+     "time": "23:25",
+     "from": "KAEC",
+     "train": "00210"
+    },
+    {
+     "time": "23:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01212"
+    },
+    {
+     "time": "23:54",
+     "from": "KAEC",
+     "train": "07220"
+    }
+   ]
+  },
+  "friday": {
+   "date": "09/10/2026",
+   "departures": [
+    {
+     "time": "00:00",
+     "to": "KAEC",
+     "train": "07001"
+    },
+    {
+     "time": "08:00",
+     "to": "KAEC",
+     "train": "07081"
+    },
+    {
+     "time": "08:30",
+     "to": "KAEC",
+     "train": "00081"
+    },
+    {
+     "time": "08:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01083"
+    },
+    {
+     "time": "09:00",
+     "to": "KAEC",
+     "train": "07091"
+    },
+    {
+     "time": "09:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01091"
+    },
+    {
+     "time": "10:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01101"
+    },
+    {
+     "time": "11:00",
+     "to": "KAEC",
+     "train": "07111"
+    },
+    {
+     "time": "11:30",
+     "to": "KAEC",
+     "train": "00111"
+    },
+    {
+     "time": "11:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01113"
+    },
+    {
+     "time": "12:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01121"
+    },
+    {
+     "time": "12:50",
+     "to": "Makkah",
+     "train": "03123"
+    },
+    {
+     "time": "13:00",
+     "to": "Jeddah Airport (KAIA)",
+     "train": "08131"
+    },
+    {
+     "time": "13:20",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01135"
+    },
+    {
+     "time": "13:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01131"
+    },
+    {
+     "time": "14:30",
+     "to": "KAEC",
+     "train": "00141"
+    },
+    {
+     "time": "15:00",
+     "to": "KAEC",
+     "train": "07151"
+    },
+    {
+     "time": "15:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01151"
+    },
+    {
+     "time": "15:50",
+     "to": "Makkah",
+     "train": "03153"
+    },
+    {
+     "time": "16:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01161"
+    },
+    {
+     "time": "16:50",
+     "to": "Makkah",
+     "train": "03163"
+    },
+    {
+     "time": "17:00",
+     "to": "KAEC",
+     "train": "07171"
+    },
+    {
+     "time": "17:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01171"
+    },
+    {
+     "time": "17:50",
+     "to": "Makkah",
+     "train": "03173"
+    },
+    {
+     "time": "18:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01181"
+    },
+    {
+     "time": "19:00",
+     "to": "Jeddah Airport (KAIA)",
+     "train": "08191"
+    },
+    {
+     "time": "19:30",
+     "to": "KAEC",
+     "train": "00191"
+    },
+    {
+     "time": "19:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01193"
+    },
+    {
+     "time": "20:00",
+     "to": "KAEC",
+     "train": "07201"
+    },
+    {
+     "time": "20:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01201"
+    },
+    {
+     "time": "20:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01203"
+    },
+    {
+     "time": "21:30",
+     "to": "KAEC",
+     "train": "00211"
+    },
+    {
+     "time": "22:00",
+     "to": "KAEC",
+     "train": "07221"
+    },
+    {
+     "time": "22:30",
+     "to": "KAEC",
+     "train": "00221"
+    },
+    {
+     "time": "23:00",
+     "to": "Jeddah Airport (KAIA)",
+     "train": "08231"
+    }
+   ],
+   "arrivals": [
+    {
+     "time": "00:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01220"
+    },
+    {
+     "time": "00:45",
+     "from": "KAEC",
+     "train": "00222"
+    },
+    {
+     "time": "00:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08230"
+    },
+    {
+     "time": "01:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08000"
+    },
+    {
+     "time": "09:54",
+     "from": "KAEC",
+     "train": "07080"
+    },
+    {
+     "time": "10:25",
+     "from": "KAEC",
+     "train": "00080"
+    },
+    {
+     "time": "10:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01082"
+    },
+    {
+     "time": "10:54",
+     "from": "KAEC",
+     "train": "07090"
+    },
+    {
+     "time": "11:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01090"
+    },
+    {
+     "time": "11:45",
+     "from": "KAEC",
+     "train": "00092"
+    },
+    {
+     "time": "12:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01100"
+    },
+    {
+     "time": "12:54",
+     "from": "KAEC",
+     "train": "07110"
+    },
+    {
+     "time": "13:25",
+     "from": "KAEC",
+     "train": "00110"
+    },
+    {
+     "time": "14:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01120"
+    },
+    {
+     "time": "14:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08130"
+    },
+    {
+     "time": "15:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01130"
+    },
+    {
+     "time": "16:25",
+     "from": "KAEC",
+     "train": "00140"
+    },
+    {
+     "time": "16:35",
+     "from": "Makkah",
+     "train": "03142"
+    },
+    {
+     "time": "16:54",
+     "from": "KAEC",
+     "train": "07150"
+    },
+    {
+     "time": "17:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01150"
+    },
+    {
+     "time": "17:35",
+     "from": "Makkah",
+     "train": "03152"
+    },
+    {
+     "time": "18:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01160"
+    },
+    {
+     "time": "18:35",
+     "from": "Makkah",
+     "train": "03162"
+    },
+    {
+     "time": "18:54",
+     "from": "KAEC",
+     "train": "07170"
+    },
+    {
+     "time": "19:25",
+     "from": "KAEC",
+     "train": "00170"
+    },
+    {
+     "time": "19:35",
+     "from": "Makkah",
+     "train": "03172"
+    },
+    {
+     "time": "20:05",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01176"
+    },
+    {
+     "time": "20:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01180"
+    },
+    {
+     "time": "20:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08190"
+    },
+    {
+     "time": "21:25",
+     "from": "KAEC",
+     "train": "00190"
+    },
+    {
+     "time": "21:54",
+     "from": "KAEC",
+     "train": "07200"
+    },
+    {
+     "time": "22:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01200"
+    },
+    {
+     "time": "22:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01202"
+    },
+    {
+     "time": "23:25",
+     "from": "KAEC",
+     "train": "00210"
+    },
+    {
+     "time": "23:54",
+     "from": "KAEC",
+     "train": "07220"
+    }
+   ]
+  },
+  "thursday": {
+   "date": "08/10/2026",
+   "departures": [
+    {
+     "time": "06:00",
+     "to": "KAEC",
+     "train": "07061"
+    },
+    {
+     "time": "06:30",
+     "to": "KAEC",
+     "train": "00061"
+    },
+    {
+     "time": "07:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01073"
+    },
+    {
+     "time": "08:30",
+     "to": "KAEC",
+     "train": "00081"
+    },
+    {
+     "time": "09:00",
+     "to": "KAEC",
+     "train": "07091"
+    },
+    {
+     "time": "09:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01091"
+    },
+    {
+     "time": "10:00",
+     "to": "KAEC",
+     "train": "07101"
+    },
+    {
+     "time": "10:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01101"
+    },
+    {
+     "time": "11:30",
+     "to": "KAEC",
+     "train": "00111"
+    },
+    {
+     "time": "11:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01113"
+    },
+    {
+     "time": "12:00",
+     "to": "KAEC",
+     "train": "07121"
+    },
+    {
+     "time": "12:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01121"
+    },
+    {
+     "time": "12:50",
+     "to": "Makkah",
+     "train": "03123"
+    },
+    {
+     "time": "13:00",
+     "to": "Jeddah Airport (KAIA)",
+     "train": "08131"
+    },
+    {
+     "time": "13:20",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01135"
+    },
+    {
+     "time": "13:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01131"
+    },
+    {
+     "time": "13:50",
+     "to": "Makkah",
+     "train": "03133"
+    },
+    {
+     "time": "14:30",
+     "to": "KAEC",
+     "train": "00141"
+    },
+    {
+     "time": "14:50",
+     "to": "Makkah",
+     "train": "03143"
+    },
+    {
+     "time": "15:00",
+     "to": "KAEC",
+     "train": "07151"
+    },
+    {
+     "time": "15:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01151"
+    },
+    {
+     "time": "15:50",
+     "to": "Makkah",
+     "train": "03153"
+    },
+    {
+     "time": "16:00",
+     "to": "KAEC",
+     "train": "07161"
+    },
+    {
+     "time": "16:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01161"
+    },
+    {
+     "time": "16:50",
+     "to": "Makkah",
+     "train": "03163"
+    },
+    {
+     "time": "17:00",
+     "to": "KAEC",
+     "train": "07171"
+    },
+    {
+     "time": "17:20",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01175"
+    },
+    {
+     "time": "17:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01171"
+    },
+    {
+     "time": "18:00",
+     "to": "KAEC",
+     "train": "07181"
+    },
+    {
+     "time": "18:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01181"
+    },
+    {
+     "time": "19:00",
+     "to": "Jeddah Airport (KAIA)",
+     "train": "08191"
+    },
+    {
+     "time": "19:30",
+     "to": "KAEC",
+     "train": "00191"
+    },
+    {
+     "time": "19:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01193"
+    },
+    {
+     "time": "20:00",
+     "to": "KAEC",
+     "train": "07201"
+    },
+    {
+     "time": "20:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01201"
+    },
+    {
+     "time": "20:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01203"
+    },
+    {
+     "time": "21:30",
+     "to": "KAEC",
+     "train": "00211"
+    },
+    {
+     "time": "21:50",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01213"
+    },
+    {
+     "time": "22:30",
+     "to": "KAEC",
+     "train": "00221"
+    },
+    {
+     "time": "23:00",
+     "to": "Jeddah Airport (KAIA)",
+     "train": "08231"
+    },
+    {
+     "time": "23:30",
+     "to": "Jeddah (Al-Sulimaniyah)",
+     "train": "01231"
+    }
+   ],
+   "arrivals": [
+    {
+     "time": "00:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01220"
+    },
+    {
+     "time": "00:45",
+     "from": "KAEC",
+     "train": "00222"
+    },
+    {
+     "time": "00:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08230"
+    },
+    {
+     "time": "01:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01230"
+    },
+    {
+     "time": "01:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01232"
+    },
+    {
+     "time": "07:54",
+     "from": "KAEC",
+     "train": "07060"
+    },
+    {
+     "time": "08:25",
+     "from": "KAEC",
+     "train": "00060"
+    },
+    {
+     "time": "09:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01070"
+    },
+    {
+     "time": "09:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01072"
+    },
+    {
+     "time": "10:25",
+     "from": "KAEC",
+     "train": "00080"
+    },
+    {
+     "time": "10:54",
+     "from": "KAEC",
+     "train": "07090"
+    },
+    {
+     "time": "11:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01090"
+    },
+    {
+     "time": "11:54",
+     "from": "KAEC",
+     "train": "07100"
+    },
+    {
+     "time": "12:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01100"
+    },
+    {
+     "time": "13:25",
+     "from": "KAEC",
+     "train": "00110"
+    },
+    {
+     "time": "13:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01112"
+    },
+    {
+     "time": "13:54",
+     "from": "KAEC",
+     "train": "07120"
+    },
+    {
+     "time": "14:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01120"
+    },
+    {
+     "time": "14:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08130"
+    },
+    {
+     "time": "15:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01130"
+    },
+    {
+     "time": "16:05",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01136"
+    },
+    {
+     "time": "16:25",
+     "from": "KAEC",
+     "train": "00140"
+    },
+    {
+     "time": "16:35",
+     "from": "Makkah",
+     "train": "03142"
+    },
+    {
+     "time": "16:54",
+     "from": "KAEC",
+     "train": "07150"
+    },
+    {
+     "time": "17:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01150"
+    },
+    {
+     "time": "17:35",
+     "from": "Makkah",
+     "train": "03152"
+    },
+    {
+     "time": "17:54",
+     "from": "KAEC",
+     "train": "07160"
+    },
+    {
+     "time": "18:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01160"
+    },
+    {
+     "time": "18:35",
+     "from": "Makkah",
+     "train": "03162"
+    },
+    {
+     "time": "18:54",
+     "from": "KAEC",
+     "train": "07170"
+    },
+    {
+     "time": "19:25",
+     "from": "KAEC",
+     "train": "00170"
+    },
+    {
+     "time": "19:54",
+     "from": "KAEC",
+     "train": "07180"
+    },
+    {
+     "time": "20:05",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01176"
+    },
+    {
+     "time": "20:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01180"
+    },
+    {
+     "time": "20:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01182"
+    },
+    {
+     "time": "20:48",
+     "from": "Jeddah Airport (KAIA)",
+     "train": "08190"
+    },
+    {
+     "time": "21:25",
+     "from": "KAEC",
+     "train": "00190"
+    },
+    {
+     "time": "21:40",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01192"
+    },
+    {
+     "time": "21:54",
+     "from": "KAEC",
+     "train": "07200"
+    },
+    {
+     "time": "22:20",
+     "from": "Jeddah (Al-Sulimaniyah)",
+     "train": "01200"
+    },
+    {
+     "time": "23:25",
+     "from": "KAEC",
+     "train": "00210"
+    }
+   ]
+  }
+ }
+}

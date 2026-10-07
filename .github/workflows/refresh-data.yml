@@ -1,0 +1,49 @@
+# Keep the map's timeline on today: every 3 hours, rebuild the DHDE map files (real
+# Open-Meteo weather and heat alerts, demo visitors and flows from 2 days ago to 5 days
+# ahead), commit them, and redeploy. Commits made with GITHUB_TOKEN don't trigger other
+# workflows, so this one dispatches the Pages deploy itself.
+name: Refresh map data
+
+on:
+  schedule:
+    - cron: '7 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests
+      - name: Build map data
+        working-directory: scripts
+        run: python gen_dhde_data.py
+      - name: Commit if changed
+        id: commit
+        run: |
+          git config user.name "dhde-bot"
+          git config user.email "dhde-bot@users.noreply.github.com"
+          git add public/data/live_demo.json public/data/market_voice_demo.json public/data/nodes.json public/data/routes.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "data: refresh map timeline $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main

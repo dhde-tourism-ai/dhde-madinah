@@ -84,14 +84,14 @@ export default function SummaryView({ data }: { data: AppData }) {
         </Card>
 
         <Card title={t('Historic sites', 'المواقع التاريخية')} sub={t('Visitors a day and time on site', 'الزوار يوميًا ومدة البقاء')} prov="illustrative" className="span-2">
-          <div className="site-cards">
+          <div className="scards">
             {historic.map((s) => {
               const ts = tel.sites[s.id]
               return (
-                <a key={s.id} className="site-card" href={`#/sites/${s.id}`}>
-                  {s.photo ? <img src={s.photo.url} alt="" loading="lazy" /> : <div className="site-card-ph" style={{ background: clusterOf(s).colour }}></div>}
-                  <span className="site-card-body">
-                    <span className="site-card-name">{t(s.name, s.name_ar)}</span>
+                <a key={s.id} className="scard" href={`#/sites/${s.id}`}>
+                  {s.photo ? <img src={s.photo.url} alt="" loading="lazy" /> : <div className="scard-ph" style={{ background: clusterOf(s).colour }}></div>}
+                  <span className="scard-body">
+                    <span className="scard-name">{t(s.name, s.name_ar)}</span>
                     <span className="muted small tnum">
                       {fmtCompact(ts?.daily_devices[0], lang)} {t('a day', 'يوميًا')} · {ts?.dwell.median_min} {t('min', 'د')}
                     </span>
