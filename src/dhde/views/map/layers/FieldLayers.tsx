@@ -16,7 +16,8 @@ export function DensityLayer({ nodes, frame }: { nodes: MapNode[]; frame: Record
           return {
             lat: n.lat,
             lon: n.lon,
-            radius: 3500 + Math.sqrt(f.onSite) * 260,
+            // Madinah sites sit a few km apart: a city-scale glow that swells with the hour.
+            radius: Math.min(1400, 180 + Math.sqrt(f.onSite) * 7),
             rgb: '236,131,90',
             alpha: Math.min(0.8, 0.25 + 0.5 * Math.min(1.1, f.load)),
           }

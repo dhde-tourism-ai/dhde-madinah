@@ -273,3 +273,38 @@ export function nextTrains(runs: RailRun[], stationId: string, m: number, n = 6)
   }
   return out.sort((a, b) => a.min - b.min).slice(0, n)
 }
+
+/**
+ * Like trainsAt, with what a hover card needs: whether the train is heading to the line's
+ * station (arriving) or away from it, and its timetabled minute at the station.
+ */
+export function trainsInfoAt(r: RailRun, m: number, cache: Map<string, Leg[]>): { at: [number, number]; arriving: boolean; stationMin: number }[] {
+  const total = r.km[r.km.length - 1]
+  const travel = (total / r.speedKmh) * 60
+  const out: { at: [number, number]; arriving: boolean; stationMin: number }[] = []
+  for (const dir of [0, 1] as const) {
+    const key = `${r.key}:${dir}`
+    let L = cache.get(key)
+    if (!L) {
+      L = legs(r, dir)
+      cache.set(key, L)
+    }
+    const run = L[L.length - 1].arr
+    const towards = r.fixed ? (r.fixed.stationAtEnd ? dir === 0 : dir === 1) : dir === 0
+    for (const t0 of departures(r, dir)) {
+      const x = m - t0
+      if (x < 0 || x > run) continue
+      let i = 0
+      while (i < L.length - 1 && L[i + 1].arr <= x) i++
+      let d: number
+      if (x <= L[i].dep) d = L[i].d
+      else {
+        const nxt = L[Math.min(i + 1, L.length - 1)]
+        const span = nxt.arr - L[i].dep || 1
+        d = L[i].d + ((x - L[i].dep) / span) * (nxt.d - L[i].d)
+      }
+      out.push({ at: along(r, dir ? total - d : d), arriving: towards, stationMin: towards ? t0 + travel : t0 })
+    }
+  }
+  return out
+}

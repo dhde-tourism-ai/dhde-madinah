@@ -1,11 +1,13 @@
 import type L from 'leaflet'
 import { CanvasOverlay } from './CanvasOverlay'
-import { vehicleClock } from '../../../lib/vehicleClock'
-import { trainsAt } from '../../../lib/railModel'
+import { vehicleClock, clock } from '../../../lib/vehicleClock'
+import { trainsInfoAt } from '../../../lib/railModel'
 import { alongPath } from '../../../lib/busPath'
 import type { SnappedTrip } from '../../../lib/busPath'
 import type { RailRun } from '../../../lib/railModel'
-import { drawBus } from './busGlyph'
+import { drawBus, drawTrain } from './busGlyph'
+import { clearHits, setHits } from './hits'
+import type { Hit } from './hits'
 
 /** A bus trip: stop positions and the departure minute at each, in calling order. */
 export interface BusTrip {
@@ -15,6 +17,9 @@ export interface BusTrip {
   snap: SnappedTrip | null
   /** Line colour: the bus icon is drawn in it. */
   colour?: string
+  /** Line name and stop names, for the hover card. */
+  line?: string
+  stopNames?: string[]
 }
 
 export interface VehicleStyle {
@@ -22,10 +27,13 @@ export interface VehicleStyle {
   train: string
 }
 
+const HITS = 'vehicles'
+
 /**
- * Moving buses and trains on vehicleClock: buses where their timetable puts them
- * (straight between stops), trains on the illustrative rail model (lib/railModel),
- * stopping at stations.
+ * Moving city buses and trains on vehicleClock: buses where their timetable puts them
+ * (along their line between stops), trains on the rail model (the official Haramain
+ * timetable at Madinah station), stopping at stations. Each is drawn as its own pictogram
+ * and registered for hover cards.
  */
 export class VehicleCanvas extends CanvasOverlay {
   private buses: BusTrip[] = []
@@ -51,6 +59,7 @@ export class VehicleCanvas extends CanvasOverlay {
 
   onRemove(map: L.Map): this {
     cancelAnimationFrame(this.raf)
+    clearHits(HITS)
     return super.onRemove(map)
   }
 
@@ -64,24 +73,29 @@ export class VehicleCanvas extends CanvasOverlay {
     const m = vehicleClock.minute()
     const w = this.size.x
     const h = this.size.y
-    // Small at the prefecture view, a little larger as you zoom in (matching the stop and station dots).
     const z = this._map.getZoom()
-    const trainR = z >= 14 ? 3 : z >= 12 ? 2.4 : 2
+    const trainS = z >= 14 ? 12 : z >= 12 ? 9 : 7
     // Bus icons from street level; dots when zoomed out so the network stays readable.
     const busS = z >= 15 ? 13 : z >= 14 ? 11 : z >= 13 ? 9 : 4
-    const dot = (p: L.Point, r: number, fill: string) => {
-      if (p.x < -10 || p.y < -10 || p.x > w + 10 || p.y > h + 10) return
-      ctx.beginPath()
-      ctx.arc(p.x, p.y, r + 0.75, 0, Math.PI * 2)
-      ctx.fillStyle = '#ffffff'
-      ctx.fill()
-      ctx.beginPath()
-      ctx.arc(p.x, p.y, r, 0, Math.PI * 2)
-      ctx.fillStyle = fill
-      ctx.fill()
-    }
+    const hits: Hit[] = []
+    const inView = (p: L.Point) => p.x >= -14 && p.y >= -14 && p.x <= w + 14 && p.y <= h + 14
 
-    for (const r of this.rail) for (const ll of trainsAt(r, m, this.legCache)) dot(this.toCanvas(ll), trainR, this.style.train)
+    for (const r of this.rail) {
+      for (const tr of trainsInfoAt(r, m, this.legCache)) {
+        const p = this.toCanvas(tr.at)
+        if (!inView(p)) continue
+        drawTrain(ctx, p.x, p.y, trainS, this.style.train)
+        const c = this._map.latLngToContainerPoint(tr.at)
+        hits.push({
+          x: c.x,
+          y: c.y,
+          r: trainS,
+          kind: 'train',
+          title: r.lineName[0],
+          lines: [tr.arriving ? `Arriving at Madinah ${clock(tr.stationMin)}` : `Left Madinah ${clock(tr.stationMin)}`, r.fixed ? 'Official timetable (sar.hhr.sa)' : 'Illustrative service'],
+        })
+      }
+    }
 
     for (const b of this.buses) {
       const n = b.min.length
@@ -101,8 +115,21 @@ export class VehicleCanvas extends CanvasOverlay {
         at = [a[0] + (c[0] - a[0]) * f, a[1] + (c[1] - a[1]) * f]
       }
       const p = this.toCanvas(at)
-      if (p.x < -12 || p.y < -12 || p.x > w + 12 || p.y > h + 12) continue
+      if (!inView(p)) continue
       drawBus(ctx, p.x, p.y, busS, b.colour ?? this.style.bus)
+      if (busS >= 6) {
+        const c = this._map.latLngToContainerPoint(at)
+        const next = b.stopNames?.[i + 1]
+        hits.push({
+          x: c.x,
+          y: c.y,
+          r: busS / 2 + 2,
+          kind: 'bus',
+          title: `City bus · ${b.line ?? 'Madinah Bus'}`,
+          lines: [next ? `Next stop: ${next} at ${clock(b.min[i + 1])}` : `Next stop at ${clock(b.min[i + 1])}`, `Terminus ${clock(b.min[n - 1])} · timetable estimated from published hours`],
+        })
+      }
     }
+    setHits(HITS, hits)
   }
 }

@@ -21,12 +21,13 @@ function streamFor(key: string, path: [number, number][], flow: number, dir: 1 |
     key,
     path,
     colour: dir === 1 ? ARRIVE : DEPART,
-    kind: rail ? 'rail' : 'person',
-    // Density and speed both scale with volume: a busy road reads as a dense, brisk stream.
-    density: flow <= 0 ? 0 : 0.6 + flow / 45,
-    speed: (22 + 40 * v) * (rail ? 1.9 : 1),
-    lane: rail ? 2.5 : 3.2,
-    size: rail ? 2.8 : 2.6,
+    kind: rail ? 'rail' : 'vehicle',
+    // Trips by road: density scales with volume; an unhurried pace so they read as traffic, not a sprint.
+    density: flow <= 0 ? 0 : 0.4 + flow / 90,
+    speed: 7 + 9 * v,
+    // Saudi Arabia drives on the right: negative = right of travel.
+    lane: rail ? -2.5 : -3,
+    size: 2.1,
   }
 }
 
@@ -58,6 +59,8 @@ export function FlowLayer({ live, routes, t, paused }: { live: LiveData; routes:
         fw *= 1 - DIVERT
         rv *= 1 - DIVERT
       }
+      // Trains are drawn as train icons on the timetable; no passenger particles on the rail line.
+      if (rail) continue
       streams.push(streamFor(`${rid}:f`, r.path, fw, 1, rail))
       streams.push(streamFor(`${rid}:r`, reversePath(r.path), rv, -1, rail))
     }
@@ -86,14 +89,14 @@ export function FlowLayer({ live, routes, t, paused }: { live: LiveData; routes:
               <strong>{tr(r.label, r.label_ja)}</strong>
               <div className="tip-row">
                 <i className="k-line" style={{ borderColor: ARRIVE }}></i>
-                {tr('Arriving', '到着')} <b className="num">{(f.forward[t] ?? 0).toLocaleString('en-US')}</b> {tr('people/h', '人/時')}
+                {tr('Towards', 'ذهابًا')} <b className="num">{(f.forward[t] ?? 0).toLocaleString('en-US')}</b> {tr('people/h', 'شخص/س')}
               </div>
               <div className="tip-row">
                 <i className="k-line" style={{ borderColor: DEPART }}></i>
-                {tr('Departing', '出発')} <b className="num">{(f.reverse[t] ?? 0).toLocaleString('en-US')}</b> {tr('people/h', '人/時')}
+                {tr('Away', 'إيابًا')} <b className="num">{(f.reverse[t] ?? 0).toLocaleString('en-US')}</b> {tr('people/h', 'شخص/س')}
               </div>
               <div className="tip-sub">
-                {rail ? tr('Hokuriku Shinkansen, line approximate', '北陸新幹線（線形は概略）') : `${r.distance_km} km · ${r.duration_min} min ${tr('by road', '（道路）')}`}
+                {rail ? tr('Haramain High Speed Railway passengers', 'ركاب قطار الحرمين') : `${r.distance_km} km · ${r.duration_min} min ${tr('by road', 'بالطريق')}`}
               </div>
             </Tooltip>
           </Polyline>

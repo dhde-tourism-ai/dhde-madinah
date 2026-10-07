@@ -13,6 +13,8 @@ import { clusterOf } from '../lib/sites'
 import { go } from '../lib/route'
 import { Loading } from '../components/ui'
 import { useLang } from '../lib/i18n'
+import { hhmmToHours, PRAYERS, prayersFor } from '../lib/data'
+import type { MadinahExtras } from '../dhde/views/map/layers/MadinahLayers'
 
 /**
  * The oversight map: the DHDE map (same UI as dhde-app) on Madinah data, with every
@@ -34,9 +36,19 @@ export default function OversightView({ data, selected }: { data: AppData; selec
     return allBookings(ctx, st, dates).map((b) => {
       const first = ctx.byId[sitesFor(ctx, b.value)[0]]
       const colour = b.value === 'route:ALL' ? '#8b9dff' : first ? clusterOf(first).colour : '#199e70'
-      return { b, colour }
+      const origin = ctx.origins.find((o) => o.id === b.origin)
+      return { b, colour, siteName: (id: string) => ctx.byId[id]?.short ?? id, originName: origin?.label ?? b.origin }
     })
   }, [ctx, st, live.data])
+
+  const extras = useMemo<MadinahExtras | null>(
+    () => (data.sites ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois } : null),
+    [data.sites, data.isochrones, data.pois],
+  )
+  const prayersOn = (date: string) => {
+    const p = prayersFor(data, date)
+    return p ? PRAYERS.map((x) => hhmmToHours(p[x.id])) : []
+  }
 
   if (live.isLoading || registry.isLoading) return <Loading what={t('Loading the oversight map…', 'جارٍ تحميل خريطة الإشراف…')} />
 
@@ -54,6 +66,8 @@ export default function OversightView({ data, selected }: { data: AppData; selec
       onSelect={(id) => go('map', id ?? null)}
       onOpenNode={(id) => go('sites', id)}
       coaches={coaches}
+      extras={extras}
+      prayersOn={prayersOn}
     />
   )
 }

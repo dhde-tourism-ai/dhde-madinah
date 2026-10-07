@@ -47,6 +47,9 @@ import { SiteCards } from './layers/SiteCards'
 import { Declutter } from './Declutter'
 import { CoachesLayer } from './layers/CoachesLayer'
 import type { CoachItem } from './canvas/CoachCanvas'
+import { BusinessLayer, ClusterLayer, CrowdLayer, WalkLayer } from './layers/MadinahLayers'
+import type { MadinahExtras } from './layers/MadinahLayers'
+import { VehicleHover } from './layers/VehicleHover'
 
 /** Madinah: the Haram, both site clusters, Jabal Ayr to the south and the airport to the north-east. */
 const VIEW_BOUNDS: [[number, number], [number, number]] = [
@@ -54,11 +57,22 @@ const VIEW_BOUNDS: [[number, number], [number, number]] = [
   [24.545, 39.7],
 ]
 
+/** ?at=lat,lon,zoom opens the map there (shareable close-ups, e.g. one site's crowd). */
+function urlAt(): [number, number, number] | null {
+  const v = new URLSearchParams(window.location.search).get('at')?.split(',').map(Number)
+  return v && v.length === 3 && v.every((x) => !Number.isNaN(x)) ? [v[0], v[1], v[2]] : null
+}
+
 function FitView({ narrow }: { narrow: boolean }) {
   const map = useMap()
   useEffect(() => {
     const id = window.setTimeout(() => {
       map.invalidateSize()
+      const at = urlAt()
+      if (at) {
+        map.setView([at[0], at[1]], at[2])
+        return
+      }
       map.fitBounds(VIEW_BOUNDS, narrow ? { paddingTopLeft: [8, 8], paddingBottomRight: [8, 150] } : { paddingTopLeft: [330, 64], paddingBottomRight: [440, 96] })
     }, 50)
     return () => window.clearTimeout(id)
@@ -206,9 +220,13 @@ interface MapViewProps {
   onOpenNode: (id: string) => void
   /** Booked tour coaches from the operator console. */
   coaches?: CoachItem[]
+  /** Madinah sites, walking reach and places for the Madinah layers. */
+  extras?: MadinahExtras | null
+  /** Prayer times (fractional hours) for a Riyadh date. */
+  prayersOn?: (date: string) => number[]
 }
 
-export default function MapView({ registry, dashboard, economics, economicsError, live, liveError, routes, market, selectedId, onSelect, onOpenNode, coaches = [] }: MapViewProps) {
+export default function MapView({ registry, dashboard, economics, economicsError, live, liveError, routes, market, selectedId, onSelect, onOpenNode, coaches = [], extras = null, prayersOn }: MapViewProps) {
   const { t: tr, lang } = useLang()
   const narrow = useIsNarrow()
   const [url] = useState(readUrlState)
@@ -367,10 +385,14 @@ export default function MapView({ registry, dashboard, economics, economicsError
           <>
             {layerOn('density') && <DensityLayer nodes={nodes} frame={frame} />}
             {layerOn('traffic') && <TrafficLayer live={live} routes={routes} t={t} paused={paused} />}
-            {layerOn('flow') && <FlowLayer live={live} routes={routes} t={t} paused={paused} />}
+            {layerOn('trips') && <FlowLayer live={live} routes={routes} t={t} paused={paused} />}
+            {layerOn('flow') && extras && <CrowdLayer extras={extras} frame={frame} />}
+            {layerOn('walk') && extras && <WalkLayer extras={extras} frame={frame} />}
             {layerOn('sentiment') && <SentimentLayer nodes={nodes} frame={frame} />}
           </>
         )}
+        {layerOn('business') && extras && live && <BusinessLayer extras={extras} hour={t % 24} prayers={prayersOn?.(live.days[day]?.date ?? '') ?? []} />}
+        {layerOn('clusters') && extras && <ClusterLayer extras={extras} onSelect={(id) => onSelect(id)} />}
         {market && layerOn('hotels') && <HotelsLayer data={market} day={day} nodes={registry?.nodes ?? []} />}
         {market && layerOn('rsi') && <RsiLayer data={market} />}
         {transportOn && transportMap && (
@@ -389,7 +411,7 @@ export default function MapView({ registry, dashboard, economics, economicsError
         )}
         {coachesOn && <CoachesLayer items={coaches} />}
         {layerOn('economics') && economics && <EconomicsLayer economics={economics} nodes={allNodes} selectedId={selectedId} />}
-        {(layerOn('people') || layerOn('flow')) && (
+        {layerOn('people') && (
           <PeopleLayer
             nodes={layerOn('people') ? nodes : []}
             frame={frame}
@@ -414,6 +436,7 @@ export default function MapView({ registry, dashboard, economics, economicsError
           day={day}
         />
         {layerOn('nudges') && <NudgeLayer nudges={nudgesShown} routes={routes} day={day} activeId={activeNudge} onPick={pickNudge} />}
+        <VehicleHover />
         <FlyTo target={fly} />
         <KeepCardsInView />
         <Declutter />
@@ -426,7 +449,7 @@ export default function MapView({ registry, dashboard, economics, economicsError
             <span className="ss-time">{timeLabel(live, t, lang)}</span>
             {top ? (
               <span className="ss-msg">
-                <span className="ss-sev" style={{ background: SEV_COLOUR[top.sev] }} aria-hidden="true"></span>
+                <span className={`ss-sev${top.sev === 'crit' ? ' blink' : ''}`} style={{ background: SEV_COLOUR[top.sev] }} aria-hidden="true"></span>
                 {tr(top.en, top.ja)}
               </span>
             ) : (

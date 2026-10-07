@@ -47,7 +47,7 @@ export function TrafficLayer({ live, routes, t, paused }: { live: LiveData; rout
           kind: 'vehicle' as const,
           density: 0.5 + (vph / 260) * (0.6 + 1.6 * c),
           speed: 8 + 46 * (1 - c) ** 1.4,
-          lane: 2.6,
+          lane: -2.6, // right-hand traffic
           size: 2,
         }
         streams.push({ ...base, key: `${rid}:${i}:f`, path: r.path, from: a, to: b })

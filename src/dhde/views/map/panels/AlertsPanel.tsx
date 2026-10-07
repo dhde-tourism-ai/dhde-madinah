@@ -31,7 +31,7 @@ function Group({ title, icon, items, empty, onPick }: { title: string; icon: Ico
           {items.map((a) => {
             const body = (
               <>
-                <span className="al-sev" style={{ background: SEV_COLOUR[a.sev] }} aria-hidden="true"></span>
+                <span className={`al-sev${a.sev === 'crit' ? ' blink' : ''}`} style={{ background: SEV_COLOUR[a.sev] }} aria-hidden="true"></span>
                 <span className="al-text">
                   <span className="sr-only">{t(SEV_LABEL[a.sev][0], SEV_LABEL[a.sev][1])}: </span>
                   {t(a.en, a.ja)}

@@ -100,6 +100,77 @@ export function LayersPanel(p: Props) {
         <p className="lg-note">{t('Flags show the selected day. Full list in the Action nudges tab.', 'الأعلام لليوم المختار. القائمة الكاملة في تبويب الإجراءات.')}</p>
       </>
     ),
+    flow: (
+      <>
+        {[
+          ['#3987e5', 'Arriving through an entrance', 'يصل من مدخل'],
+          ['#7fe0c8', 'On site, lingering', 'في الموقع'],
+          ['#d55181', 'Leaving by another way', 'يغادر من طريق آخر'],
+        ].map(([c, en, ar]) => (
+          <div key={en} className="lg-row">
+            <span className="lg-dot" style={{ background: c }}></span>
+            {t(en, ar)}
+          </div>
+        ))}
+        <p className="lg-note">{t('One dot is a group on foot; dashed circle = the visit area. Time-lapse 12×, so a 40-minute visit plays in about 3 minutes.', 'النقطة مجموعة سيرًا؛ الدائرة المتقطعة منطقة الزيارة. عرض مسرّع ١٢×.')}</p>
+      </>
+    ),
+    trips: (
+      <>
+        <div className="lg-row">
+          <span className="lg-dot" style={{ background: '#3987e5' }}></span>
+          {t('Towards the site or the Haram', 'نحو الموقع أو الحرم')}
+        </div>
+        <div className="lg-row">
+          <span className="lg-dot" style={{ background: '#d55181' }}></span>
+          {t('Away', 'مغادرة')}
+        </div>
+        <p className="lg-note">{t('By car, taxi or bus; buses and coaches are drawn separately as icons.', 'بالسيارة أو الأجرة أو الحافلة؛ والحافلات تظهر كأيقونات منفصلة.')}</p>
+      </>
+    ),
+    clusters: (
+      <>
+        {[
+          ['#199e70', 'A · Quba and the wells (central loop)', 'أ · قباء والآبار'],
+          ['#c98500', 'B · Uhud and al-Khandaq', 'ب · أحد والخندق'],
+          ['#e66767', 'Jabal Ayr (stand-alone)', 'جبل عير (مستقل)'],
+        ].map(([c, en, ar]) => (
+          <div key={en} className="lg-row">
+            <span className="site-num sm" style={{ background: c }}>#</span>
+            {t(en, ar)}
+          </div>
+        ))}
+      </>
+    ),
+    walk: (
+      <>
+        <div className="lg-row">
+          <span className="lg-sq" style={{ background: '#3987e5' }}></span>
+          {t('Comfortable walk (5 / 10 / 15 min)', 'مشي مريح (٥ / ١٠ / ١٥ د)')}
+        </div>
+        <div className="lg-row">
+          <span className="lg-sq" style={{ background: '#d03b3b' }}></span>
+          {t('Too hot to walk that far now', 'حار جدًا للمشي هذه المسافة الآن')}
+        </div>
+      </>
+    ),
+    business: (
+      <>
+        {[
+          ['#ec835a', 'Restaurants and cafés', 'مطاعم ومقاهٍ'],
+          ['#b18cff', 'Shops and souvenirs', 'متاجر وهدايا'],
+          ['#5b9cf0', 'Hotels', 'فنادق'],
+          ['#3dbb6e', 'Services', 'خدمات'],
+          ['#e0a33a', 'Mosques', 'مساجد'],
+        ].map(([c, en, ar]) => (
+          <div key={en} className="lg-row">
+            <span className="lg-dot" style={{ background: c }}></span>
+            {t(en, ar)}
+          </div>
+        ))}
+        <p className="lg-note">{t('Bigger = busier at this hour (demo curve). Places are real (OpenStreetMap).', 'أكبر = أكثر ازدحامًا في هذه الساعة (تجريبي). الأماكن حقيقية.')}</p>
+      </>
+    ),
     coaches: (
       <>
         {[
@@ -109,11 +180,11 @@ export function LayersPanel(p: Props) {
           ['#8a94a6', 'Returning to hotel', 'العودة إلى الفندق'],
         ].map(([c, en, ar]) => (
           <div key={en} className="lg-row">
-            <span className="lg-bus" style={{ background: c }}></span>
+            <span className="lg-coach" style={{ background: c }}></span>
             {t(en, ar)}
           </div>
         ))}
-        <p className="lg-note">{t('One icon per booked coach, on real roads (OSRM). Book and sign off coaches in the Operator view.', 'أيقونة لكل حافلة محجوزة على الطرق الفعلية. احجز ووقّع الحافلات من عرض المشغل.')}</p>
+        <p className="lg-note">{t('Private coaches: long icon with a gold roof stripe. City buses: square icon in the line colour. Trains: white capsule. Hover any vehicle for its next stop and time.', 'الحافلات الخاصة: أيقونة طويلة بشريط ذهبي. حافلات المدينة: أيقونة مربعة بلون الخط. القطار: كبسولة بيضاء. مرّر فوق أي مركبة لمعرفة محطتها التالية.')}</p>
       </>
     ),
     hotels: (
@@ -179,24 +250,7 @@ export function LayersPanel(p: Props) {
         <p className="lg-note">{t('Area = people on site. Colour = share of comfortable capacity.', '面積＝現地の人数。色＝快適容量に対する割合。')}</p>
       </>
     ),
-    density: <Grad from="rgba(236,131,90,0.1)" to="rgba(236,131,90,0.75)" left={t('Few', '少')} right={t('Many visitors', '多')} />,
-    flow: (
-      <>
-        <div className="lg-row">
-          <span className="lg-line" style={{ borderColor: 'var(--arrive)' }}></span>
-          {t('Arriving (toward a site, or into Fukui)', '到着（目的地へ／福井県内へ）')}
-        </div>
-        <div className="lg-row">
-          <span className="lg-line" style={{ borderColor: 'var(--depart)' }}></span>
-          {t('Departing (heading back)', '出発（帰路）')}
-        </div>
-        <div className="lg-row">
-          <span className="lg-line" style={{ borderColor: '#c9d4ff', borderTopStyle: 'dotted' }}></span>
-          {t('Hokuriku Shinkansen (approx. line)', '北陸新幹線（概略）')}
-        </div>
-        <p className="lg-note">{t('Denser, faster dots = more people per hour. Roads from OSRM / OpenStreetMap. The dots follow each site’s daily total; measured origin-to-destination journeys are Pending: KDDI data.', '点が密で速いほど人数が多い。道路はOSRM／OpenStreetMap。点は各地点の日合計に沿った表示で、出発地から目的地までの実測の移動はKDDIデータ待ち。')}</p>
-      </>
-    ),
+    density: <Grad from="rgba(236,131,90,0.1)" to="rgba(236,131,90,0.75)" left={t('Few', 'قليل')} right={t('Many visitors', 'كثير')} />,
     traffic: (
       <>
         <div className="lg-tiers">

@@ -61,7 +61,7 @@ export function NudgeLayer({ nudges, routes, day, activeId, onPick }: { nudges: 
         const active = g.some((n) => n.id === activeId)
         const icon = L.divIcon({
           className: 'map-divicon',
-          html: `<div class="nudge-flag${active ? ' on' : ''}" style="--c:${PRIORITY[priorityOf(worst.sev)].colour}">${iconSvg('flag', 13)}<span class="num">${g.length}</span></div>`,
+          html: `<div class="nudge-flag${active ? ' on' : ''}${priorityOf(worst.sev) === 'high' ? ' crit' : ''}" style="--c:${PRIORITY[priorityOf(worst.sev)].colour}">${iconSvg('flag', 13)}<span class="num">${g.length}</span></div>`,
           iconSize: [0, 0],
         })
         return (

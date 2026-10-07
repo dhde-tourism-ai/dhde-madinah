@@ -83,7 +83,7 @@ export function VehiclesLayer({
       const pts = s.map((i) => trips.stops[i])
       const key = `${r}:${s.join(',')}`
       if (!snaps.has(key)) snaps.set(key, snapTrip(path, pts))
-      out.push({ pts, min, snap: snaps.get(key) ?? null, colour: colourOf.get(trips.routes[r]?.id ?? '') })
+      out.push({ pts, min, snap: snaps.get(key) ?? null, colour: colourOf.get(trips.routes[r]?.id ?? ''), line: trips.routes[r]?.name, stopNames: trips.stop_names ? s.map((i) => trips.stop_names![i]) : undefined })
     }
     return out
   }, [trips, lines, day])
