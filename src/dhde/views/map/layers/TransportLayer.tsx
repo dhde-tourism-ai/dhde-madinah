@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react'
-import { CircleMarker, Pane, Polygon, Polyline, useMapEvents } from 'react-leaflet'
+import { CircleMarker, Marker, Pane, Polygon, Polyline, useMapEvents } from 'react-leaflet'
+import L from 'leaflet'
 import type { TransportMapFile, TransportTripsFile } from '../../../types/transport'
 import type { RailRun } from '../../../lib/railModel'
 import { BusStopSchedule, StationSchedule } from './Schedules'
@@ -24,6 +25,29 @@ const HIT_STYLE = { stroke: false, fillColor: '#000', fillOpacity: 0 }
 const WALK_STYLE: Record<string, { color: string; fillOpacity: number; dashArray?: string }> = {
   '15': { color: '#6fdc93', fillOpacity: 0.16 },
   '30': { color: '#6fdc93', fillOpacity: 0.06, dashArray: '4 6' },
+}
+
+/**
+ * Stop and station signs: a bus-stop sign on a pole (blue; red for the City Sightseeing
+ * stops) and a train sign for stations, so stops read apart from the moving bus icons.
+ */
+const signCache = new Map<string, L.DivIcon>()
+function signIcon(kind: 'bus' | 'sightseeing' | 'train', size: number): L.DivIcon {
+  const key = `${kind}:${size}`
+  const hit = signCache.get(key)
+  if (hit) return hit
+  const bg = kind === 'train' ? '#ffffff' : kind === 'sightseeing' ? '#e0262b' : '#0b5fa5'
+  const fg = kind === 'train' ? '#d03b3b' : '#ffffff'
+  const glyph =
+    kind === 'train'
+      ? `<rect x="6" y="4" width="12" height="12" rx="3" fill="none" stroke="${fg}" stroke-width="2"/><path d="M6 10h12M9 16l-2 3M15 16l2 3" stroke="${fg}" stroke-width="2"/>`
+      : `<rect x="6" y="4.5" width="12" height="11" rx="2.2" fill="${fg}"/><rect x="7.6" y="6.2" width="8.8" height="3.6" rx="0.6" fill="${bg}"/><circle cx="9" cy="17.2" r="1.5" fill="${fg}"/><circle cx="15" cy="17.2" r="1.5" fill="${fg}"/>`
+  const pole = kind === 'train' ? '' : `<rect x="11" y="23" width="2" height="7" fill="#e6edf5"/>`
+  const h = kind === 'train' ? 24 : 30
+  const html = `<svg viewBox="0 0 24 ${h}" width="${size}" height="${(size * h) / 24}" aria-hidden="true"><rect x="1" y="1" width="22" height="22" rx="5" fill="${bg}" stroke="#ffffff" stroke-width="1.6"/>${glyph}${pole}</svg>`
+  const icon = L.divIcon({ className: 'stop-sign', html, iconSize: [size, (size * h) / 24], iconAnchor: [size / 2, (size * h) / 24] })
+  signCache.set(key, icon)
+  return icon
 }
 
 /** Stop and station dots grow as you zoom in; bus stops only appear from street level, so the prefecture and city views aren't a carpet of dots. */
@@ -134,12 +158,15 @@ export function TransportLayer({
         <Pane name="dhde-transport-stops" style={{ zIndex: 455 }}>
           {data.stops.map((s) => (
             <Fragment key={s.id}>
-              <CircleMarker center={[s.lat, s.lon]} radius={stopR} interactive={false}
-                pathOptions={{ color: '#0a1120', weight: 0.6, fillColor: '#ffffff', fillOpacity: 1 }} />
+              {zoom >= 14 ? (
+                <Marker position={[s.lat, s.lon]} icon={signIcon(s.feed === 'sightseeing' || /sightseeing|السياحية/i.test(s.name) ? 'sightseeing' : 'bus', zoom >= 16 ? 22 : zoom >= 15 ? 18 : 15)} interactive={false} />
+              ) : (
+                <CircleMarker center={[s.lat, s.lon]} radius={stopR + 0.8} interactive={false} pathOptions={{ color: '#ffffff', weight: 1, fillColor: '#0b5fa5', fillOpacity: 1 }} />
+              )}
               <CircleMarker center={[s.lat, s.lon]} radius={HIT_R} pathOptions={HIT_STYLE} eventHandlers={openOnClick(busStopUrl(s.name, s.lat, s.lon))}>
                 <Tip above lingers>
                   {named(placeEn(s.name), s.name)}
-                  <div className="tip-sub">{tr('Bus stop', 'バス停')}</div>
+                  <div className="tip-sub">{tr('Bus stop', 'موقف حافلات')}</div>
                   <BusStopSchedule trips={trips} stopId={s.id} />
                   {gmaps(busStopUrl(s.name, s.lat, s.lon))}
                 </Tip>
@@ -150,10 +177,13 @@ export function TransportLayer({
       )}
       {/* stations above bus stops: fewer, and the main transfer points */}
       <Pane name="dhde-transport-stations" style={{ zIndex: 460 }}>
-        {rail?.stations.filter((s) => allStations || s.lines.length > 1 || s.lines.includes('hokuriku_shinkansen')).map((s) => (
+        {rail?.stations.filter((s) => allStations || s.lines.length > 1 || s.lines.includes('haramain_hsr')).map((s) => (
           <Fragment key={s.id}>
-            <CircleMarker center={[s.lat, s.lon]} radius={stationR} interactive={false}
-              pathOptions={{ color: RAIL_LINE_COLOUR, weight: 1, fillColor: '#ffffff', fillOpacity: 1 }} />
+            {zoom >= 12 ? (
+              <Marker position={[s.lat, s.lon]} icon={signIcon('train', zoom >= 15 ? 26 : 20)} interactive={false} />
+            ) : (
+              <CircleMarker center={[s.lat, s.lon]} radius={stationR} interactive={false} pathOptions={{ color: RAIL_LINE_COLOUR, weight: 1, fillColor: '#ffffff', fillOpacity: 1 }} />
+            )}
             <CircleMarker center={[s.lat, s.lon]} radius={HIT_R} pathOptions={HIT_STYLE} eventHandlers={openOnClick(stationUrl(s.name_ja, s.lat, s.lon))}>
               <Tip above lingers>
                 {named(placeEn(s.name_ja), s.name_ja)}

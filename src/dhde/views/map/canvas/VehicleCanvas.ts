@@ -70,7 +70,8 @@ export class VehicleCanvas extends CanvasOverlay {
   }
 
   protected draw(ctx: CanvasRenderingContext2D) {
-    const m = vehicleClock.minute()
+    const mNow = vehicleClock.minute()
+    const m = mNow
     const w = this.size.x
     const h = this.size.y
     const z = this._map.getZoom()
@@ -99,6 +100,8 @@ export class VehicleCanvas extends CanvasOverlay {
 
     for (const b of this.buses) {
       const n = b.min.length
+      // A trip that runs past midnight (minutes > 1440) carries on into the small hours.
+      const m = mNow >= b.min[0] && mNow <= b.min[n - 1] ? mNow : mNow + 1440
       if (m < b.min[0] || m > b.min[n - 1]) continue
       let i = 0
       while (i < n - 2 && b.min[i + 1] <= m) i++

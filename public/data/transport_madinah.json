@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07T12:29:55+03:00",
+ "generated_at": "2026-10-08T03:48:56+03:00",
  "operator_hours": "06:00–24:00 daily (Madinah Bus FAQ); some lines 24 hours",
  "faq_url": "https://madinahbus.mda.gov.sa/",
  "lines": [
@@ -10,9 +10,10 @@
    "name_ar": "400 · خط المطار السريع: المطار – المسجد النبوي",
    "stops": 4,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
-   "hours": "06:00–24:00",
+   "hours": "24 hours",
+   "hours_status": "reported",
    "headway_min": 30,
-   "headway_status": "estimated",
+   "headway_status": "reported (20-40)",
    "round_trip_min": 63
   },
   {
@@ -22,9 +23,10 @@
    "name_ar": "130 · الميقات – محطة قطار الحرمين",
    "stops": 30,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
-   "hours": "06:00–24:00",
-   "headway_min": 20,
-   "headway_status": "estimated",
+   "hours": "24 hours",
+   "hours_status": "reported",
+   "headway_min": 15,
+   "headway_status": "reported",
    "round_trip_min": 177
   },
   {
@@ -34,9 +36,10 @@
    "name_ar": "150 · حلقة الفيصلية",
    "stops": 53,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
-   "hours": "06:00–24:00",
-   "headway_min": 20,
-   "headway_status": "estimated",
+   "hours": "24 hours",
+   "hours_status": "reported",
+   "headway_min": 15,
+   "headway_status": "reported",
    "round_trip_min": 266
   },
   {
@@ -46,9 +49,10 @@
    "name_ar": "190 · حلقة ميدان سيد الشهداء",
    "stops": 28,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
-   "hours": "06:00–24:00",
+   "hours": "24 hours",
+   "hours_status": "reported",
    "headway_min": 20,
-   "headway_status": "estimated",
+   "headway_status": "reported",
    "round_trip_min": 112
   },
   {
@@ -58,9 +62,10 @@
    "name_ar": "191 · حلقة الخالدية",
    "stops": 39,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
-   "hours": "06:00–24:00",
+   "hours": "24 hours",
+   "hours_status": "reported",
    "headway_min": 20,
-   "headway_status": "estimated",
+   "headway_status": "reported",
    "round_trip_min": 177
   },
   {
@@ -71,6 +76,7 @@
    "stops": 22,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 77
@@ -83,6 +89,7 @@
    "stops": 41,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 243
@@ -95,6 +102,7 @@
    "stops": 32,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 218
@@ -107,6 +115,7 @@
    "stops": 14,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 113
@@ -119,6 +128,7 @@
    "stops": 17,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 85
@@ -131,6 +141,7 @@
    "stops": 33,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 168
@@ -143,6 +154,7 @@
    "stops": 57,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 288
@@ -155,6 +167,7 @@
    "stops": 31,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 204
@@ -167,6 +180,7 @@
    "stops": 45,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 248
@@ -179,6 +193,7 @@
    "stops": 24,
    "source": "Madinah Bus official route map (madinahbus.mda.gov.sa)",
    "hours": "06:00–24:00",
+   "hours_status": "official",
    "headway_min": 20,
    "headway_status": "estimated",
    "round_trip_min": 162
@@ -191,6 +206,7 @@
    "stops": 10,
    "source": "City Sightseeing Madinah stops, OpenStreetMap",
    "hours": "08:00–22:00",
+   "hours_status": "estimated",
    "headway_min": 30,
    "headway_status": "estimated",
    "round_trip_min": 58

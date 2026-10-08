@@ -45,8 +45,25 @@ LINE_NAMES = {
     "490": ("Airport district loop", "حلقة حي المطار"),
     "590": ("Al-Qaswa loop", "حلقة القصواء"),
 }
-HEADWAY = {"400": 30, "cs": 30}
-FIRST, LAST = 6 * 60, 24 * 60
+# Service per line, from the published 1447 AH (2026) schedule:
+#  - five lines run 24 hours (Akhbaar 24, 29 Mar 2026: "5 routes around the clock";
+#    Al-Weeam / Economy Today, 8 Jun 2026: route 400 airport - Prophet's Mosque 24 h),
+#    with the reported intervals (130 and 150 every 15 min, 190 and 191 every 20 min;
+#    400 reported as 20 to 40 min, taken as 30);
+#  - the other ten lines run 18 hours, 06:00 to midnight (Madinah Bus FAQ); their
+#    intervals are only in the Madinah Bus app, so they are ESTIMATED at 20 min.
+# Each line: (first departure, closing time, interval, hours status, interval status).
+H24 = (0, 24 * 60)
+DAY = (6 * 60, 24 * 60)
+SCHEDULE = {
+    "400": (*H24, 30, "reported", "reported (20-40)"),
+    "130": (*H24, 15, "reported", "reported"),
+    "150": (*H24, 15, "reported", "reported"),
+    "190": (*H24, 20, "reported", "reported"),
+    "191": (*H24, 20, "reported", "reported"),
+    "cs": (8 * 60, 22 * 60, 30, "estimated", "estimated"),
+}
+DEFAULT_SCHEDULE = (*DAY, 20, "official", "estimated")
 
 
 def osrm_through(key, pts):
@@ -149,14 +166,17 @@ def main():
         offs = [0.0]
         for m in geo["legs_min"]:
             offs.append(offs[-1] + m * 1.35 + 0.5)
-        hw = HEADWAY.get(ref, 20)
-        first = 8 * 60 if ref == "cs" else FIRST
-        last = 22 * 60 if ref == "cs" else LAST
-        for dep in range(first, last, hw):
+        first, last, hw, hours_status, hw_status = SCHEDULE.get(ref, DEFAULT_SCHEDULE)
+        h24 = last - first >= 24 * 60
+        dep = first
+        # 24-hour lines leave all day and night (a late trip runs on past midnight); day lines
+        # stop sending buses out so the last one finishes its run by closing time.
+        while (dep < last) if h24 else (dep + offs[-1] <= last):
             trips_idx.append([ridx, sidx, [round(dep + o, 1) for o in offs]])
+            dep += hw
         prov.append({"id": line_id, "ref": ref, "name": en, "name_ar": ar, "stops": len(sts), "source": src,
-                     "hours": f"{first // 60:02d}:00–{last // 60:02d}:00" if last < 1440 else "06:00–24:00",
-                     "headway_min": hw, "headway_status": "estimated",
+                     "hours": "24 hours" if h24 else f"{first // 60:02d}:00–{last // 60:02d}:00",
+                     "hours_status": hours_status, "headway_min": hw, "headway_status": hw_status,
                      "round_trip_min": round(offs[-1])})
         print(ref, len(sts), "stops,", round(offs[-1]), "min round trip")
 
@@ -181,7 +201,7 @@ def main():
     today = dt.date.today().isoformat()
     with open(os.path.join(OUT, "transport_trips.json"), "w", encoding="utf-8") as f:
         json.dump({"generated_at": now,
-                   "note": "Stops and lines are official (Madinah Bus route map) or OpenStreetMap (sightseeing). Headways are ESTIMATED: Madinah Bus publishes hours (06:00–24:00) but not frequencies.",
+                   "note": "Stops and lines: Madinah Bus official route map (sightseeing: OpenStreetMap). Hours per line: 400, 130, 150, 190, 191 run 24 hours (1447 AH schedule); the rest 06:00-24:00 (Madinah Bus FAQ). Intervals: reported for the 24-hour lines, ESTIMATED (20 min) for the others: they are published only in the Madinah Bus app.",
                    "days": {"weekday": today, "saturday": today, "sunday": today},
                    "stops": [[s["lat"], s["lon"]] for s in stops], "stop_ids": [s["id"] for s in stops], "stop_names": [s["name"] for s in stops],
                    "routes": routes, "trips": {"weekday": trips_idx, "saturday": trips_idx, "sunday": trips_idx}},
