@@ -39,7 +39,7 @@ export default function OversightView({ data, selected }: { data: AppData; selec
     const dates = live.data.days.map((d) => d.date)
     return allBookings(ctx, st, dates).map((b) => {
       const first = ctx.byId[sitesFor(ctx, b.value)[0]]
-      const colour = b.value === 'route:ALL' ? '#8b9dff' : first ? clusterOf(first).colour : '#199e70'
+      const colour = b.value === 'route:ALL' ? '#c99a3b' : first ? clusterOf(first).colour : '#199e70'
       const origin = ctx.origins.find((o) => o.id === b.origin)
       return { b, colour, siteName: (id: string) => ctx.byId[id]?.short ?? id, originName: origin?.label ?? b.origin }
     })
@@ -48,7 +48,7 @@ export default function OversightView({ data, selected }: { data: AppData; selec
   const extras = useMemo<MadinahExtras | null>(
     () =>
       data.sites
-        ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois, areas: areas.data?.sites ?? null, buildings: buildings.data?.sites ?? null, legs: legs.data?.legs ?? null }
+        ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois, areas: areas.data?.sites ?? null, buildings: buildings.data?.sites ?? null, legs: legs.data?.legs ?? null, origins: data.sites.origins }
         : null,
     [data.sites, data.isochrones, data.pois, areas.data, buildings.data, legs.data],
   )

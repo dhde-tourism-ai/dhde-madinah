@@ -47,7 +47,7 @@ import { SiteCards } from './layers/SiteCards'
 import { Declutter } from './Declutter'
 import { CoachesLayer } from './layers/CoachesLayer'
 import type { CoachItem } from './canvas/CoachCanvas'
-import { BusinessLayer, ClusterLayer, CrowdLayer, ShadeLayer, WalkLayer } from './layers/MadinahLayers'
+import { BusinessLayer, ClusterLayer, CrowdLayer, OccupancyHalos, OriginMarkers, ShadeLayer, WalkLayer } from './layers/MadinahLayers'
 import type { MadinahExtras } from './layers/MadinahLayers'
 import { VehicleHover } from './layers/VehicleHover'
 import { PrayerCard, PRAYER_NAMES } from './panels/PrayerCard'
@@ -388,6 +388,7 @@ export default function MapView({ registry, dashboard, economics, economicsError
         {live && frame && routes && (
           <>
             {layerOn('density') && <DensityLayer nodes={nodes} frame={frame} />}
+            {layerOn('people') && extras && <OccupancyHalos extras={extras} frame={frame} />}
             {layerOn('traffic') && <TrafficLayer live={live} routes={routes} t={t} paused={paused} />}
             {layerOn('trips') && <FlowLayer live={live} routes={routes} t={t} paused={paused} />}
             {layerOn('shade') && extras && <ShadeLayer extras={extras} frame={frame} date={live.days[day]?.date ?? live.start} hour={t % 24} />}
@@ -416,6 +417,7 @@ export default function MapView({ registry, dashboard, economics, economicsError
           />
         )}
         {coachesOn && <CoachesLayer items={coaches} />}
+        {layerOn('coaches') && extras && <OriginMarkers origins={extras.origins} />}
         {layerOn('economics') && economics && <EconomicsLayer economics={economics} nodes={allNodes} selectedId={selectedId} />}
         {layerOn('people') && (
           <PeopleLayer

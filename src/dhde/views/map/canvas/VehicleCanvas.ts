@@ -74,9 +74,9 @@ export class VehicleCanvas extends CanvasOverlay {
     const w = this.size.x
     const h = this.size.y
     const z = this._map.getZoom()
-    const trainS = z >= 14 ? 12 : z >= 12 ? 9 : 7
+    const trainS = z >= 14 ? 18 : z >= 12 ? 14 : 10
     // Bus icons from street level; dots when zoomed out so the network stays readable.
-    const busS = z >= 15 ? 13 : z >= 14 ? 11 : z >= 13 ? 9 : 4
+    const busS = z >= 15 ? 18 : z >= 14 ? 15 : z >= 13 ? 12 : 5
     const hits: Hit[] = []
     const inView = (p: L.Point) => p.x >= -14 && p.y >= -14 && p.x <= w + 14 && p.y <= h + 14
 

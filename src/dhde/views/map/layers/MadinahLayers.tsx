@@ -37,6 +37,8 @@ export interface MadinahExtras {
   buildings: Record<string, Building[]> | null
   /** Road legs between sites (coach_legs.json), for the cluster loops. */
   legs: Record<string, { path: [number, number][] }> | null
+  /** Coach starting points (hotel districts, airport, station, terminal). */
+  origins: { id: string; label: string; label_ar: string; lat: number; lon: number }[]
 }
 
 /** Sun and shadows for a date and fractional hour, per site (memoised by the caller). */
@@ -188,13 +190,13 @@ export function ClusterLayer({ extras, onSelect }: { extras: MadinahExtras; onSe
           const st = CLUSTER_STYLE[s.cluster === 'Asat' ? 'A' : s.cluster] ?? CLUSTER_STYLE.A
           const icon = L.divIcon({
             className: 'site-num-icon',
-            html: `<span class="site-num" style="background:${st.colour}">${s.num}</span>`,
-            iconSize: [22, 22],
-            iconAnchor: [11, 11],
+            html: `<span class="site-num big" style="background:${st.colour}">${s.num}</span>`,
+            iconSize: [40, 40],
+            iconAnchor: [20, 20],
           })
           return (
             <Marker key={s.id} position={[s.lat, s.lon]} icon={icon} eventHandlers={{ click: () => onSelect(s.id) }} zIndexOffset={800}>
-              <Tooltip direction="top" offset={[0, -12]} className="map-tip">
+              <Tooltip direction="top" offset={[0, -22]} className="map-tip">
                 <strong>
                   {s.num}. {t(s.name, s.name_ar)}
                 </strong>
@@ -349,6 +351,67 @@ export function ShadeLayer({ extras, date, hour, frame }: { extras: MadinahExtra
           </Polygon>
         )
       })}
+    </>
+  )
+}
+
+/* ---------------------------------------------------------------- occupancy halos */
+
+/**
+ * The prototype's occupancy halos: soft concentric rings in the site's cluster colour that
+ * grow and brighten with how full the site is this hour (people on site against its
+ * comfortable level). Neighbouring sites blend into a shared glow.
+ */
+const HALO_FACTORS = [1, 1.8, 2.7, 3.7]
+const HALO_OPACITY = [0.3, 0.17, 0.09, 0.04]
+
+export function OccupancyHalos({ extras, frame }: { extras: MadinahExtras; frame: Record<string, NodeFrame> }) {
+  return (
+    <>
+      {extras.sites.map((s) => {
+        const f = frame[s.id]
+        if (!f) return null
+        const st = s.id === 'haram' ? { colour: '#c99a3b' } : (CLUSTER_STYLE[s.cluster === 'Asat' ? 'A' : s.cluster] ?? CLUSTER_STYLE.A)
+        const load = Math.max(0, Math.min(1.4, f.load))
+        const base = 22 + Math.sqrt(load) * 38
+        const w = Math.max(0.55, Math.min(1.3, load + 0.35))
+        return HALO_FACTORS.map((k, i) => (
+          <CircleMarker
+            key={`${s.id}-${i}`}
+            center={[s.lat, s.lon]}
+            radius={base * k}
+            interactive={false}
+            pathOptions={{ stroke: false, fillColor: st.colour, fillOpacity: HALO_OPACITY[i] * w }}
+          />
+        ))
+      })}
+    </>
+  )
+}
+
+/* ---------------------------------------------------------------- starting points */
+
+const ORIGIN_ICON: Record<string, string> = {
+  haram: '🕌', 'quba-hotels': '🏨', 'airport-rd': '🏨', airport: '✈️', 'rail-station': '🚄', 'bus-terminal': '🚌', markaziya: '🏨', 'taibah-u': '🎓',
+}
+
+/** Where tour coaches start (hotel districts, the airport, the Haramain station, the coach terminal). */
+export function OriginMarkers({ origins }: { origins: { id: string; label: string; label_ar: string; lat: number; lon: number }[] }) {
+  const { t } = useLang()
+  return (
+    <>
+      {origins.map((o) => (
+        <Marker
+          key={o.id}
+          position={[o.lat, o.lon]}
+          zIndexOffset={600}
+          icon={L.divIcon({ className: 'origin-icon', html: `<div class="morigin-badge">${ORIGIN_ICON[o.id] ?? '📍'}</div>`, iconSize: [40, 40], iconAnchor: [20, 20] })}
+        >
+          <Tooltip permanent direction="right" offset={[18, 0]} className="morigin-label">
+            {t('Starting point', 'نقطة الانطلاق')}: {t(o.label, o.label_ar)}
+          </Tooltip>
+        </Marker>
+      ))}
     </>
   )
 }

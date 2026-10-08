@@ -90,7 +90,7 @@ table th {
   align-items: center;
   gap: var(--sp-4);
   padding: 0 var(--sp-4);
-  background: rgba(10, 17, 32, 0.92);
+  background: rgba(7, 36, 29, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }

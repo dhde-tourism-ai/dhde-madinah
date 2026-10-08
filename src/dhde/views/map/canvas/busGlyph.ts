@@ -89,6 +89,27 @@ export function drawCoach(ctx: CanvasRenderingContext2D, x: number, y: number, s
   ctx.restore()
 }
 
+/** The prototype's coach: a large bus emoji on a disc in the cluster colour (grey on the way back). */
+export function drawCoachEmoji(ctx: CanvasRenderingContext2D, x: number, y: number, s: number, fill: string, opts: { parked?: boolean } = {}) {
+  ctx.save()
+  ctx.beginPath()
+  ctx.arc(x, y, s * 0.62, 0, Math.PI * 2)
+  ctx.fillStyle = fill
+  ctx.globalAlpha = opts.parked ? 0.95 : 0.85
+  ctx.fill()
+  ctx.globalAlpha = 1
+  ctx.lineWidth = 2.5
+  ctx.strokeStyle = '#ffffff'
+  ctx.stroke()
+  ctx.font = `${Math.round(s * 0.78)}px "Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif`
+  ctx.textAlign = 'center'
+  ctx.textBaseline = 'middle'
+  ctx.shadowColor = 'rgba(0,0,0,0.55)'
+  ctx.shadowBlur = 3
+  ctx.fillText('🚌', x, y + s * 0.04)
+  ctx.restore()
+}
+
 export function drawTrain(ctx: CanvasRenderingContext2D, x: number, y: number, s: number, band = '#d03b3b') {
   if (s < 7) return dot(ctx, x, y, s / 2.4, band)
   const w = s * 2.1

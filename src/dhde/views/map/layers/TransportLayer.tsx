@@ -120,7 +120,7 @@ export function TransportLayer({
         <Pane name="dhde-transport-lines" style={{ zIndex: 430 }}>
           {data.lines.map((l) => (
             <Polyline key={l.id} positions={l.path} eventHandlers={openOnClick(busRouteUrl(l.path))}
-              pathOptions={{ color: l.colour ?? (l.mode === 'rail' ? MODE_COLOUR.rail : MODE_COLOUR.bus), weight: l.mode === 'rail' ? 2.5 : 2, opacity: 0.8 }}>
+              pathOptions={{ color: l.colour ?? (l.mode === 'rail' ? MODE_COLOUR.rail : MODE_COLOUR.bus), weight: l.mode === 'rail' ? 2.5 : 1.6, opacity: l.mode === 'rail' ? 0.8 : 0.42 }}>
               <Tip sticky above lingers>
                 {named(routeEn(l.name), l.name)}
                 <div className="tip-sub">{tr(...MODE_LABEL[l.mode])}</div>

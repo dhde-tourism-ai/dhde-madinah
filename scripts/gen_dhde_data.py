@@ -49,7 +49,7 @@ PRAYERS = load("prayer_times.json")["days"] if os.path.exists(os.path.join(OUT, 
 TRANSPORT = load("transport.json") if os.path.exists(os.path.join(OUT, "transport.json")) else None
 
 # the Madinah prototype's cluster colours (dhde-ai-demo/medina)
-CLUSTER_COLOUR = {"center": "#8b9dff", "A": "#0ca3a3", "Asat": "#0ca3a3", "B": "#eda100", "outlier": "#d03b3b"}
+CLUSTER_COLOUR = {"center": "#c99a3b", "A": "#0ca3a3", "Asat": "#0ca3a3", "B": "#eda100", "outlier": "#d03b3b"}
 # typical people on site at the busiest hour (demo), and a comfortable level
 PEAK = {"haram": 260000, "quba": 9000, "shuhada": 4200, "uhud": 1100, "qiblatain": 2100, "al-khandaq": 900,
         "biography-museum": 700, "safiya": 520, "faqir-well": 180, "gharas-well": 160, "al-hayy": 300, "jabal-ayr": 60}

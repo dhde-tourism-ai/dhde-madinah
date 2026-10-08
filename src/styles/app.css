@@ -1057,3 +1057,95 @@ input[type='range'] {
   white-space: nowrap;
   pointer-events: none;
 }
+
+/* ---------- Saudi (Nusuk-style) theme, as in the Madinah prototype ----------
+   Deep green surfaces, white text, aqua for interaction, gold trim. Overrides the
+   DHDE navy tokens; status colours (good / warn / crit) stay as they are. */
+:root {
+  --bg: #062219;
+  --bg-2: #08291f;
+  --surface: #0b2f24;
+  --surface-2: #0e3b2e;
+  --surface-3: #134a3a;
+  --glass: rgba(9, 42, 33, 0.9);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.2);
+  --text: #ffffff;
+  --text-2: #cfe8dc;
+  --muted: #8fb8a8;
+  --accent: #00a79d;
+  --accent-strong: #3fd2c4;
+  --accent-soft: rgba(0, 167, 157, 0.18);
+  --accent-ink: #03140f;
+  --gold: #c99a3b;
+  --gold-soft: rgba(201, 154, 59, 0.18);
+  --header-bg: #0a2a2f;
+  --grid: rgba(255, 255, 255, 0.1);
+  --axis: rgba(255, 255, 255, 0.25);
+  --shadow-float: 0 10px 30px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+.appbar {
+  background: rgba(10, 42, 47, 0.96);
+  border-bottom: 2px solid var(--gold);
+}
+.brand-name .dot,
+.eyebrow {
+  color: var(--gold);
+}
+.tab[aria-current='page'] {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-accent {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.card,
+.kpi {
+  border-color: rgba(201, 154, 59, 0.22);
+}
+.lang-toggle button[aria-pressed='true'],
+.seg button[aria-pressed='true'] {
+  box-shadow: inset 0 0 0 1px var(--gold);
+}
+
+/* the prototype's big map badges and coach starting points */
+.site-num.big {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border-width: 3px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+.origin-icon {
+  background: none;
+  border: 0;
+}
+.morigin-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: var(--header-bg);
+  color: #ffffff;
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);
+  border: 3px solid var(--gold);
+}
+.leaflet-tooltip.morigin-label {
+  background: var(--header-bg);
+  color: #ffffff;
+  border: 0;
+  border-radius: 6px;
+  font-weight: 800;
+  font-size: 11.5px;
+  padding: 3px 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+.leaflet-tooltip.morigin-label::before {
+  display: none;
+}

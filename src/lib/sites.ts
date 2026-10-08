@@ -2,7 +2,7 @@ import type { Site, TelecomFile } from '../types/data'
 
 /** Cluster colours from the Madinah prototype, always shown with the cluster name. */
 export const CLUSTER: Record<string, { colour: string; en: string; ar: string }> = {
-  center: { colour: '#8b9dff', en: 'Central area', ar: 'المنطقة المركزية' },
+  center: { colour: '#c99a3b', en: 'Central area', ar: 'المنطقة المركزية' },
   A: { colour: '#0ca3a3', en: 'Quba cluster', ar: 'مجموعة قباء' },
   Asat: { colour: '#0ca3a3', en: 'Quba cluster (satellite)', ar: 'مجموعة قباء (تابع)' },
   B: { colour: '#eda100', en: 'Uhud and Khandaq', ar: 'أحد والخندق' },

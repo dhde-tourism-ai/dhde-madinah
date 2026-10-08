@@ -1,7 +1,7 @@
 import type L from 'leaflet'
 import { CanvasOverlay } from './CanvasOverlay'
 import { vehicleClock, clock } from '../../../lib/vehicleClock'
-import { drawCoach } from './busGlyph'
+import { drawCoachEmoji } from './busGlyph'
 import { clearHits, setHits } from './hits'
 import type { Hit } from './hits'
 import { coachAt } from '../../../../lib/operator'
@@ -69,7 +69,8 @@ export class CoachCanvas extends CanvasOverlay {
     const date = vehicleClock.date()
     const m = vehicleClock.minute()
     const z = this._map.getZoom()
-    const s = z >= 15 ? 14 : z >= 13 ? 11 : z >= 12 ? 9 : 7
+    // large and clear, as in the Madinah prototype
+    const s = z >= 15 ? 40 : z >= 13 ? 34 : z >= 12 ? 28 : 22
     const parked = new Map<string, number>()
     const hits: Hit[] = []
     for (const item of this.items) {
@@ -83,18 +84,18 @@ export class CoachCanvas extends CanvasOverlay {
           const n = parked.get(pos.site ?? '') ?? 0
           parked.set(pos.site ?? '', n + 1)
           const ang = n * 2.4
-          const r = n ? 0.0004 + n * 0.00007 : 0
+          const r = n ? 0.0006 + n * 0.0001 : 0
           at = [at[0] + Math.cos(ang) * r, at[1] + Math.sin(ang) * r]
         } else if (k > 0) {
           at = [at[0] + k * 0.0002, at[1] + k * 0.0002]
         }
         const p = this.toCanvas(at)
-        drawCoach(ctx, p.x, p.y, s, pos.isReturn ? '#8a94a6' : colour, { ring: pos.moving ? undefined : 'rgba(255,209,102,0.22)' })
+        drawCoachEmoji(ctx, p.x, p.y, s, pos.isReturn ? '#8a94a6' : colour, { parked: !pos.moving })
         const c = this._map.latLngToContainerPoint(at)
         hits.push({
           x: c.x,
           y: c.y,
-          r: s,
+          r: s * 0.62,
           kind: 'coach',
           title: `Private coach · ${b.operator}`,
           lines: [`${b.code}${b.coaches > 1 ? ` (coach ${k + 1} of ${b.coaches})` : ''}`, ...status(item, m)],

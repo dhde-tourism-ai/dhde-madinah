@@ -197,7 +197,7 @@ export function LayersPanel(p: Props) {
             {t(en, ar)}
           </div>
         ))}
-        <p className="lg-note">{t('Private coaches: long icon with a gold roof stripe. City buses: square icon in the line colour. Trains: white capsule. Hover any vehicle for its next stop and time.', 'الحافلات الخاصة: أيقونة طويلة بشريط ذهبي. حافلات المدينة: أيقونة مربعة بلون الخط. القطار: كبسولة بيضاء. مرّر فوق أي مركبة لمعرفة محطتها التالية.')}</p>
+        <p className="lg-note">{t('Private tour coaches: large 🚌 on a disc in the cluster colour (grey on the way back). City buses: small square icon in the line colour. Trains: white capsule. Hover any vehicle for its next stop and time. Gold tiles: coach starting points.', 'حافلات الرحلات الخاصة: 🚌 كبيرة على قرص بلون المجموعة (رمادي عند العودة). حافلات المدينة: أيقونة مربعة صغيرة بلون الخط. القطار: كبسولة بيضاء. المربعات الذهبية: نقاط الانطلاق.')}</p>
       </>
     ),
     hotels: (
