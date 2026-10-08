@@ -16,6 +16,7 @@ import { useLang } from '../lib/i18n'
 import { hhmmToHours, PRAYERS, prayersFor } from '../lib/data'
 import type { MadinahExtras, SiteArea } from '../dhde/views/map/layers/MadinahLayers'
 import type { Building } from '../dhde/lib/shade'
+import type { Region } from '../dhde/views/map/layers/RegionLayer'
 import { economyFacts } from '../dhde/views/map/layers/MadinahLayers'
 import { economyFactsStore } from '../dhde/views/map/layers/economyStore'
 
@@ -33,6 +34,7 @@ export default function OversightView({ data, selected }: { data: AppData; selec
   const areas = useJsonResource<{ sites: Record<string, SiteArea> }>('site_areas.json')
   const buildings = useJsonResource<{ sites: Record<string, Building[]> }>('buildings.json')
   const legs = useJsonResource<{ legs: Record<string, { path: [number, number][] }> }>('coach_legs.json')
+  const regions = useJsonResource<{ regions: Region[] }>('regions.json')
   const ctx = useOperatorCtx(data)
   const st = useOperatorState()
 
@@ -79,6 +81,7 @@ export default function OversightView({ data, selected }: { data: AppData; selec
       extras={extras}
       prayersOn={prayersOn}
       prayerTimes={(date) => prayersFor(data, date)}
+      regions={regions.data?.regions ?? []}
     />
   )
 }

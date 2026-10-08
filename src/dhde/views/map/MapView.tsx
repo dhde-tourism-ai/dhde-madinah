@@ -52,6 +52,8 @@ import type { MadinahExtras } from './layers/MadinahLayers'
 import { VehicleHover } from './layers/VehicleHover'
 import { PrayerCard, PRAYER_NAMES } from './panels/PrayerCard'
 import { SunChip } from './panels/SunChip'
+import { FlyRegion, KINGDOM, KingdomCard, RegionCard, RegionLayer, ZoomClass } from './layers/RegionLayer'
+import type { Region } from './layers/RegionLayer'
 
 /** Madinah: the Haram, both site clusters, Jabal Ayr to the south and the airport to the north-east. */
 const VIEW_BOUNDS: [[number, number], [number, number]] = [
@@ -229,9 +231,19 @@ interface MapViewProps {
   prayersOn?: (date: string) => number[]
   /** Prayer times as HH:MM for a Riyadh date (fajr, sunrise, dhuhr, asr, maghrib, isha). */
   prayerTimes?: (date: string) => Record<string, string> | null
+  /** Pilot locations to switch between (regions.json). */
+  regions?: Region[]
 }
 
-export default function MapView({ registry, dashboard, economics, economicsError, live, liveError, routes, market, selectedId, onSelect, onOpenNode, coaches = [], extras = null, prayersOn, prayerTimes }: MapViewProps) {
+export default function MapView({ registry, dashboard, economics, economicsError, live, liveError, routes, market, selectedId, onSelect, onOpenNode, coaches = [], extras = null, prayersOn, prayerTimes, regions = [] }: MapViewProps) {
+  const [regionId, setRegionId] = useState<string>('madinah')
+  const [regionFly, setRegionFly] = useState<{ center: [number, number]; zoom: number; key: number } | null>(null)
+  const pickRegion = (id: string) => {
+    setRegionId(id)
+    const r = regions.find((x) => x.id === id)
+    setRegionFly(id === 'kingdom' || !r ? { ...KINGDOM, key: Date.now() } : { center: r.center, zoom: id === 'madinah' ? 12.75 : r.zoom, key: Date.now() })
+  }
+  const region = regions.find((x) => x.id === regionId && x.status === 'candidate') ?? null
   const { t: tr, lang } = useLang()
   const narrow = useIsNarrow()
   const [url] = useState(readUrlState)
@@ -448,6 +460,9 @@ export default function MapView({ registry, dashboard, economics, economicsError
         {layerOn('nudges') && <NudgeLayer nudges={nudgesShown} routes={routes} day={day} activeId={activeNudge} onPick={pickNudge} />}
         <VehicleHover />
         <FlyTo target={fly} />
+        <FlyRegion target={regionFly} />
+        <ZoomClass />
+        {regions.length > 0 && <RegionLayer regions={regions} onPick={pickRegion} />}
         <KeepCardsInView />
         <Declutter />
       </MapContainer>
@@ -490,6 +505,16 @@ export default function MapView({ registry, dashboard, economics, economicsError
         )}
         {liveError && <div className="banner banner-warn status-strip">live_demo.json: {liveError.message}</div>}
 
+        {regions.length > 0 && (
+          <div className="region-switch" role="group" aria-label={tr('Location', 'الموقع')}>
+            {[...regions.map((r) => ({ id: r.id, en: r.name, ar: r.name_ar, live: r.status === 'live' })), { id: 'kingdom', en: 'All Saudi Arabia', ar: 'كل المملكة', live: false }].map((r) => (
+              <button key={r.id} aria-pressed={regionId === r.id} onClick={() => pickRegion(r.id)} className={r.live ? 'live' : ''}>
+                {tr(r.en, r.ar)}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="map-left">
           <LayersPanel
             basemap={basemap}
@@ -508,7 +533,9 @@ export default function MapView({ registry, dashboard, economics, economicsError
         </div>
 
         <div className="map-right">
-          {live && !selected && !narrow && (
+          {regionId === 'kingdom' && <KingdomCard onPick={pickRegion} />}
+          {region && <RegionCard region={region} onBack={() => pickRegion('madinah')} />}
+          {!region && regionId !== 'kingdom' && live && !selected && !narrow && (
             <PrayerCard date={live.days[day]?.date ?? live.start} times={prayerTimes?.(live.days[day]?.date ?? live.start) ?? null} hour={t % 24} atNow={!playing && t === (live.now_index ?? live.observed_until)} />
           )}
           {rightPanel}

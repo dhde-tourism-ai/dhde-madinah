@@ -1330,3 +1330,172 @@ input[type='range'] {
   border-radius: 50%;
   margin-inline-end: 6px;
 }
+
+/* ---------- pilot locations ---------- */
+.region-switch {
+  position: absolute;
+  z-index: 1001;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  max-width: 316px;
+  padding: 3px;
+  border-radius: var(--r-md);
+  background: var(--glass);
+  border: 1px solid rgba(201, 154, 59, 0.45);
+  box-shadow: var(--shadow-float);
+  pointer-events: auto;
+}
+.region-switch button {
+  border: 0;
+  background: none;
+  color: var(--text-2);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 9px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.region-switch button.live::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--good-text);
+  margin-inline-end: 5px;
+  vertical-align: 1px;
+}
+.region-switch button[aria-pressed='true'] {
+  background: var(--gold);
+  color: #1b1302;
+}
+.map-ui .map-left {
+  top: 76px;
+}
+.region-icon {
+  background: none;
+  border: 0;
+}
+.region-badge {
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: var(--header-bg);
+  border: 2px solid var(--gold);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.region-badge.live {
+  border-color: var(--good-text);
+}
+.region-badge b {
+  font-size: 14px;
+}
+.region-badge span {
+  font-size: 10.5px;
+  color: var(--text-2);
+}
+.morigin-badge.place {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+}
+.region-card {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  flex: none;
+}
+.region-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+.region-title {
+  margin: 2px 0 6px;
+  font-size: 22px;
+}
+.region-use {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--text);
+  border-inline-start: 3px solid var(--gold);
+  padding-inline-start: 10px;
+}
+.region-places,
+.region-needs {
+  margin: 4px 0 10px;
+  padding-inline-start: 18px;
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+
+/* zoomed out to the Kingdom: Madinah's site detail steps aside for the location badges */
+.map-far .leaflet-marker-pane > :not(.region-icon),
+.map-far .leaflet-tooltip-pane .morigin-label,
+.map-far .leaflet-tooltip-pane .map-tip.leaflet-tooltip-permanent {
+  display: none;
+}
+.region-badge.r-jeddah {
+  transform: translate(-112%, -30%);
+}
+.region-badge.r-makkah {
+  transform: translate(8%, -50%);
+}
+.region-badge.r-redsea {
+  transform: translate(-100%, -10%);
+}
+.region-badge.r-alula {
+  transform: translate(-60%, -90%);
+}
+.option {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.option-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.option-head b {
+  font-size: 15px;
+}
+.ready {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+.option-use {
+  margin: 4px 0;
+  font-size: 13px;
+  color: var(--text);
+}
+.option p.small {
+  margin: 2px 0;
+  color: var(--text-2);
+}
+.good-text {
+  color: var(--good-text);
+  font-weight: 700;
+}
+.warn-text {
+  color: var(--warn-text);
+  font-weight: 700;
+}
+.option-go {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.map-far .leaflet-dhde-cards-pane,
+.map-far .leaflet-dhde-nodes-pane .map-divicon {
+  display: none;
+}
