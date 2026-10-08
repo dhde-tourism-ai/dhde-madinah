@@ -51,6 +51,7 @@ import { BusinessLayer, ClusterLayer, CrowdLayer, OccupancyHalos, OriginMarkers,
 import type { MadinahExtras } from './layers/MadinahLayers'
 import { VehicleHover } from './layers/VehicleHover'
 import { PrayerCard, PRAYER_NAMES } from './panels/PrayerCard'
+import { SunChip } from './panels/SunChip'
 
 /** Madinah: the Haram, both site clusters, Jabal Ayr to the south and the airport to the north-east. */
 const VIEW_BOUNDS: [[number, number], [number, number]] = [
@@ -183,7 +184,7 @@ function Basemap({ id }: { id: BasemapId }) {
           attribution="Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors"
           maxZoom={16}
         />
-        <TileLayer key="dark-ref" url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}" maxZoom={16} />
+        <TileLayer key="dark-ref" url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}" maxZoom={14} />
       </>
     )
   }
@@ -511,6 +512,8 @@ export default function MapView({ registry, dashboard, economics, economicsError
           )}
           {rightPanel}
         </div>
+
+        {live && layerOn('shade') && <SunChip date={live.days[day]?.date ?? live.start} hour={t % 24} />}
 
         <div className="map-bottom">
           {live && (

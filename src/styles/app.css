@@ -1149,3 +1149,38 @@ input[type='range'] {
 .leaflet-tooltip.morigin-label::before {
   display: none;
 }
+
+/* sun compass while the Sun and shade layer is on */
+.sun-chip {
+  position: absolute;
+  left: 12px;
+  bottom: 104px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 300px;
+  padding: 8px 12px 8px 8px;
+  border-radius: var(--r-lg);
+  background: var(--glass);
+  border: 1px solid rgba(255, 201, 74, 0.45);
+  box-shadow: var(--shadow-float);
+  pointer-events: auto;
+}
+.sun-chip.night {
+  border-color: rgba(201, 212, 255, 0.35);
+}
+.sun-chip div {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: var(--text-2);
+  line-height: 1.35;
+}
+.sun-chip b {
+  color: #ffd166;
+  font-size: 13px;
+}
+.sun-chip.night b {
+  color: #c9d4ff;
+}

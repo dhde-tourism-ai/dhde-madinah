@@ -318,8 +318,9 @@ export function ShadeLayer({ extras, date, hour, frame }: { extras: MadinahExtra
   const canvas = useLeafletLayer(() => new ShadeCanvas())
   const shade = useMemo(() => shadowsAt(extras, date, hour + 0.5), [extras, date, hour])
   useEffect(() => {
-    canvas.setData(Object.values(shade.bySite).flat(), shade.sun)
-  }, [canvas, shade])
+    const areas = extras.sites.map((s) => extras.areas?.[s.id]?.area).filter((a): a is Ring => Boolean(a && a.length > 2))
+    canvas.setData(Object.values(shade.bySite).flat(), shade.sun, areas)
+  }, [canvas, shade, extras])
   const sun = shade.sun
   const [dirEn, dirAr] = compass(sun.azimuth)
   return (
@@ -334,7 +335,7 @@ export function ShadeLayer({ extras, date, hour, frame }: { extras: MadinahExtra
           <Polygon
             key={s.id}
             positions={a.area}
-            pathOptions={{ color: exposed ? '#ec835a' : '#ffd166', weight: exposed ? 2 : 1.2, dashArray: exposed ? undefined : '3 4', fillOpacity: 0 }}
+            pathOptions={{ color: exposed ? '#ff8a3d' : '#ffd166', weight: exposed ? 2.5 : 1.2, dashArray: exposed ? undefined : '3 4', fill: true, fillOpacity: 0 }}
           >
             <Tooltip sticky className="map-tip">
               <strong>

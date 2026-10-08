@@ -1,71 +1,85 @@
 import { CanvasOverlay } from './CanvasOverlay'
-import type { Shadow } from '../../../lib/shade'
+import type { Ring, Shadow } from '../../../lib/shade'
 import type { Sun } from '../../../lib/sun'
 
 /**
- * Building shadows for the hour (drawn once onto an offscreen layer so overlaps don't
- * darken twice), plus a sun compass in the corner: where the sun is and how high.
+ * Sun and shade on the ground for the hour:
+ *  - building shadows in deep blue (drawn once onto a buffer so overlaps don't darken twice)
+ *  - each site's visit area in warm amber where it is in direct sun, so sun vs shade reads on
+ *    any basemap (the shaded parts are cut out of the amber)
+ * At night nothing is drawn: the whole ground is in shade.
  */
 export class ShadeCanvas extends CanvasOverlay {
   private shadows: Shadow[] = []
+  private areas: Ring[] = []
   private sun: Sun | null = null
   private buf: HTMLCanvasElement | null = null
+  private sunBuf: HTMLCanvasElement | null = null
 
   constructor() {
     super('dhde-shade', 340)
   }
 
-  setData(shadows: Shadow[], sun: Sun) {
+  setData(shadows: Shadow[], sun: Sun, areas: Ring[]) {
     this.shadows = shadows
     this.sun = sun
+    this.areas = areas
     this.redraw()
   }
 
-  protected draw(ctx: CanvasRenderingContext2D) {
-    const w = this.size.x
-    const h = this.size.y
-    if (!this.buf) this.buf = document.createElement('canvas')
-    const off = this.buf
-    off.width = ctx.canvas.width
-    off.height = ctx.canvas.height
-    const o = off.getContext('2d')!
+  private path(c: CanvasRenderingContext2D, ring: Ring) {
+    c.beginPath()
+    ring.forEach((p, i) => {
+      const q = this.toCanvas(p)
+      if (i) c.lineTo(q.x, q.y)
+      else c.moveTo(q.x, q.y)
+    })
+    c.closePath()
+  }
+
+  private layer(ctx: CanvasRenderingContext2D, key: 'buf' | 'sunBuf'): CanvasRenderingContext2D {
+    if (!this[key]) this[key] = document.createElement('canvas')
+    const b = this[key]!
+    b.width = ctx.canvas.width
+    b.height = ctx.canvas.height
+    const o = b.getContext('2d')!
     o.setTransform(ctx.getTransform())
-    o.fillStyle = '#05080f'
-    for (const s of this.shadows) {
-      o.beginPath()
-      s.ring.forEach((p, i) => {
-        const c = this.toCanvas(p)
-        if (i) o.lineTo(c.x, c.y)
-        else o.moveTo(c.x, c.y)
-      })
-      o.closePath()
+    return o
+  }
+
+  protected draw(ctx: CanvasRenderingContext2D) {
+    const sun = this.sun
+    if (!sun || sun.elevation <= 1) return
+
+    // sunlit ground at the sites: amber, minus the shadows
+    const s = this.layer(ctx, 'sunBuf')
+    s.fillStyle = '#ffb547'
+    for (const a of this.areas) {
+      this.path(s, a)
+      s.fill()
+    }
+    s.globalCompositeOperation = 'destination-out'
+    s.fillStyle = '#000'
+    for (const sh of this.shadows) {
+      this.path(s, sh.ring)
+      s.fill()
+    }
+    s.globalCompositeOperation = 'source-over'
+
+    // shadows: deep blue
+    const o = this.layer(ctx, 'buf')
+    o.fillStyle = '#16245c'
+    for (const sh of this.shadows) {
+      this.path(o, sh.ring)
       o.fill()
     }
+
     ctx.save()
     ctx.setTransform(1, 0, 0, 1, 0, 0)
-    ctx.globalAlpha = 0.5
-    ctx.drawImage(off, 0, 0)
+    ctx.globalAlpha = 0.6
+    ctx.drawImage(o.canvas, 0, 0)
+    ctx.globalAlpha = 0.42
+    ctx.drawImage(s.canvas, 0, 0)
     ctx.restore()
-
-    // sun rays across the view, pointing where light comes from
-    const sun = this.sun
-    if (sun && sun.elevation > 1) {
-      const b = (sun.azimuth * Math.PI) / 180
-      const dx = Math.sin(b)
-      const dy = -Math.cos(b)
-      ctx.save()
-      ctx.strokeStyle = 'rgba(255,209,102,0.10)'
-      ctx.lineWidth = 2
-      for (let k = -6; k <= 6; k++) {
-        const cx = w / 2 + -dy * k * 140
-        const cy = h / 2 + dx * k * 140
-        ctx.beginPath()
-        ctx.moveTo(cx - dx * 2000, cy - dy * 2000)
-        ctx.lineTo(cx + dx * 2000, cy + dy * 2000)
-        ctx.stroke()
-      }
-      ctx.restore()
-    }
   }
 }
-
