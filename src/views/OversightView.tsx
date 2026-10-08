@@ -30,6 +30,7 @@ export default function OversightView({ data, selected }: { data: AppData; selec
   const market = useJsonResource<MarketVoiceData>('market_voice_demo.json')
   const areas = useJsonResource<{ sites: Record<string, SiteArea> }>('site_areas.json')
   const buildings = useJsonResource<{ sites: Record<string, Building[]> }>('buildings.json')
+  const legs = useJsonResource<{ legs: Record<string, { path: [number, number][] }> }>('coach_legs.json')
   const ctx = useOperatorCtx(data)
   const st = useOperatorState()
 
@@ -47,9 +48,9 @@ export default function OversightView({ data, selected }: { data: AppData; selec
   const extras = useMemo<MadinahExtras | null>(
     () =>
       data.sites
-        ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois, areas: areas.data?.sites ?? null, buildings: buildings.data?.sites ?? null }
+        ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois, areas: areas.data?.sites ?? null, buildings: buildings.data?.sites ?? null, legs: legs.data?.legs ?? null }
         : null,
-    [data.sites, data.isochrones, data.pois, areas.data, buildings.data],
+    [data.sites, data.isochrones, data.pois, areas.data, buildings.data, legs.data],
   )
   const prayersOn = (date: string) => {
     const p = prayersFor(data, date)

@@ -7,7 +7,7 @@
  */
 import { useEffect, useMemo } from 'react'
 import L from 'leaflet'
-import { CircleMarker, Marker, Polygon, Tooltip } from 'react-leaflet'
+import { CircleMarker, Marker, Polygon, Polyline, Tooltip } from 'react-leaflet'
 import { useLeafletLayer } from '../canvas/useLeafletLayer'
 import { CrowdCanvas, TIMELAPSE } from '../canvas/CrowdCanvas'
 import type { CrowdSite } from '../canvas/CrowdCanvas'
@@ -35,6 +35,8 @@ export interface MadinahExtras {
   areas: Record<string, SiteArea> | null
   /** Buildings near each site, for shadows (buildings.json). */
   buildings: Record<string, Building[]> | null
+  /** Road legs between sites (coach_legs.json), for the cluster loops. */
+  legs: Record<string, { path: [number, number][] }> | null
 }
 
 /** Sun and shadows for a date and fractional hour, per site (memoised by the caller). */
@@ -124,62 +126,60 @@ export const CROWD_NOTE = `One dot ≈ a group on foot. Time-lapse ${TIMELAPSE}�
 
 /* ---------------------------------------------------------------- clusters */
 
-function hull(pts: [number, number][]): [number, number][] {
-  const p = [...pts].sort((a, b) => a[1] - b[1] || a[0] - b[0])
-  if (p.length < 3) return p
-  const cross = (o: [number, number], a: [number, number], b: [number, number]) => (a[1] - o[1]) * (b[0] - o[0]) - (a[0] - o[0]) * (b[1] - o[1])
-  const lower: [number, number][] = []
-  for (const q of p) {
-    while (lower.length >= 2 && cross(lower[lower.length - 2], lower[lower.length - 1], q) <= 0) lower.pop()
-    lower.push(q)
-  }
-  const upper: [number, number][] = []
-  for (const q of [...p].reverse()) {
-    while (upper.length >= 2 && cross(upper[upper.length - 2], upper[upper.length - 1], q) <= 0) upper.pop()
-    upper.push(q)
-  }
-  return [...lower.slice(0, -1), ...upper.slice(0, -1)]
-}
+/**
+ * The prototype's cluster loops (dhde-ai-demo/medina MEDINA_ROUTE_DEFS): the order a coach
+ * visits a cluster, drawn on the real roads in the cluster colour. Links between clusters
+ * (Jabal Ayr to Quba, Shuhada to the museums) are dashed.
+ */
+const LOOPS: { from: string; to: string; cluster: string; link?: boolean }[] = [
+  { from: 'faqir-well', to: 'gharas-well', cluster: 'A' },
+  { from: 'gharas-well', to: 'quba', cluster: 'A' },
+  { from: 'quba', to: 'safiya', cluster: 'A' },
+  { from: 'safiya', to: 'biography-museum', cluster: 'A' },
+  { from: 'biography-museum', to: 'al-hayy', cluster: 'A' },
+  { from: 'al-hayy', to: 'qiblatain', cluster: 'A' },
+  { from: 'uhud', to: 'shuhada', cluster: 'B' },
+  { from: 'shuhada', to: 'al-khandaq', cluster: 'B' },
+  { from: 'shuhada', to: 'biography-museum', cluster: 'B', link: true },
+  { from: 'jabal-ayr', to: 'quba', cluster: 'outlier', link: true },
+]
 
-/** A padded outline: each site becomes a small circle of points, then the hull of all of them. */
-function padded(sites: Site[], padM: number): [number, number][] {
-  const pts: [number, number][] = []
-  for (const s of sites) {
-    for (let a = 0; a < 360; a += 30) {
-      const r = padM / 111320
-      pts.push([s.lat + Math.cos((a * Math.PI) / 180) * r, s.lon + (Math.sin((a * Math.PI) / 180) * r) / Math.cos((s.lat * Math.PI) / 180)])
-    }
-  }
-  return hull(pts)
+function legPath(extras: MadinahExtras, a: string, b: string): [number, number][] | null {
+  const f = extras.legs?.[`${a}|${b}`]
+  if (f) return f.path
+  const r = extras.legs?.[`${b}|${a}`]
+  if (r) return [...r.path].reverse()
+  const sa = extras.sites.find((s) => s.id === a)
+  const sb = extras.sites.find((s) => s.id === b)
+  return sa && sb ? [[sa.lat, sa.lon], [sb.lat, sb.lon]] : null
 }
 
 export function ClusterLayer({ extras, onSelect }: { extras: MadinahExtras; onSelect: (id: string) => void }) {
   const { t } = useLang()
-  const groups = useMemo(() => {
-    const by: Record<string, Site[]> = { A: [], B: [], outlier: [] }
-    for (const s of extras.sites) {
-      const k = s.cluster === 'Asat' ? 'A' : s.cluster
-      if (by[k]) by[k].push(s)
-    }
-    return by
-  }, [extras.sites])
-
+  const name = (id: string) => {
+    const s = extras.sites.find((x) => x.id === id)
+    return s ? `${s.num}. ${t(s.short, s.short_ar)}` : id
+  }
   return (
     <>
-      {Object.entries(groups).map(([k, list]) => {
-        if (!list.length) return null
-        const st = CLUSTER_STYLE[k]
-        const poly = padded(list, k === 'outlier' ? 900 : 420)
+      {LOOPS.map((l) => {
+        const path = legPath(extras, l.from, l.to)
+        if (!path) return null
+        const st = CLUSTER_STYLE[l.cluster]
         return (
-          <Polygon key={k} positions={poly} pathOptions={{ color: st.colour, weight: 1.5, dashArray: '6 6', fillColor: st.colour, fillOpacity: 0.07 }} interactive>
+          <Polyline
+            key={`${l.from}-${l.to}`}
+            positions={path}
+            pathOptions={{ color: st.colour, weight: l.link ? 2.5 : 4, opacity: l.link ? 0.6 : 0.75, dashArray: l.link ? '6 7' : undefined, lineCap: 'round' }}
+          >
             <Tooltip sticky className="map-tip">
               <strong>{t(st.en, st.ar)}</strong>
               <div className="tip-row">
-                {list.map((s) => `${s.num}. ${t(s.short, s.short_ar)}`).join(' · ')}
+                {name(l.from)} → {name(l.to)}
               </div>
-              <div className="tip-sub">{t('Operators book a cluster as one itinerary (Operator view).', 'يحجز المشغلون المجموعة كمسار واحد (عرض المشغل).')}</div>
+              <div className="tip-sub">{l.link ? t('Link between clusters', 'رابط بين المجموعات') : t('Suggested coach loop, as booked in the Operator view', 'الجولة المقترحة للحافلات كما تُحجز في عرض المشغل')}</div>
             </Tooltip>
-          </Polygon>
+          </Polyline>
         )
       })}
       {extras.sites
@@ -189,13 +189,16 @@ export function ClusterLayer({ extras, onSelect }: { extras: MadinahExtras; onSe
           const icon = L.divIcon({
             className: 'site-num-icon',
             html: `<span class="site-num" style="background:${st.colour}">${s.num}</span>`,
-            iconSize: [20, 20],
-            iconAnchor: [24, 24],
+            iconSize: [22, 22],
+            iconAnchor: [11, 11],
           })
           return (
             <Marker key={s.id} position={[s.lat, s.lon]} icon={icon} eventHandlers={{ click: () => onSelect(s.id) }} zIndexOffset={800}>
-              <Tooltip direction="top" offset={[-14, -24]} className="map-tip">
-                {s.num}. {t(s.name, s.name_ar)}
+              <Tooltip direction="top" offset={[0, -12]} className="map-tip">
+                <strong>
+                  {s.num}. {t(s.name, s.name_ar)}
+                </strong>
+                <div className="tip-row">{t(st.en, st.ar)}</div>
               </Tooltip>
             </Marker>
           )
