@@ -1,6 +1,6 @@
-export type ViewId = 'summary' | 'map' | 'operator' | 'sites' | 'networks' | 'strategy' | 'data' | 'verify'
+export type ViewId = 'summary' | 'map' | 'heat' | 'operator' | 'sites' | 'networks' | 'strategy' | 'data' | 'verify'
 
-export const VIEW_IDS: ViewId[] = ['summary', 'map', 'operator', 'sites', 'networks', 'strategy', 'data', 'verify']
+export const VIEW_IDS: ViewId[] = ['summary', 'map', 'heat', 'operator', 'sites', 'networks', 'strategy', 'data', 'verify']
 
 export interface Route {
   view: ViewId

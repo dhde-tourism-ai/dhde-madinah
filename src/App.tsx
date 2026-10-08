@@ -9,6 +9,7 @@ import type { Route, ViewId } from './lib/route'
 const SummaryView = lazy(() => import('./views/SummaryView'))
 const OversightView = lazy(() => import('./views/OversightView'))
 const OperatorView = lazy(() => import('./views/OperatorView'))
+const HeatView = lazy(() => import('./views/HeatView'))
 const VerifyView = lazy(() => import('./views/VerifyView'))
 const SitesView = lazy(() => import('./views/SitesView'))
 const NetworksView = lazy(() => import('./views/NetworksView'))
@@ -18,6 +19,7 @@ const DataView = lazy(() => import('./views/DataView'))
 const TABS: { id: ViewId; en: string; ar: string; icon: IconName }[] = [
   { id: 'summary', en: 'Summary', ar: 'الملخص', icon: 'home' },
   { id: 'map', en: 'Oversight', ar: 'الإشراف', icon: 'map' },
+  { id: 'heat', en: 'Heat', ar: 'الحرارة', icon: 'weather' },
   { id: 'operator', en: 'Operator', ar: 'المشغل', icon: 'bus' },
   { id: 'sites', en: 'Sites', ar: 'المواقع', icon: 'nodes' },
   { id: 'networks', en: 'Networks', ar: 'الشبكات', icon: 'network' },
@@ -99,6 +101,7 @@ export default function App() {
           <Suspense fallback={loading}>
             {route.view === 'summary' && <SummaryView data={data} />}
             {route.view === 'map' && <OversightView data={data} selected={route.site} />}
+            {route.view === 'heat' && <HeatView data={data} />}
             {route.view === 'operator' && <OperatorView data={data} />}
             {route.view === 'verify' && <VerifyView data={data} payload={route.site} />}
             {route.view === 'sites' && <SitesView data={data} selected={route.site} />}
@@ -109,7 +112,7 @@ export default function App() {
         )}
       </main>
 
-      {route.view !== 'map' && (
+      {route.view !== 'map' && route.view !== 'heat' && (
         <footer className="site-foot">
           DHDE · {t('Madinah Visitor Intelligence', 'ذكاء الزوار في المدينة المنورة')} ·{' '}
           {t(
