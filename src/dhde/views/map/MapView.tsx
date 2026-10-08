@@ -61,6 +61,12 @@ const VIEW_BOUNDS: [[number, number], [number, number]] = [
   [24.545, 39.7],
 ]
 
+/** Saudi Arabia, Red Sea coast to the Gulf: the opening view. */
+const KINGDOM_BOUNDS: [[number, number], [number, number]] = [
+  [16.3, 34.6],
+  [32.2, 55.6],
+]
+
 /** ?at=lat,lon,zoom opens the map there (shareable close-ups, e.g. one site's crowd). */
 function urlAt(): [number, number, number] | null {
   const v = new URLSearchParams(window.location.search).get('at')?.split(',').map(Number)
@@ -77,7 +83,8 @@ function FitView({ narrow }: { narrow: boolean }) {
         map.setView([at[0], at[1]], at[2])
         return
       }
-      map.fitBounds(VIEW_BOUNDS, narrow ? { paddingTopLeft: [8, 8], paddingBottomRight: [8, 150] } : { paddingTopLeft: [330, 64], paddingBottomRight: [440, 96] })
+      // opens on the whole Kingdom: every pilot location at a glance, Madinah one click away
+      map.fitBounds(KINGDOM_BOUNDS, narrow ? { paddingTopLeft: [8, 8], paddingBottomRight: [8, 150] } : { paddingTopLeft: [330, 64], paddingBottomRight: [400, 96] })
     }, 50)
     return () => window.clearTimeout(id)
   }, [map, narrow])
@@ -236,7 +243,7 @@ interface MapViewProps {
 }
 
 export default function MapView({ registry, dashboard, economics, economicsError, live, liveError, routes, market, selectedId, onSelect, onOpenNode, coaches = [], extras = null, prayersOn, prayerTimes, regions = [] }: MapViewProps) {
-  const [regionId, setRegionId] = useState<string>('madinah')
+  const [regionId, setRegionId] = useState<string>(() => (urlAt() ? 'madinah' : 'kingdom'))
   const [regionFly, setRegionFly] = useState<{ center: [number, number]; zoom: number; key: number } | null>(null)
   const pickRegion = (id: string) => {
     setRegionId(id)
