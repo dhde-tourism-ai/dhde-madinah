@@ -1496,6 +1496,7 @@ input[type='range'] {
   margin-top: 6px;
 }
 .map-far .leaflet-dhde-cards-pane,
-.map-far .leaflet-dhde-nodes-pane .map-divicon {
+.map-far .leaflet-dhde-nodes-pane .map-divicon,
+.map-far canvas.dhde-canvas {
   display: none;
 }

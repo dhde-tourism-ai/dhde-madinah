@@ -84,7 +84,7 @@ function FitView({ narrow }: { narrow: boolean }) {
         return
       }
       // opens on the whole Kingdom: every pilot location at a glance, Madinah one click away
-      map.fitBounds(KINGDOM_BOUNDS, narrow ? { paddingTopLeft: [8, 8], paddingBottomRight: [8, 150] } : { paddingTopLeft: [330, 64], paddingBottomRight: [400, 96] })
+      map.fitBounds(KINGDOM_BOUNDS, narrow ? { paddingTopLeft: [8, 8], paddingBottomRight: [8, 150] } : { paddingTopLeft: [330, 64], paddingBottomRight: [document.querySelector('.mapview.focus') ? 60 : 400, 96] })
     }, 50)
     return () => window.clearTimeout(id)
   }, [map, narrow])
@@ -396,10 +396,40 @@ export default function MapView({ registry, dashboard, economics, economicsError
     <AlertsPanel source={live?.sources?.people} alerts={alerts} nodes={nodes} frame={frame} isDemo={isDemo} onSelect={(id) => onSelect(id)} onClose={narrow ? () => setSheet(null) : undefined} tabs={narrow ? undefined : tabs} />
   ) : null
 
+  // Map focus: hide the side panels so the map fills the screen (remembered per browser); full screen hides the app bar too.
+  const [focus, setFocus] = useState<boolean>(() => {
+    if (new URLSearchParams(window.location.search).get('focus') === '1') return true
+    try {
+      return localStorage.getItem('dhde.mapFocus') === '1'
+    } catch {
+      return false
+    }
+  })
+  const toggleFocus = () =>
+    setFocus((f) => {
+      try {
+        localStorage.setItem('dhde.mapFocus', f ? '0' : '1')
+      } catch {
+        /* storage blocked: the choice lasts for this visit */
+      }
+      return !f
+    })
+  const viewRef = useRef<HTMLElement>(null)
+  const [full, setFull] = useState(false)
+  useEffect(() => {
+    const on = () => setFull(document.fullscreenElement === viewRef.current)
+    document.addEventListener('fullscreenchange', on)
+    return () => document.removeEventListener('fullscreenchange', on)
+  }, [])
+  const toggleFull = () => {
+    if (document.fullscreenElement) void document.exitFullscreen()
+    else void viewRef.current?.requestFullscreen?.()
+  }
+
   const sheetState = narrow ? (selected ? 'right' : sheet === 'layers' ? 'left' : sheet === 'alerts' || sheet === 'nudges' ? 'right' : 'none') : 'none'
 
   return (
-    <section className={`mapview sheet-${sheetState}`}>
+    <section ref={viewRef} className={`mapview sheet-${sheetState}${focus && !narrow ? ' focus' : ''}${selected ? ' has-sel' : ''}`}>
       <MapContainer bounds={VIEW_BOUNDS} zoomSnap={0.25} zoomDelta={0.5} zoomControl={false} scrollWheelZoom className="map-canvas" preferCanvas={false} worldCopyJump={false}>
         <FitView narrow={narrow} />
         {!narrow && <ZoomControl position="bottomright" />}
@@ -549,6 +579,25 @@ export default function MapView({ registry, dashboard, economics, economicsError
         </div>
 
         {live && layerOn('shade') && <SunChip date={live.days[day]?.date ?? live.start} hour={t % 24} />}
+
+        {!narrow && (
+          <div className="map-tools" role="group" aria-label={tr('Map size', 'حجم الخريطة')}>
+            <button className="map-tool" onClick={toggleFocus} aria-pressed={focus} title={focus ? tr('Show panels', 'إظهار اللوحات') : tr('Hide panels: larger map', 'إخفاء اللوحات: خريطة أكبر')}>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                {focus ? <path d="M15 4h5v16h-5M4 12h9M9 7l-5 5 5 5" /> : <path d="M15 4h5v16h-5M13 12H4M9 7l5 5-5 5" />}
+              </svg>
+              <span>{focus ? tr('Panels', 'اللوحات') : tr('Larger map', 'خريطة أكبر')}</span>
+            </button>
+            {typeof document !== 'undefined' && document.fullscreenEnabled && (
+              <button className="map-tool" onClick={toggleFull} aria-pressed={full} title={full ? tr('Exit full screen', 'الخروج من ملء الشاشة') : tr('Full screen', 'ملء الشاشة')}>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  {full ? <path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" /> : <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" />}
+                </svg>
+                <span>{full ? tr('Exit', 'خروج') : tr('Full screen', 'ملء الشاشة')}</span>
+              </button>
+            )}
+          </div>
+        )}
 
         <div className="map-bottom">
           {live && (
