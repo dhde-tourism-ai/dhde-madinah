@@ -47,7 +47,7 @@ import { SiteCards } from './layers/SiteCards'
 import { Declutter } from './Declutter'
 import { CoachesLayer } from './layers/CoachesLayer'
 import type { CoachItem } from './canvas/CoachCanvas'
-import { BusinessLayer, ClusterLayer, CrowdLayer, OccupancyHalos, OriginMarkers, ShadeLayer, WalkLayer } from './layers/MadinahLayers'
+import { BusinessLayer, ClusterLayer, CrowdLayer, EconomyLayer, OccupancyHalos, OriginMarkers, ShadeLayer, WalkLayer } from './layers/MadinahLayers'
 import type { MadinahExtras } from './layers/MadinahLayers'
 import { VehicleHover } from './layers/VehicleHover'
 import { PrayerCard, PRAYER_NAMES } from './panels/PrayerCard'
@@ -184,7 +184,7 @@ function Basemap({ id }: { id: BasemapId }) {
           attribution="Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors"
           maxZoom={16}
         />
-        <TileLayer key="dark-ref" url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}" maxZoom={14} />
+        <TileLayer key="dark-ref" url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}" maxZoom={13} />
       </>
     )
   }
@@ -204,7 +204,7 @@ function Basemap({ id }: { id: BasemapId }) {
       <TileLayer key="img" url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}" attribution={ESRI_ATTR} maxZoom={18} className="tiles-imagery" />
       <TileLayer key="roads" url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}" maxZoom={18} opacity={0.55} />
       {/* Place names only up to city zoom: beyond it Esri serves them stretched (a giant "Medina"). */}
-      <TileLayer key="ref" url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}" maxZoom={14} />
+      <TileLayer key="ref" url="https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}" maxZoom={13} />
     </>
   )
 }
@@ -420,6 +420,7 @@ export default function MapView({ registry, dashboard, economics, economicsError
         {coachesOn && <CoachesLayer items={coaches} />}
         {layerOn('coaches') && extras && <OriginMarkers origins={extras.origins} />}
         {layerOn('economics') && economics && <EconomicsLayer economics={economics} nodes={allNodes} selectedId={selectedId} />}
+        {layerOn('economics') && extras && <EconomyLayer extras={extras} hour={t % 24} dayIdx={day} />}
         {layerOn('people') && (
           <PeopleLayer
             nodes={layerOn('people') ? nodes : []}

@@ -16,6 +16,8 @@ import { useLang } from '../lib/i18n'
 import { hhmmToHours, PRAYERS, prayersFor } from '../lib/data'
 import type { MadinahExtras, SiteArea } from '../dhde/views/map/layers/MadinahLayers'
 import type { Building } from '../dhde/lib/shade'
+import { economyFacts } from '../dhde/views/map/layers/MadinahLayers'
+import { economyFactsStore } from '../dhde/views/map/layers/economyStore'
 
 /**
  * The oversight map: the DHDE map (same UI as dhde-app) on Madinah data, with every
@@ -48,10 +50,11 @@ export default function OversightView({ data, selected }: { data: AppData; selec
   const extras = useMemo<MadinahExtras | null>(
     () =>
       data.sites
-        ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois, areas: areas.data?.sites ?? null, buildings: buildings.data?.sites ?? null, legs: legs.data?.legs ?? null, origins: data.sites.origins }
+        ? { sites: data.sites.sites, isochrones: data.isochrones, pois: data.pois, areas: areas.data?.sites ?? null, buildings: buildings.data?.sites ?? null, legs: legs.data?.legs ?? null, origins: data.sites.origins, telecom: data.telecom, spend: data.spend, context: data.context }
         : null,
-    [data.sites, data.isochrones, data.pois, areas.data, buildings.data, legs.data],
+    [data.sites, data.isochrones, data.pois, areas.data, buildings.data, legs.data, data.telecom, data.spend, data.context],
   )
+  economyFactsStore.set(economyFacts(extras))
   const prayersOn = (date: string) => {
     const p = prayersFor(data, date)
     return p ? PRAYERS.map((x) => hhmmToHours(p[x.id])) : []

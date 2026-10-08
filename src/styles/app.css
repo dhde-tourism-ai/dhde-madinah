@@ -1306,3 +1306,27 @@ input[type='range'] {
     grid-template-rows: 55% 45%;
   }
 }
+
+.econ-fact {
+  display: flex;
+  flex-direction: column;
+  margin: 6px 0;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: var(--gold-soft);
+}
+.econ-fact b {
+  color: #ffd166;
+  font-size: 14px;
+}
+.econ-fact span {
+  font-size: 11.5px;
+  color: var(--text-2);
+}
+.k-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-inline-end: 6px;
+}

@@ -1,13 +1,12 @@
 import { useState } from 'react'
+import { economyFactsStore } from '../layers/economyStore'
 import type { ReactNode } from 'react'
 import { useLang } from '../../../lib/i18n'
 import { Icon } from '../../../components/icons'
 import { DemoBadge } from '../../../components/DemoBadge'
 import { SourceBadge } from '../../../components/SourceBadge'
 import type { DataSources, SourceInfo } from '../../../types/live'
-import { PillLegend } from '../../../components/StatusPill'
 import { CROWD_TIERS, TRAFFIC_TIERS } from '../../../lib/live'
-import { econCaveats } from '../../../lib/economics'
 import type { RegionalEconomics } from '../../../types/economics'
 import { BASEMAPS, GROUPS, LAYERS, OVERVIEW_NOTE, readPanelOpen, storePanelOpen } from '../layers'
 import type { MarketVoiceData } from '../../../types/market'
@@ -60,6 +59,7 @@ function Grad({ from, to, left, right }: { from: string; to: string; left: strin
 
 export function LayersPanel(p: Props) {
   const { t } = useLang()
+  const econ = economyFactsStore.get()
   // On a phone the panel is a sheet with its own close button, so it never collapses.
   const collapsible = !p.onClose
   const [openState, setOpenState] = useState(readPanelOpen)
@@ -165,6 +165,37 @@ export function LayersPanel(p: Props) {
           {t('Site mostly in full sun in the heat', 'موقع معظمه تحت الشمس في الحر')}
         </div>
         <p className="lg-note">{t('Press play to watch the shadows swing through the day.', 'اضغط تشغيل لمشاهدة الظلال تتحرك خلال اليوم.')}</p>
+      </>
+    ),
+    economics: (
+      <>
+        {[
+          ['#ec835a', 'Food and cafés', 'مطاعم ومقاهٍ'],
+          ['#b18cff', 'Retail and souvenirs', 'تسوق وهدايا'],
+          ['#5b9cf0', 'Transport and parking', 'نقل ومواقف'],
+          ['#3dbb6e', 'Services', 'خدمات'],
+        ].map(([c, en, ar]) => (
+          <div key={en} className="lg-row">
+            <span className="lg-dot" style={{ background: c }}></span>
+            {t(en, ar)}
+          </div>
+        ))}
+        {econ.week && (
+          <div className="econ-fact">
+            <b>SAR {(econ.week.value / 1e6).toFixed(0)}M</b>
+            <span>
+              {t(`card spending in Madinah, week to ${econ.week.end}`, `الإنفاق بالبطاقات في المدينة، أسبوع حتى ${econ.week.end}`)}
+              {econ.week.change != null && ` (${econ.week.change >= 0 ? '+' : ''}${Math.round(econ.week.change * 100)}%)`} · SAMA
+            </span>
+          </div>
+        )}
+        {econ.perNight != null && (
+          <div className="econ-fact">
+            <b>SAR {econ.perNight}</b>
+            <span>{t('tourism spend per visitor-night (H1 2025, Ministry of Tourism)', 'الإنفاق السياحي لكل ليلة (النصف الأول ٢٠٢٥، وزارة السياحة)')}</span>
+          </div>
+        )}
+        <p className="lg-note">{t('Gold disc = card spend around the site this hour (demo). Figures above are real.', 'القرص الذهبي = الإنفاق حول الموقع هذه الساعة (تجريبي). الأرقام أعلاه حقيقية.')}</p>
       </>
     ),
     business: (
@@ -310,30 +341,6 @@ export function LayersPanel(p: Props) {
           <span className="lg-ring" style={{ borderStyle: 'solid', borderColor: '#3987e5' }}></span>
           {t('Pulsing ring = hotspot (strong opinion, 25+ posts)', '点滅する輪＝ホットスポット（25件以上）')}
         </div>
-      </>
-    ),
-    economics: (
-      <>
-        <p className="lg-note">{t('Circle = municipal revenue · dashed line = visitor flow · grey dashed = Pending: KDDI data (journeys not measured yet).', '円＝市町の観光収入・破線＝来訪者の流れ・灰色破線＝KDDIデータ待ち（移動は未計測）。')}</p>
-        <PillLegend />
-        {p.economics?.sample && (
-          <div className="banner banner-warn">
-            <Icon name="alert" />
-            <span>
-              <strong>{t('Sample data.', 'サンプルデータ。')}</strong> {t('Placeholder in the agreed shape; do not quote.', '仮データです。引用しないでください。')}
-            </span>
-          </div>
-        )}
-        {p.economics &&
-          econCaveats(p.economics).map((c) => (
-            <div key={c} className="banner banner-warn">
-              <Icon name="alert" />
-              <span>
-                <strong>{t('Check before quoting:', '引用前に確認：')}</strong> {c}
-              </span>
-            </div>
-          ))}
-        {p.economicsError && <div className="banner banner-warn">{p.economicsError.message}</div>}
       </>
     ),
   }

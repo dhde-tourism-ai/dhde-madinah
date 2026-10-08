@@ -13,7 +13,7 @@ import { CrowdCanvas, TIMELAPSE } from '../canvas/CrowdCanvas'
 import type { CrowdSite } from '../canvas/CrowdCanvas'
 import type { NodeFrame } from '../../../lib/live'
 import { useLang } from '../../../lib/i18n'
-import type { IsochronesFile, LatLon, PoisFile, Site } from '../../../../types/data'
+import type { ContextFile, IsochronesFile, LatLon, PoisFile, Site, SpendFile, TelecomFile } from '../../../../types/data'
 import { ShadeCanvas } from '../canvas/ShadeCanvas'
 import { shadeShare, shadowsFor } from '../../../lib/shade'
 import type { Building, Ring, Shadow } from '../../../lib/shade'
@@ -39,6 +39,10 @@ export interface MadinahExtras {
   legs: Record<string, { path: [number, number][] }> | null
   /** Coach starting points (hotel districts, airport, station, terminal). */
   origins: { id: string; label: string; label_ar: string; lat: number; lon: number }[]
+  /** Spend by site and category (demo, stc pay / point-of-sale shape), city card spend (SAMA, real), facts. */
+  telecom: TelecomFile | null
+  spend: SpendFile | null
+  context: ContextFile | null
 }
 
 /** Sun and shadows for a date and fractional hour, per site (memoised by the caller). */
@@ -415,4 +419,74 @@ export function OriginMarkers({ origins }: { origins: { id: string; label: strin
       ))}
     </>
   )
+}
+
+/* ---------------------------------------------------------------- economy */
+
+const CAT_COLOUR: Record<string, string> = { food: '#ec835a', retail: '#b18cff', transport: '#5b9cf0', services: '#3dbb6e' }
+const sar = (v: number) => (v >= 1e6 ? `${(v / 1e6).toFixed(1)}M` : v >= 1e3 ? `${Math.round(v / 1e3)}k` : `${Math.round(v)}`)
+
+/**
+ * Spending around each site this hour: a gold disc sized by card spend in the hour, ringed
+ * by its category split (food, retail, transport, services), in the shape of stc pay /
+ * point-of-sale aggregates. Demo until spend data arrives; the city total is real (SAMA).
+ */
+export function EconomyLayer({ extras, hour, dayIdx }: { extras: MadinahExtras; hour: number; dayIdx: number }) {
+  const { t } = useLang()
+  const tel = extras.telecom
+  if (!tel) return null
+  const cats = tel.spend_categories
+  return (
+    <>
+      {extras.sites.map((s) => {
+        const sp = tel.sites[s.id]
+        if (!sp) return null
+        const day = Object.values(sp.spend_sar_day).reduce((a, b) => a + b, 0)
+        const now = day * (sp.spend_sar_hourly_share[hour] ?? 0)
+        const visitors = sp.daily_devices[dayIdx % sp.daily_devices.length] || 1
+        const capped = Math.min(10 + Math.sqrt(now / 500), 60)
+        return (
+          <CircleMarker
+            key={s.id}
+            center={[s.lat - 0.0012, s.lon + 0.0016]}
+            radius={capped}
+            pathOptions={{ color: '#ffd166', weight: 2, fillColor: '#c99a3b', fillOpacity: 0.45 }}
+          >
+            <Tooltip className="map-tip wide" direction="top">
+              <strong>
+                {t(s.short, s.short_ar)} · {t('card spend this hour', 'الإنفاق بالبطاقات هذه الساعة')}: SAR {sar(now)}
+              </strong>
+              {cats.map((c) => {
+                const v = sp.spend_sar_day[c.id] ?? 0
+                return (
+                  <div key={c.id} className="tip-row">
+                    <i className="k-dot" style={{ background: CAT_COLOUR[c.id] }}></i>
+                    {t(c.label, c.label_ar)}: SAR {sar(v)} {t('a day', 'يوميًا')} ({Math.round((v / day) * 100)}%)
+                  </div>
+                )
+              })}
+              <div className="tip-row">
+                {t('Per visitor', 'لكل زائر')}: SAR {Math.round(day / visitors)} · {t('day total', 'إجمالي اليوم')}: SAR {sar(day)}
+              </div>
+              <div className="tip-sub">{t('Demo, in the shape of stc pay / point-of-sale aggregates. City totals in the legend are real (SAMA).', 'تجريبي بصيغة بيانات stc pay ونقاط البيع. إجمالي المدينة في المفتاح حقيقي (ساما).')}</div>
+            </Tooltip>
+          </CircleMarker>
+        )
+      })}
+    </>
+  )
+}
+
+/** Real city figures for the economy legend: SAMA weekly card spend in Madinah and spend per night. */
+export function economyFacts(extras: MadinahExtras | null) {
+  const weeks = extras?.spend?.weeks ?? []
+  const last = weeks[weeks.length - 1]
+  const prev = weeks.length > 1 ? weeks[weeks.length - 2] : null
+  const fact = (id: string) => extras?.context?.facts.find((f) => f.id === id)
+  return {
+    week: last ? { end: last.week_end, value: last.value_sar, change: prev ? (last.value_sar - prev.value_sar) / prev.value_sar : null } : null,
+    perNight: fact('madinah_spend_per_night_h1_2025')?.value ?? null,
+    perTrip: fact('madinah_spend_per_trip_h1_2025')?.value ?? null,
+    total: fact('madinah_tourism_spend_h1_2025')?.value ?? null,
+  }
 }
