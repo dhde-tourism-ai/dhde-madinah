@@ -131,9 +131,9 @@ export function LayersPanel(p: Props) {
     clusters: (
       <>
         {[
-          ['#199e70', 'A · Quba and the wells (central loop)', 'أ · قباء والآبار'],
-          ['#c98500', 'B · Uhud and al-Khandaq', 'ب · أحد والخندق'],
-          ['#e66767', 'Jabal Ayr (stand-alone)', 'جبل عير (مستقل)'],
+          ['#0ca3a3', 'A · Quba and the wells (central loop)', 'أ · قباء والآبار'],
+          ['#eda100', 'B · Uhud and al-Khandaq', 'ب · أحد والخندق'],
+          ['#d03b3b', 'Jabal Ayr (stand-alone)', 'جبل عير (مستقل)'],
         ].map(([c, en, ar]) => (
           <div key={en} className="lg-row">
             <span className="site-num sm" style={{ background: c }}>#</span>
@@ -187,9 +187,9 @@ export function LayersPanel(p: Props) {
     coaches: (
       <>
         {[
-          ['#199e70', 'Quba cluster', 'مجموعة قباء'],
-          ['#c98500', 'Uhud and Khandaq', 'أحد والخندق'],
-          ['#e66767', 'Jabal Ayr (stand-alone)', 'جبل عير (مستقل)'],
+          ['#0ca3a3', 'Quba cluster', 'مجموعة قباء'],
+          ['#eda100', 'Uhud and Khandaq', 'أحد والخندق'],
+          ['#d03b3b', 'Jabal Ayr (stand-alone)', 'جبل عير (مستقل)'],
           ['#8a94a6', 'Returning to hotel', 'العودة إلى الفندق'],
         ].map(([c, en, ar]) => (
           <div key={en} className="lg-row">

@@ -46,9 +46,9 @@ export function shadowsAt(extras: MadinahExtras, date: string, hour: number): { 
 }
 
 export const CLUSTER_STYLE: Record<string, { colour: string; en: string; ar: string; tag: string }> = {
-  A: { colour: '#199e70', en: 'Cluster A · Quba and the wells (central loop)', ar: 'المجموعة أ · قباء والآبار (الجولة الوسطى)', tag: 'A' },
-  B: { colour: '#c98500', en: 'Cluster B · Uhud and al-Khandaq', ar: 'المجموعة ب · أحد والخندق', tag: 'B' },
-  outlier: { colour: '#e66767', en: 'Stand-alone · Jabal Ayr (own itinerary)', ar: 'مستقل · جبل عير (مسار مستقل)', tag: '' },
+  A: { colour: '#0ca3a3', en: 'Cluster A · Quba and the wells (central loop)', ar: 'المجموعة أ · قباء والآبار (الجولة الوسطى)', tag: 'A' },
+  B: { colour: '#eda100', en: 'Cluster B · Uhud and al-Khandaq', ar: 'المجموعة ب · أحد والخندق', tag: 'B' },
+  outlier: { colour: '#d03b3b', en: 'Stand-alone · Jabal Ayr (own itinerary)', ar: 'مستقل · جبل عير (مسار مستقل)', tag: '' },
 }
 
 const ZONE_M: Record<string, number> = {

@@ -24,9 +24,9 @@ export function SiteMarkers({ nodes, selectedId, onSelect }: Props) {
           <CircleMarker
             key={n.id}
             center={[n.lat, n.lon]}
-            radius={6}
+            radius={8}
             eventHandlers={click}
-            pathOptions={{ color: selected ? ACCENT : '#c9d4ff', weight: selected ? 2.5 : 1.8, fillColor: '#0a1120', fillOpacity: 0.85 }}
+            pathOptions={{ color: selected ? ACCENT : '#ffffff', weight: selected ? 2.5 : 1.8, fillColor: n.colour ?? '#0a1120', fillOpacity: 0.9 }}
           />
         )
       })}

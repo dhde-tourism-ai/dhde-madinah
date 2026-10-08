@@ -47,6 +47,8 @@ interface Props {
   setSpeed: (s: number) => void
   /** Moving buses or trains are on: show their clock (live at Now, else a preview of the hour). */
   vehicles?: boolean
+  /** Prayer times as fractional hour indices (labels shown for today only). */
+  marks?: { key: string; i: number; label: string; short?: string }[]
 }
 
 /** The vehicle clock, ticking: HH:MM:SS live, HH:MM in a preview. */
@@ -61,7 +63,7 @@ function VehicleTime({ live }: { live: boolean }) {
   return <span className="tl-hour num">{clock(m)}{live ? `:${String(secs).padStart(2, '0')}` : ''}</span>
 }
 
-export function Timeline({ live, t, setT, playing, setPlaying, speed, setSpeed, vehicles = false }: Props) {
+export function Timeline({ live, t, setT, playing, setPlaying, speed, setSpeed, vehicles = false, marks = [] }: Props) {
   const { t: tr, lang } = useLang()
   const track = useRef<HTMLDivElement>(null)
   const H = live.hours
@@ -174,6 +176,11 @@ export function Timeline({ live, t, setT, playing, setPlaying, speed, setSpeed, 
             <span>{todayDay > 0 ? tr('data', '実測') : tr('now', '現在')}</span>
           </div>
           {nowIdx !== now && <div className="tl-clock" style={{ left: `${xOf(nowIdx + 0.5, sc) * 100}%` }} title={tr('Now', '現在')}></div>}
+          {marks.map((m) => (
+            <div key={m.key} className="tl-prayer-mark" style={{ left: `${xOf(m.i, sc) * 100}%` }} title={m.label}>
+              {m.short && <span>{m.short}</span>}
+            </div>
+          ))}
           <div className="tl-thumb" style={{ left: `${xOf(t + 0.5, sc) * 100}%` }}></div>
         </div>
       </div>

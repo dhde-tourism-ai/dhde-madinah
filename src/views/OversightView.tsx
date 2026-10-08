@@ -74,6 +74,7 @@ export default function OversightView({ data, selected }: { data: AppData; selec
       coaches={coaches}
       extras={extras}
       prayersOn={prayersOn}
+      prayerTimes={(date) => prayersFor(data, date)}
     />
   )
 }

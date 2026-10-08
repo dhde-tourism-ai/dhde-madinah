@@ -140,11 +140,12 @@ export function PeopleLayer({ nodes, frame, selectedId, onSelect, kanazawa, meta
               radius={rNow}
               eventHandlers={click}
               pathOptions={{
-                color: est ? col : '#0a1120',
-                weight: est ? 2.2 : 1.5,
+                // Fill: the site's cluster colour (as in the Madinah prototype). Outline: how crowded it is.
+                color: col,
+                weight: 3,
                 dashArray: est ? '4 3' : undefined,
-                fillColor: col,
-                fillOpacity: f.observed ? (est ? 0.55 : 0.88) : 0.22,
+                fillColor: n.colour ?? col,
+                fillOpacity: f.observed ? 0.8 : 0.35,
               }}
             >
               <Tooltip className="map-tip wide" direction="top" offset={[0, -rNow]}>

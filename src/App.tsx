@@ -30,9 +30,9 @@ function BrandMark() {
     <svg className="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
       <rect width="32" height="32" rx="9" fill="#17233a" />
       <path d="M6 22c4-9 9-12 20-13" stroke="#8b9dff" strokeWidth="2" fill="none" strokeLinecap="round" strokeDasharray="1 3.2" />
-      <circle cx="7" cy="21.5" r="2.6" fill="#199e70" />
+      <circle cx="7" cy="21.5" r="2.6" fill="#0ca3a3" />
       <circle cx="15.5" cy="13.5" r="3.4" fill="#8b9dff" />
-      <circle cx="25" cy="9.3" r="2.2" fill="#c98500" />
+      <circle cx="25" cy="9.3" r="2.2" fill="#eda100" />
     </svg>
   )
 }

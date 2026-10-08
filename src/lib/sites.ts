@@ -1,12 +1,12 @@
 import type { Site, TelecomFile } from '../types/data'
 
-/** Cluster colours (series palette from tokens.css), always shown with the cluster name. */
+/** Cluster colours from the Madinah prototype, always shown with the cluster name. */
 export const CLUSTER: Record<string, { colour: string; en: string; ar: string }> = {
   center: { colour: '#8b9dff', en: 'Central area', ar: 'المنطقة المركزية' },
-  A: { colour: '#199e70', en: 'Quba cluster', ar: 'مجموعة قباء' },
-  Asat: { colour: '#199e70', en: 'Quba cluster (satellite)', ar: 'مجموعة قباء (تابع)' },
-  B: { colour: '#c98500', en: 'Uhud and Khandaq', ar: 'أحد والخندق' },
-  outlier: { colour: '#e66767', en: 'Stand-alone', ar: 'مستقل' },
+  A: { colour: '#0ca3a3', en: 'Quba cluster', ar: 'مجموعة قباء' },
+  Asat: { colour: '#0ca3a3', en: 'Quba cluster (satellite)', ar: 'مجموعة قباء (تابع)' },
+  B: { colour: '#eda100', en: 'Uhud and Khandaq', ar: 'أحد والخندق' },
+  outlier: { colour: '#d03b3b', en: 'Stand-alone', ar: 'مستقل' },
 }
 
 export function clusterOf(s: Site) {

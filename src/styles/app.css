@@ -964,3 +964,96 @@ input[type='range'] {
     outline: 2px solid #ff8a8a;
   }
 }
+
+/* ---------- prayer times on the oversight map ---------- */
+.map-right .prayer-card {
+  padding: 10px 14px 10px;
+  margin-bottom: 10px;
+  flex: none;
+  max-height: none;
+  overflow: visible;
+}
+.prayer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.prayer-next {
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+.prayer-next b {
+  color: var(--warn-text);
+}
+.prayer-now {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0a1120;
+  background: var(--warn);
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  animation: dhde-alert-pulse 1.6s ease-in-out infinite;
+}
+.prayer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 4px;
+}
+.prayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 2px;
+  border-radius: var(--r-sm);
+  background: var(--bg-2);
+  font-size: 11.5px;
+}
+.prayer-name {
+  color: var(--text-2);
+}
+.prayer-time {
+  font-weight: 700;
+  font-size: 13px;
+}
+.prayer.past {
+  opacity: 0.45;
+}
+.prayer.sun .prayer-time {
+  font-weight: 500;
+  color: var(--text-2);
+}
+.prayer.next {
+  box-shadow: inset 0 0 0 1.5px var(--warn);
+}
+.prayer.now {
+  background: rgba(250, 178, 25, 0.22);
+  box-shadow: inset 0 0 0 1.5px var(--warn);
+}
+.prayer-src {
+  margin: 6px 0 0;
+  font-size: 10.5px;
+  color: var(--muted);
+}
+.tl-prayer-mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px dashed rgba(250, 178, 25, 0.55);
+  pointer-events: auto;
+  z-index: 2;
+}
+.tl-prayer-mark span {
+  position: absolute;
+  top: -1px;
+  left: 3px;
+  font-size: 9.5px;
+  color: var(--warn-text);
+  white-space: nowrap;
+  pointer-events: none;
+}

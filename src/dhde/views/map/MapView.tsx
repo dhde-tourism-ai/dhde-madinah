@@ -50,6 +50,7 @@ import type { CoachItem } from './canvas/CoachCanvas'
 import { BusinessLayer, ClusterLayer, CrowdLayer, ShadeLayer, WalkLayer } from './layers/MadinahLayers'
 import type { MadinahExtras } from './layers/MadinahLayers'
 import { VehicleHover } from './layers/VehicleHover'
+import { PrayerCard, PRAYER_NAMES } from './panels/PrayerCard'
 
 /** Madinah: the Haram, both site clusters, Jabal Ayr to the south and the airport to the north-east. */
 const VIEW_BOUNDS: [[number, number], [number, number]] = [
@@ -225,9 +226,11 @@ interface MapViewProps {
   extras?: MadinahExtras | null
   /** Prayer times (fractional hours) for a Riyadh date. */
   prayersOn?: (date: string) => number[]
+  /** Prayer times as HH:MM for a Riyadh date (fajr, sunrise, dhuhr, asr, maghrib, isha). */
+  prayerTimes?: (date: string) => Record<string, string> | null
 }
 
-export default function MapView({ registry, dashboard, economics, economicsError, live, liveError, routes, market, selectedId, onSelect, onOpenNode, coaches = [], extras = null, prayersOn }: MapViewProps) {
+export default function MapView({ registry, dashboard, economics, economicsError, live, liveError, routes, market, selectedId, onSelect, onOpenNode, coaches = [], extras = null, prayersOn, prayerTimes }: MapViewProps) {
   const { t: tr, lang } = useLang()
   const narrow = useIsNarrow()
   const [url] = useState(readUrlState)
@@ -394,7 +397,8 @@ export default function MapView({ registry, dashboard, economics, economicsError
           </>
         )}
         {layerOn('business') && extras && live && <BusinessLayer extras={extras} hour={t % 24} prayers={prayersOn?.(live.days[day]?.date ?? '') ?? []} />}
-        {layerOn('clusters') && extras && <ClusterLayer extras={extras} onSelect={(id) => onSelect(id)} />}
+        {/* Clusters and site numbers are always shown: they are how operators and MRDA name the sites. */}
+        {extras && <ClusterLayer extras={extras} onSelect={(id) => onSelect(id)} />}
         {market && layerOn('hotels') && <HotelsLayer data={market} day={day} nodes={registry?.nodes ?? []} />}
         {market && layerOn('rsi') && <RsiLayer data={market} />}
         {transportOn && transportMap && (
@@ -499,10 +503,35 @@ export default function MapView({ registry, dashboard, economics, economicsError
           />
         </div>
 
-        <div className="map-right">{rightPanel}</div>
+        <div className="map-right">
+          {live && !selected && !narrow && (
+            <PrayerCard date={live.days[day]?.date ?? live.start} times={prayerTimes?.(live.days[day]?.date ?? live.start) ?? null} hour={t % 24} atNow={!playing && t === (live.now_index ?? live.observed_until)} />
+          )}
+          {rightPanel}
+        </div>
 
         <div className="map-bottom">
-          {live && <Timeline live={live} t={t} setT={(i) => setT(i)} playing={playing} setPlaying={setPlaying} speed={speed} setSpeed={setSpeed} vehicles={transportOn || coachesOn} />}
+          {live && (
+            <Timeline
+              live={live}
+              t={t}
+              setT={(i) => setT(i)}
+              playing={playing}
+              setPlaying={setPlaying}
+              speed={speed}
+              setSpeed={setSpeed}
+              vehicles={transportOn || coachesOn}
+              marks={live.days.flatMap((d, k) => {
+                const pt = prayerTimes?.(d.date)
+                if (!pt) return []
+                return PRAYER_NAMES.filter((p) => p.id !== 'sunrise' && pt[p.id]).map((p) => ({
+                  key: `${d.date}-${p.id}`,
+                  i: k * 24 + Number(pt[p.id].slice(0, 2)) + Number(pt[p.id].slice(3, 5)) / 60,
+                  label: `${tr(p.en, p.ar)} ${pt[p.id]}`,
+                }))
+              })}
+            />
+          )}
           {narrow && (
             <div className="sheet-tabs" role="group" aria-label={tr('Panels', 'اللوحات')}>
               <button className="btn" aria-pressed={sheetState === 'left'} onClick={() => { onSelect(undefined); setSheet(sheet === 'layers' ? null : 'layers') }}>
