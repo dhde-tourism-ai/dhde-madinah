@@ -68,4 +68,8 @@ python gen_telecom_demo.py
 
 Overpass responses are cached in `cache/` (git-ignored); delete a file to re-fetch it.
 
+## Saudi open data (`data/open/`)
+
+Published monthly and daily figures on Madinah visitors (site visitors, Rawdah permits, hotels, airport, Umrah entries, city bus), cleaned by `scripts/build_open_data.py`. Not used by the app yet; [docs/open-data-eda.md](docs/open-data-eda.md) says what it can add, and [data/open/README.md](data/open/README.md) lists the sources.
+
 OpenStreetMap data © OpenStreetMap contributors (ODbL). Photos from Wikimedia Commons, credited in `sites.json`.
