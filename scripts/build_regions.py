@@ -2,7 +2,7 @@
 build_regions.py - the pilot locations shown alongside Madinah, with their key places.
 
 From the STA call notes (Oct 2026), where a pilot could start:
-  - Madinah: replicate the dashboard with MDA; its data or demo data to build correlations
+  - Madinah: replicate the dashboard with the regional authority; its data or demo data to build correlations
   - AlUla and the Red Sea: test beds for nudging, since visitors arrive mostly by air
   - Jeddah or Makkah: the effect of trains and promotions on travel
 Places are geocoded with OpenStreetMap Nominatim (one request a second); a place it can't
@@ -25,7 +25,7 @@ REGIONS = [
     {
         "id": "madinah", "name": "Madinah", "name_ar": "المدينة المنورة", "center": [24.467, 39.611], "zoom": 13,
         "arrival": "Air (MED), Haramain railway, road", "arrival_ar": "جوًا (مطار المدينة)، قطار الحرمين، برًا",
-        "use_case": "Replicate the dashboard with MDA and access its data, or demo data, to build correlations",
+        "use_case": "Replicate the dashboard with the regional authority and access its data, or demo data, to build correlations",
         "use_case_ar": "تكرار اللوحة مع هيئة تطوير المدينة والوصول إلى بياناتها أو بيانات تجريبية لبناء الارتباطات",
         "status": "live", "places": [],
     },

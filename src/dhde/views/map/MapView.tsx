@@ -448,7 +448,7 @@ export default function MapView({ registry, dashboard, economics, economicsError
           </>
         )}
         {layerOn('business') && extras && live && <BusinessLayer extras={extras} hour={t % 24} prayers={prayersOn?.(live.days[day]?.date ?? '') ?? []} />}
-        {/* Clusters and site numbers are always shown: they are how operators and MRDA name the sites. */}
+        {/* Clusters and site numbers are always shown: they are how operators and the authorities name the sites. */}
         {extras && <ClusterLayer extras={extras} onSelect={(id) => onSelect(id)} />}
         {market && layerOn('hotels') && <HotelsLayer data={market} day={day} nodes={registry?.nodes ?? []} />}
         {market && layerOn('rsi') && <RsiLayer data={market} />}

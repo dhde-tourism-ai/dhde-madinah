@@ -1,5 +1,5 @@
 {
- "source": "DHDE Madinah heritage-sites prototype (dhde-ai-demo/medina), MRDA site list; OpenStreetMap coordinates where found",
+ "source": "DHDE Madinah heritage-sites prototype (dhde-ai-demo/medina), official site list; OpenStreetMap coordinates where found",
  "status": "real",
  "sites": [
   {
@@ -266,8 +266,8 @@
    "lat": 24.4771,
    "lon": 39.5951,
    "typical_visit_min": 22,
-   "desc": "The site of the Battle of the Trench, with the small Seven Mosques and al-Fath Mosque. A pilot site in the STC request; too close to other cells for the network to separate, so Wi-Fi counts help here.",
-   "desc_ar": "موقع غزوة الخندق، ويضم المساجد السبعة ومسجد الفتح. موقع تجريبي في طلب بيانات STC؛ قريب جدًا من خلايا أخرى، لذا تساعد عدادات الواي فاي هنا.",
+   "desc": "The site of the Battle of the Trench, with the small Seven Mosques and al-Fath Mosque. A pilot site in the telecom data request; too close to other cells for the network to separate, so Wi-Fi counts help here.",
+   "desc_ar": "موقع غزوة الخندق، ويضم المساجد السبعة ومسجد الفتح. موقع تجريبي في طلب بيانات الاتصالات؛ قريب جدًا من خلايا أخرى، لذا تساعد عدادات الواي فاي هنا.",
    "photo": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Mosque_of_Ali_ibn_Abi_Talib_at_the_Seven_Mosques%2C_Madinah%2C_Saudi_Arabia_%282%29.jpg/960px-Mosque_of_Ali_ibn_Abi_Talib_at_the_Seven_Mosques%2C_Madinah%2C_Saudi_Arabia_%282%29.jpg",
     "credit": "Richard Mortel, CC BY 2.0, via Wikimedia Commons"

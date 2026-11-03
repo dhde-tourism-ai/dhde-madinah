@@ -22,7 +22,7 @@ import { economyFactsStore } from '../dhde/views/map/layers/economyStore'
 
 /**
  * The oversight map: the DHDE map (same UI as dhde-app) on Madinah data, with every
- * operator's booked coaches on it. MRDA sees all operators, flows, transport and nudges in
+ * operator's booked coaches on it. The authority sees all operators, flows, transport and nudges in
  * one place; operators book and sign off in the Operator view.
  */
 export default function OversightView({ data, selected }: { data: AppData; selected: string | null }) {

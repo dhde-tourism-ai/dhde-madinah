@@ -74,9 +74,9 @@ export default function App() {
 
         <div className="appbar-right">
           {data.telecom?.demo && (
-            <span className="fresh-chip stale" title={t('Visitor, time-on-site, flow and spend layers run on demo data until STC data arrives', 'طبقات الزوار والمدة والتنقل والإنفاق تعمل ببيانات تجريبية حتى وصول بيانات STC')}>
+            <span className="fresh-chip stale" title={t('Visitor, time-on-site, flow and spend layers run on demo data until telecom data arrives', 'طبقات الزوار والمدة والتنقل والإنفاق تعمل ببيانات تجريبية حتى وصول بيانات الاتصالات')}>
               <span className="fresh-dot" aria-hidden="true"></span>
-              <span className="fresh-text-long">{t('STC data pending', 'بانتظار بيانات STC')}</span>
+              <span className="fresh-text-long">{t('Telecom data pending', 'بانتظار بيانات الاتصالات')}</span>
             </span>
           )}
           <div className="lang-toggle" role="group" aria-label={t('Language', 'اللغة')}>
@@ -116,8 +116,8 @@ export default function App() {
         <footer className="site-foot">
           DHDE · {t('Madinah Visitor Intelligence', 'ذكاء الزوار في المدينة المنورة')} ·{' '}
           {t(
-            'University of Fukui and Taibah University, with MRDA. Visitor, flow and spend layers are illustrative until STC data arrives.',
-            'جامعة فوكوي وجامعة طيبة، بالتعاون مع هيئة تطوير منطقة المدينة المنورة. طبقات الزوار والتنقل والإنفاق توضيحية حتى وصول بيانات STC.',
+            'University of Fukui and Taibah University. Visitor, flow and spend layers are illustrative until telecom data arrives.',
+            'جامعة فوكوي وجامعة طيبة. طبقات الزوار والتنقل والإنفاق توضيحية حتى وصول بيانات الاتصالات.',
           )}
         </footer>
       )}

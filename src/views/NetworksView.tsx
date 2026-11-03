@@ -58,8 +58,8 @@ export default function NetworksView({ data, selected }: { data: AppData; select
           <h1 className="display page-title">{t('How visitors link the sites, and which visitor types to target', 'كيف يربط الزوار بين المواقع، وأي أنواع الزوار نستهدف')}</h1>
           <p className="page-lede">
             {t(
-              'The site network uses aggregate trips, which STC can share directly. The visitor–place graph needs STC-side processing or an opt-in panel; it shows visitor types and repeat routes.',
-              'تعتمد شبكة المواقع على رحلات مجمعة يمكن لـ STC مشاركتها مباشرة. أما مخطط الزائر–المكان فيحتاج معالجة داخل STC أو عينة بموافقة المشاركين؛ ويُظهر أنواع الزوار والمسارات المتكررة.',
+              'The site network uses aggregate trips, which the telecom provider can share directly. The visitor–place graph needs provider-side processing or an opt-in panel; it shows visitor types and repeat routes.',
+              'تعتمد شبكة المواقع على رحلات مجمعة يمكن لمشغل الاتصالات مشاركتها مباشرة. أما مخطط الزائر–المكان فيحتاج معالجة داخل مشغل الاتصالات أو عينة بموافقة المشاركين؛ ويُظهر أنواع الزوار والمسارات المتكررة.',
             )}
           </p>
         </div>
@@ -136,7 +136,7 @@ export default function NetworksView({ data, selected }: { data: AppData; select
 
         <Card
           title={t('Visitor–place graph: each visitor linked to the places they visit, in order', 'مخطط الزائر–المكان: كل زائر مرتبط بالأماكن التي يزورها بالترتيب')}
-          sub={t('A sample of anonymised visitors. Needs STC-side processing or an opt-in panel.', 'عينة من زوار مجهولي الهوية. يحتاج معالجة داخل STC أو عينة بموافقة.')}
+          sub={t('A sample of anonymised visitors. Needs provider-side processing or an opt-in panel.', 'عينة من زوار مجهولي الهوية. يحتاج معالجة داخل مشغل الاتصالات أو عينة بموافقة.')}
           prov="illustrative"
           className="span-2"
           right={
@@ -232,7 +232,7 @@ export default function NetworksView({ data, selected }: { data: AppData; select
           </p>
         </Card>
 
-        <Card title={t('Length of stay in Madinah, by nationality group', 'مدة الإقامة في المدينة حسب مجموعة الجنسية')} sub={t('MRDA target: 7 to 8 days', 'هدف الهيئة: ٧ إلى ٨ أيام')} prov="illustrative">
+        <Card title={t('Length of stay in Madinah, by nationality group', 'مدة الإقامة في المدينة حسب مجموعة الجنسية')} sub={t('Regional target: 7 to 8 days', 'هدف الهيئة: ٧ إلى ٨ أيام')} prov="illustrative">
           <ul className="bar-list">
             {[...tel.groups]
               .sort((a, b) => a.stay_days - b.stay_days)
@@ -250,7 +250,7 @@ export default function NetworksView({ data, selected }: { data: AppData; select
               ))}
           </ul>
           <p className="muted small">
-            <Prov kind="pending" /> {t('Real figures: STC "length of stay" request, item 4.', 'الأرقام الحقيقية: طلب STC، البند ٤ "مدة الإقامة".')}
+            <Prov kind="pending" /> {t('Real figures: telecom "length of stay" request, item 4.', 'الأرقام الحقيقية: طلب بيانات الاتصالات، البند ٤ "مدة الإقامة".')}
           </p>
         </Card>
       </div>

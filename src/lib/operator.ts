@@ -9,7 +9,7 @@
  * seeded for every day on the timeline, bookings persist in this browser, and the
  * confirmation QR is a real, scannable code that opens #/verify/<booking>.
  *
- * Capacities, durations and the demo bookings are illustrative (MRDA brief); no booking
+ * Capacities, durations and the demo bookings are illustrative (prototype brief); no booking
  * leaves this browser.
  */
 import { useSyncExternalStore } from 'react'

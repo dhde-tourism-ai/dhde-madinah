@@ -24,7 +24,7 @@ export function Icon({ name, size = 16, className }: { name: IconName; size?: nu
 
 const PROV: Record<Provenance, { en: string; ar: string; tip: string }> = {
   real: { en: 'Real', ar: 'حقيقي', tip: 'Published or open data, with its source' },
-  reported: { en: 'Reported', ar: 'مُبلَّغ', tip: 'Stated by MRDA or a partner; not yet independently measured' },
+  reported: { en: 'Reported', ar: 'مُبلَّغ', tip: 'Stated by a stakeholder; not yet independently measured' },
   modelled: { en: 'Modelled', ar: 'نموذج', tip: 'Calculated by a model from other data; see the method note' },
   illustrative: { en: 'Illustrative', ar: 'توضيحي', tip: 'Simulated to show how the real data would be used. Do not quote.' },
   pending: { en: 'Pending', ar: 'قيد الانتظار', tip: 'Data requested; not yet received' },
@@ -44,9 +44,9 @@ export function Prov({ kind }: { kind: Provenance }) {
 export function DemoBadge() {
   const { t } = useLang()
   return (
-    <span className="demo-badge" title={t('Simulated in the shape of the STC request. Not observations; do not quote.', 'بيانات محاكاة بصيغة طلب STC. ليست قياسات؛ لا تُقتبس.')}>
+    <span className="demo-badge" title={t('Simulated in the shape of the telecom data request. Not observations; do not quote.', 'بيانات محاكاة بصيغة طلب بيانات الاتصالات. ليست قياسات؛ لا تُقتبس.')}>
       <Icon name="lab" size={11} />
-      {t('Demo data · STC pending', 'بيانات تجريبية · بانتظار STC')}
+      {t('Demo data · telecom data pending', 'بيانات تجريبية · بانتظار بيانات الاتصالات')}
     </span>
   )
 }

@@ -1,9 +1,9 @@
 """Build public/data/sites.json: the historic sites shown on the dashboard.
 
-Base list: the ten sites of the DHDE Madinah heritage prototype (MRDA site list),
+Base list: the ten sites of the DHDE Madinah heritage prototype (official site list),
 kept in public/data/sites_proto.json. Added here: the Prophet's Mosque (central
 area, the anchor every visitor starts from) and al-Khandaq (Seven Mosques), a
-pilot site in the STC request. Coordinates are replaced by OpenStreetMap ones
+pilot site in the telecom data request. Coordinates are replaced by OpenStreetMap ones
 where scripts/fetch_open_data.py found the named feature (site_coords.json).
 
 Run: python scripts/build_sites.py
@@ -26,14 +26,14 @@ EXTRA = [
     {
         "id": "al-khandaq", "num": 11, "name": "Al-Khandaq (Seven Mosques)", "name_ar": "الخندق (المساجد السبعة)",
         "cluster": "B", "lat": 24.47970, "lon": 39.59900, "typical_visit_min": 22,
-        "desc": "The site of the Battle of the Trench, with the small Seven Mosques and al-Fath Mosque. A pilot site in the STC request; too close to other cells for the network to separate, so Wi-Fi counts help here.",
-        "desc_ar": "موقع غزوة الخندق، ويضم المساجد السبعة ومسجد الفتح. موقع تجريبي في طلب بيانات STC؛ قريب جدًا من خلايا أخرى، لذا تساعد عدادات الواي فاي هنا.",
+        "desc": "The site of the Battle of the Trench, with the small Seven Mosques and al-Fath Mosque. A pilot site in the telecom data request; too close to other cells for the network to separate, so Wi-Fi counts help here.",
+        "desc_ar": "موقع غزوة الخندق، ويضم المساجد السبعة ومسجد الفتح. موقع تجريبي في طلب بيانات الاتصالات؛ قريب جدًا من خلايا أخرى، لذا تساعد عدادات الواي فاي هنا.",
         "photo": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Mosque_of_Ali_ibn_Abi_Talib_at_the_Seven_Mosques%2C_Madinah%2C_Saudi_Arabia_%282%29.jpg/960px-Mosque_of_Ali_ibn_Abi_Talib_at_the_Seven_Mosques%2C_Madinah%2C_Saudi_Arabia_%282%29.jpg",
                   "credit": "Richard Mortel, CC BY 2.0, via Wikimedia Commons"},
     },
 ]
 
-# Pilot sites named in the STC request (deck, October 2026)
+# Pilot sites named in the telecom data request (October 2026)
 PILOT = {"quba": 1, "shuhada": 1, "al-khandaq": 2, "qiblatain": 2}
 SHORT = {
     "haram": ("Haram", "الحرم"), "jabal-ayr": ("Jabal Ayr", "جبل عير"), "uhud": ("Uhud summit", "قمة أحد"),
@@ -41,7 +41,7 @@ SHORT = {
     "safiya": ("Al-Safiya", "الصافية"), "biography-museum": ("Seerah Museum", "متحف السيرة"), "qiblatain": ("Qiblatain", "القبلتين"),
     "quba": ("Quba", "قباء"), "al-hayy": ("Al-Hayy", "الحي"), "al-khandaq": ("Al-Khandaq", "الخندق"),
 }
-# Operator figures from the Madinah prototype (MRDA brief): coach groups per hourly slot,
+# Operator figures from the Madinah prototype (prototype brief): coach groups per hourly slot,
 # weather exposure (0-1) and a baseline satisfaction score. All illustrative until the
 # ministry publishes site capacities; the Haram is not bookable.
 CAPACITY = {"jabal-ayr": 2, "uhud": 6, "shuhada": 6, "faqir-well": 3, "gharas-well": 3, "safiya": 5,

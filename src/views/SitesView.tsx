@@ -85,7 +85,7 @@ export default function SitesView({ data, selected }: { data: AppData; selected:
             value={`${ts?.dwell.median_min ?? '–'} ${t('min', 'د')}`}
             sub={`${t('middle half', 'النصف الأوسط')} ${ts?.dwell.p25_min}–${ts?.dwell.p75_min} ${t('min', 'د')}`}
           />
-          <Kpi label={t('Go on to another site', 'ينتقلون لموقع آخر')} prov="illustrative" value={fmtPct(ts?.second_site_share, lang)} sub={t('the share MRDA wants to grow', 'النسبة المراد زيادتها')} />
+          <Kpi label={t('Go on to another site', 'ينتقلون لموقع آخر')} prov="illustrative" value={fmtPct(ts?.second_site_share, lang)} sub={t('the share the city wants to grow', 'النسبة المراد زيادتها')} />
           <Kpi label={t('Card spend nearby', 'الإنفاق بالبطاقات قربه')} prov="illustrative" value={fmtSar(spendTotal, lang)} sub={`${fmtSar(spendTotal / Math.max(1, ts?.daily_devices[day] ?? 1), lang)} ${t('per visitor', 'لكل زائر')}`} />
         </div>
 
@@ -132,7 +132,7 @@ export default function SitesView({ data, selected }: { data: AppData; selected:
             </ul>
           </Card>
 
-          <Card title={t('Card spend around the site', 'الإنفاق بالبطاقات حول الموقع')} sub={t('stc pay and point-of-sale style, per day', 'بصيغة stc pay ونقاط البيع، يوميًا')} prov="illustrative">
+          <Card title={t('Card spend around the site', 'الإنفاق بالبطاقات حول الموقع')} sub={t('mobile-wallet and point-of-sale style, per day', 'بصيغة المحافظ الرقمية ونقاط البيع، يوميًا')} prov="illustrative">
             <ul className="bar-list">
               {spend.map((s) => (
                 <li key={s.id}>
@@ -181,7 +181,7 @@ export default function SitesView({ data, selected }: { data: AppData; selected:
               <li>{t('Which visitor groups leave Madinah early', 'أي مجموعات الزوار تغادر المدينة مبكرًا')}</li>
             </ul>
             <p className="muted small">
-              <Prov kind="pending" /> {t('STC aggregates, at least 25 devices per figure.', 'بيانات STC مجمعة، ٢٥ جهازًا على الأقل لكل رقم.')}
+              <Prov kind="pending" /> {t('Telecom aggregates, at least 25 devices per figure.', 'بيانات الاتصالات مجمعة، ٢٥ جهازًا على الأقل لكل رقم.')}
             </p>
           </Card>
         </div>

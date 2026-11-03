@@ -1,11 +1,11 @@
 """Generate public/data/telecom_demo.json: ILLUSTRATIVE telecom-style aggregates.
 
-Nothing here is an observation. The file has the shape we asked STC for
+Nothing here is an observation. The file has the shape of our telecom data request
 (visitors per site and hour, time on site, origin-destination trips, length
 of stay, spend) so the dashboard can be built and reviewed before real data
 arrives; the real feed replaces it with "demo": false.
 
-Shapes follow the request in the STC deck:
+Shapes follow our telecom data request:
   - every figure is an aggregate of >= 25 devices (k-anonymity), so small
     cells are suppressed (null) rather than shown
   - hourly arrays start 00:00 local (Asia/Riyadh) on `start`, index = day*24+hour
@@ -201,7 +201,7 @@ def main():
             if t:
                 od.append({"from": a, "to": b, "trips_day": t, "km": round(km(a, b), 2)})
 
-    # Synthetic user-place sample (what an opt-in panel or STC-side processing would produce)
+    # Synthetic user-place sample (what an opt-in panel or provider-side processing would produce)
     users = []
     seg_pick = []
     for s in SEGMENTS:
@@ -239,7 +239,7 @@ def main():
     out = {
         "demo": True,
         "status": "illustrative",
-        "note": "ILLUSTRATIVE ONLY. Simulated telecom-style aggregates in the shape requested from STC (visitors per site and hour, time on site, origin-destination, length of stay, card spend). Not observations; do not quote. Cells under 25 devices are suppressed (null), as the real request requires.",
+        "note": "ILLUSTRATIVE ONLY. Simulated telecom-style aggregates in the shape requested from a telecom operator (visitors per site and hour, time on site, origin-destination, length of stay, card spend). Not observations; do not quote. Cells under 25 devices are suppressed (null), as the real request requires.",
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "timezone": "Asia/Riyadh",
         "start": start.isoformat(),

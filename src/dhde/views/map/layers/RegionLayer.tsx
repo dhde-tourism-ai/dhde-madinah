@@ -91,13 +91,13 @@ export function RegionCard({ region, onBack }: { region: Region; onBack: () => v
   const needs = air
     ? [
         ['Flight arrivals by day and origin (airport / GACA)', 'أعداد الرحلات الواصلة يوميًا ومنشؤها (المطار / الهيئة العامة للطيران المدني)'],
-        ['Telecom visitor counts and dwell at each place (STC)', 'أعداد الزوار ومدة بقائهم في كل موقع (STC)'],
+        ['Telecom visitor counts and dwell at each place (telecom)', 'أعداد الزوار ومدة بقائهم في كل موقع (الاتصالات)'],
         ['Bookings and occupancy (hotels, resorts, tour operators)', 'الحجوزات ونسب الإشغال (فنادق ومنتجعات ومشغلون)'],
       ]
     : [
         ['Haramain ridership by station and hour (SAR)', 'ركاب قطار الحرمين حسب المحطة والساعة (الخطوط الحديدية السعودية)'],
         ['Promotions and fares calendar, to test their effect', 'تقويم العروض والأسعار لاختبار أثرها'],
-        ['Telecom origin–destination flows between cities (STC)', 'تدفقات التنقل بين المدن من بيانات الاتصالات (STC)'],
+        ['Telecom origin–destination flows between cities (telecom)', 'تدفقات التنقل بين المدن من بيانات الاتصالات'],
       ]
   return (
     <section className="float-panel region-card" aria-label={t(region.name, region.name_ar)}>
@@ -154,9 +154,9 @@ const OPTIONS: { ids: string[]; en: string; ar: string; use: [string, string]; h
     ids: ['madinah'],
     en: 'Madinah',
     ar: 'المدينة المنورة',
-    use: ['Replicate the dashboard with MDA; correlate visits, dwell and spend', 'تكرار اللوحة مع الهيئة؛ ربط الزيارات ومدة البقاء والإنفاق'],
+    use: ['Replicate the dashboard with the regional authority; correlate visits, dwell and spend', 'تكرار اللوحة مع الهيئة؛ ربط الزيارات ومدة البقاء والإنفاق'],
     have: ['Live dashboard: sites, buses, Haramain timetable, prayer times, weather, real city card spend; visitor layers in demo', 'لوحة مباشرة: المواقع والحافلات وجدول قطار الحرمين وأوقات الصلاة والطقس والإنفاق الحقيقي؛ طبقات الزوار تجريبية'],
-    need: ['MDA site data; STC visitor counts and dwell', 'بيانات المواقع من الهيئة؛ أعداد الزوار ومدة البقاء من STC'],
+    need: ['Official site data; telecom visitor counts and dwell', 'بيانات المواقع من الهيئة؛ أعداد الزوار ومدة البقاء من مشغل الاتصالات'],
     ready: 3,
   },
   {

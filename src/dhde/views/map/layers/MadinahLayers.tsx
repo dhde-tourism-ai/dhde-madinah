@@ -39,7 +39,7 @@ export interface MadinahExtras {
   legs: Record<string, { path: [number, number][] }> | null
   /** Coach starting points (hotel districts, airport, station, terminal). */
   origins: { id: string; label: string; label_ar: string; lat: number; lon: number }[]
-  /** Spend by site and category (demo, stc pay / point-of-sale shape), city card spend (SAMA, real), facts. */
+  /** Spend by site and category (demo, mobile-wallet / point-of-sale shape), city card spend (SAMA, real), facts. */
   telecom: TelecomFile | null
   spend: SpendFile | null
   context: ContextFile | null
@@ -428,7 +428,7 @@ const sar = (v: number) => (v >= 1e6 ? `${(v / 1e6).toFixed(1)}M` : v >= 1e3 ? `
 
 /**
  * Spending around each site this hour: a gold disc sized by card spend in the hour, ringed
- * by its category split (food, retail, transport, services), in the shape of stc pay /
+ * by its category split (food, retail, transport, services), in the shape of mobile-wallet /
  * point-of-sale aggregates. Demo until spend data arrives; the city total is real (SAMA).
  */
 export function EconomyLayer({ extras, hour, dayIdx }: { extras: MadinahExtras; hour: number; dayIdx: number }) {
@@ -468,7 +468,7 @@ export function EconomyLayer({ extras, hour, dayIdx }: { extras: MadinahExtras; 
               <div className="tip-row">
                 {t('Per visitor', 'لكل زائر')}: SAR {Math.round(day / visitors)} · {t('day total', 'إجمالي اليوم')}: SAR {sar(day)}
               </div>
-              <div className="tip-sub">{t('Demo, in the shape of stc pay / point-of-sale aggregates. City totals in the legend are real (SAMA).', 'تجريبي بصيغة بيانات stc pay ونقاط البيع. إجمالي المدينة في المفتاح حقيقي (ساما).')}</div>
+              <div className="tip-sub">{t('Demo, in the shape of mobile-wallet / point-of-sale aggregates. City totals in the legend are real (SAMA).', 'تجريبي بصيغة بيانات المحافظ الرقمية ونقاط البيع. إجمالي المدينة في المفتاح حقيقي (ساما).')}</div>
             </Tooltip>
           </CircleMarker>
         )

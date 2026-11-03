@@ -1,8 +1,8 @@
 # dhde-madinah
 
-**DHDE · Madinah Visitor Intelligence**: the Madinah version of the DHDE dashboard ([dhde-app](https://github.com/dhde-tourism-ai/dhde-app)), for the visitor-flow pilot with MRDA, STC, Taibah University and the University of Fukui. Same stack and look as dhde-app (React, Vite, Leaflet, recharts; dark theme), in English and Arabic (right-to-left).
+**DHDE · Madinah Visitor Intelligence**: the Madinah version of the DHDE dashboard ([dhde-app](https://github.com/dhde-tourism-ai/dhde-app)), for the visitor-flow pilot with Taibah University and the University of Fukui. Same stack and look as dhde-app (React, Vite, Leaflet, recharts; dark theme), in English and Arabic (right-to-left).
 
-It answers four questions for MRDA:
+It answers four questions for the city:
 
 1. How many visitors reach each historic site, and when?
 2. How long do they stay, and what cuts visits short?
@@ -16,19 +16,19 @@ It answers four questions for MRDA:
 - **Sites**: per site, visitors hour by hour around the five prayers, time on site, nationality mix, card spend by category, and what is within a 10-minute walk.
 - **Networks**: the site network (trips between sites), the visitor–place graph (each anonymised visitor linked to the places they visit, in order), visitor types, and length of stay by nationality against the 7–8 day target.
 - **Strategy**: keeping visitors longer and spending. A what-if model for three levers (Haram-only visitors adding Quba, longer visits at open-air sites, extra nights), the five policy levers with measures of success, SAMA weekly card spending in Madinah, and published facts with sources.
-- **Data**: every source, its status, and what the STC data replaces.
+- **Data**: every source, its status, and what the telecom data replaces.
 
 ## Every number is labelled
 
 | Label | Meaning |
 |---|---|
 | Real | Published or open data, with its source |
-| Reported | Stated by MRDA or a partner, not yet measured |
+| Reported | Stated by a stakeholder, not yet measured |
 | Modelled | Calculated from other data (e.g. walking reach, the strategy what-if) |
 | Illustrative | Simulated to show how the real data will be used. Do not quote. |
 | Pending | Requested, not yet received |
 
-Visitor, time-on-site, flow, length-of-stay and spend layers run on **illustrative** data (`telecom_demo.json`, "Demo data · STC pending" badge) in the exact shape of the STC request: aggregates only, cells under 25 devices suppressed. When STC data arrives, it replaces that file with `"demo": false` and the badges disappear.
+Visitor, time-on-site, flow, length-of-stay and spend layers run on **illustrative** data (`telecom_demo.json`, "Demo data · telecom data pending" badge) in the exact shape of the telecom data request: aggregates only, cells under 25 devices suppressed. When telecom data arrives, it replaces that file with `"demo": false` and the badges disappear.
 
 ## Run
 

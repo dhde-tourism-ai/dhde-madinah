@@ -10,7 +10,7 @@ Writes (public/data/):
                           REAL weather (Open-Meteo) with heat alerts from that forecast
   market_voice_demo.json  hotels, search interest, survey, social posts, reviews (DEMO)
 
-Everything marked demo is illustrative, in the shape of the STC request, until real feeds
+Everything marked demo is illustrative, in the shape of the telecom data request, until real feeds
 arrive. Re-run daily (the GitHub workflow does) so the timeline stays on today.
 Run: python scripts/gen_dhde_data.py
 """
@@ -293,7 +293,7 @@ def build_live(routes):
 
     live = {
         "demo": True,
-        "note": "DEMO people, flows and traffic in the shape of the STC request (prayer-time profile). Weather and heat alerts: real Open-Meteo forecast.",
+        "note": "DEMO people, flows and traffic in the shape of the telecom data request (prayer-time profile). Weather and heat alerts: real Open-Meteo forecast.",
         "generated_at": now.isoformat(timespec="seconds"), "timezone": "Asia/Riyadh",
         "start": start.isoformat(), "step_minutes": 60, "hours": H, "observed_until": observed_until,
         "days": days, "nodes": nodes, "flows": flows, "traffic": traffic,
@@ -378,7 +378,7 @@ def build_nodes():
             nodes.append({"id": o["id"], "name": o["label"], "name_ja": o["label_ar"], "prefecture": "madinah-hub",
                           "lat": o["lat"], "lon": o["lon"], "priority": False})
     return {"generated_at": now_local().isoformat(timespec="seconds"),
-            "note": "Madinah historic sites (MRDA list) as DHDE nodes, coloured by cluster.",
+            "note": "Madinah historic sites (official list) as DHDE nodes, coloured by cluster.",
             "prefectures": [{"id": "madinah", "name": "Madinah", "name_ja": "المدينة المنورة", "bounds": [[24.36, 39.53], [24.56, 39.72]]}],
             "nodes": nodes}
 

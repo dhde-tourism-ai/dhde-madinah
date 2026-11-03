@@ -140,7 +140,7 @@ export default function OperatorView({ data }: { data: AppData }) {
           <h1 className="display page-title">{t('Book group visits, spread coaches across sites and slots, sign them off', 'احجز الزيارات الجماعية، ووزّع الحافلات على المواقع والفترات، ووقّع إنجازها')}</h1>
           <p className="page-lede">
             {t(
-              'Built for tour operators: groups arrive 40+ at a time, by coach. Capacity is counted in coaches per site per hour; a full slot spills to the nearest slot or a sibling site in the same cluster. MRDA oversees every operator from the same data on the Oversight map.',
+              'Built for tour operators: groups arrive 40+ at a time, by coach. Capacity is counted in coaches per site per hour; a full slot spills to the nearest slot or a sibling site in the same cluster. The authority oversees every operator from the same data on the Oversight map.',
               'مصمم لمشغلي الرحلات: تصل المجموعات ٤٠ شخصًا فأكثر بالحافلات. تُحسب السعة بعدد الحافلات لكل موقع في الساعة؛ والفترة الممتلئة تنتقل إلى أقرب فترة أو موقع شقيق في المجموعة نفسها. وتشرف الهيئة على جميع المشغلين من البيانات نفسها على خريطة الإشراف.',
             )}
           </p>
@@ -316,7 +316,7 @@ export default function OperatorView({ data }: { data: AppData }) {
             })}
           </div>
           <p className="muted small">
-            {SLOTS[0]}–{SLOTS[SLOTS.length - 1]} · {t('Bars: green some, amber 70%+, red full. Capacities are illustrative until MRDA publishes site limits.', 'الأشرطة: أخضر بعض الحجوزات، كهرماني ٧٠٪+، أحمر ممتلئ. السعات توضيحية حتى تنشر الهيئة حدود المواقع.')}
+            {SLOTS[0]}–{SLOTS[SLOTS.length - 1]} · {t('Bars: green some, amber 70%+, red full. Capacities are illustrative until official site limits are published.', 'الأشرطة: أخضر بعض الحجوزات، كهرماني ٧٠٪+، أحمر ممتلئ. السعات توضيحية حتى تنشر الهيئة حدود المواقع.')}
           </p>
         </Card>
 

@@ -10,7 +10,7 @@ export default function DataView({ data }: { data: AppData }) {
   const when = (iso?: string) => (iso ? fmtDate(iso, lang, { day: 'numeric', month: 'short', year: 'numeric' }) : '–')
 
   const rows: { layer: [string, string]; file: string; prov: Provenance; source: string; date?: string; replaces?: [string, string] }[] = [
-    { layer: ['Historic sites', 'المواقع التاريخية'], file: 'sites.json', prov: 'real', source: 'MRDA site list; DHDE Madinah prototype; OpenStreetMap coordinates' },
+    { layer: ['Historic sites', 'المواقع التاريخية'], file: 'sites.json', prov: 'real', source: 'official site list; DHDE Madinah prototype; OpenStreetMap coordinates' },
     { layer: ['Bus stops, Haramain rail, stations, car parks', 'محطات الحافلات وقطار الحرمين والمحطات والمواقف'], file: 'transport.json', prov: status(data.transport, 'real'), source: 'OpenStreetMap (Overpass API), ODbL', date: data.transport?.fetched_at },
     { layer: ['Madinah Bus route lines', 'مسارات حافلات المدينة'], file: 'transport.json', prov: data.transport?.bus_routes.length ? 'real' : 'pending', source: 'Not mapped in OpenStreetMap yet', replaces: ['Route files from Madinah Bus or the Transport General Authority (GTFS)', 'ملفات المسارات من حافلات المدينة أو الهيئة العامة للنقل (GTFS)'] },
     { layer: ['Food, shops, hotels, services, shade near sites', 'مطاعم ومتاجر وفنادق وخدمات وظل قرب المواقع'], file: 'pois.json', prov: status(data.pois, 'real'), source: 'OpenStreetMap, ODbL', date: data.pois?.fetched_at },
@@ -20,12 +20,12 @@ export default function DataView({ data }: { data: AppData }) {
     { layer: ['Card spending in Madinah (weekly)', 'الإنفاق بالبطاقات في المدينة (أسبوعيًا)'], file: 'spend.json', prov: (data.spend?.status === 'real' || data.spend?.status === 'partial') && data.spend.weeks.length ? 'real' : 'pending', source: 'Saudi Central Bank (SAMA) weekly point-of-sale bulletin, Madinah city; compiled from press reports, some weeks missing', date: data.spend?.fetched_at },
     { layer: ['Published tourism and transport facts', 'حقائق منشورة عن السياحة والنقل'], file: 'context.json', prov: status(data.context?.facts.length, 'real'), source: 'Ministry of Tourism, GASTAT, Transport General Authority and others; one link per fact' },
     { layer: ['Temperature and feels-like', 'الحرارة والحرارة المحسوسة'], file: 'Open-Meteo (live)', prov: 'real', source: 'Open-Meteo forecast API, fetched in the browser' },
-    { layer: ['Visitors per site and hour', 'الزوار لكل موقع وساعة'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['STC: visitor numbers, by type and nationality', 'STC: أعداد الزوار حسب النوع والجنسية'] },
-    { layer: ['Time on site', 'مدة البقاء'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['STC: time on site and walking range', 'STC: مدة البقاء ونطاق المشي'] },
-    { layer: ['Trips between sites; visitor–place graph', 'الرحلات بين المواقع؛ مخطط الزائر–المكان'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['STC: movement, origin and next stop', 'STC: التنقل والمنشأ والوجهة التالية'] },
-    { layer: ['Length of stay by nationality', 'مدة الإقامة حسب الجنسية'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['STC: length of stay', 'STC: مدة الإقامة'] },
-    { layer: ['Card spend by site and category', 'الإنفاق حسب الموقع والفئة'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['stc pay / point-of-sale aggregates', 'بيانات stc pay ونقاط البيع المجمعة'] },
-    { layer: ['Traffic on main roads', 'الحركة على الطرق الرئيسية'], file: 'model in app', prov: 'illustrative', source: 'Commute and prayer-time profile on real roads', replaces: ['Road sensors or STC handover counts', 'حساسات الطرق أو بيانات التنقل بين الخلايا'] },
+    { layer: ['Visitors per site and hour', 'الزوار لكل موقع وساعة'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['Telecom: visitor numbers, by type and nationality', 'الاتصالات: أعداد الزوار حسب النوع والجنسية'] },
+    { layer: ['Time on site', 'مدة البقاء'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['Telecom: time on site and walking range', 'الاتصالات: مدة البقاء ونطاق المشي'] },
+    { layer: ['Trips between sites; visitor–place graph', 'الرحلات بين المواقع؛ مخطط الزائر–المكان'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['Telecom: movement, origin and next stop', 'الاتصالات: التنقل والمنشأ والوجهة التالية'] },
+    { layer: ['Length of stay by nationality', 'مدة الإقامة حسب الجنسية'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['Telecom: length of stay', 'الاتصالات: مدة الإقامة'] },
+    { layer: ['Card spend by site and category', 'الإنفاق حسب الموقع والفئة'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Simulated', replaces: ['mobile-wallet / point-of-sale aggregates', 'بيانات المحافظ الرقمية ونقاط البيع المجمعة'] },
+    { layer: ['Traffic on main roads', 'الحركة على الطرق الرئيسية'], file: 'model in app', prov: 'illustrative', source: 'Commute and prayer-time profile on real roads', replaces: ['Road sensors or telecom handover counts', 'حساسات الطرق أو بيانات التنقل بين الخلايا'] },
     { layer: ['Wi-Fi zones', 'مناطق الواي فاي'], file: 'telecom_demo.json', prov: 'illustrative', source: 'Proposed locations', replaces: ['Wi-Fi session counts at pilot sites', 'أعداد جلسات الواي فاي في المواقع التجريبية'] },
   ]
 
@@ -34,7 +34,7 @@ export default function DataView({ data }: { data: AppData }) {
       <header className="page-head">
         <div>
           <div className="eyebrow">{t('Data', 'البيانات')}</div>
-          <h1 className="display page-title">{t('Every source, its status, and what the STC data replaces', 'كل مصدر وحالته وما ستحل محله بيانات STC')}</h1>
+          <h1 className="display page-title">{t('Every source, its status, and what the telecom data replaces', 'كل مصدر وحالته وما ستحل محله بيانات الاتصالات')}</h1>
           <p className="page-lede">
             {t(
               'Each number in the dashboard carries a label. Real: published or open data. Modelled: calculated from real data. Illustrative: simulated to show use; never quote. Pending: requested.',
@@ -72,11 +72,11 @@ export default function DataView({ data }: { data: AppData }) {
           </tbody>
         </table>
       </Card>
-      <Card title={t('Safeguards for the STC data', 'ضمانات بيانات STC')}>
+      <Card title={t('Safeguards for the telecom data', 'ضمانات بيانات الاتصالات')}>
         <ul className="plain-list">
           <li>{t('At least 25 devices behind every figure; smaller cells are hidden, as in the demo.', '٢٥ جهازًا على الأقل خلف كل رقم؛ وتُخفى الخلايا الأصغر كما في البيانات التجريبية.')}</li>
-          <li>{t('No individual data leaves STC; visitor–place graphs are built inside STC or from an opt-in panel.', 'لا تخرج بيانات فردية من STC؛ وتُبنى مخططات الزائر–المكان داخل STC أو من عينة بموافقة.')}</li>
-          <li>{t('Research use only; publication with STC’s approval.', 'للبحث فقط؛ والنشر بموافقة STC.')}</li>
+          <li>{t('No individual data leaves the telecom provider; visitor–place graphs are built inside the provider or from an opt-in panel.', 'لا تخرج بيانات فردية من مشغل الاتصالات؛ وتُبنى مخططات الزائر–المكان داخل مشغل الاتصالات أو من عينة بموافقة.')}</li>
+          <li>{t('Research use only; publication with the data provider’s approval.', 'للبحث فقط؛ والنشر بموافقة مزود البيانات.')}</li>
         </ul>
       </Card>
     </div>

@@ -112,7 +112,7 @@ export default function StrategyView({ data }: { data: AppData }) {
           <h1 className="display page-title">{t('Keep visitors in Madinah longer, and spending at more sites', 'إبقاء الزوار في المدينة مدة أطول، وإنفاقهم في مواقع أكثر')}</h1>
           <p className="page-lede">
             {t(
-              'MRDA’s goal: move the average stay from 4–5 days to 7–8, and draw visitors from the Haram to the historic sites. Three levers, and what each could be worth.',
+              'The regional goal: move the average stay from 4–5 days to 7–8, and draw visitors from the Haram to the historic sites. Three levers, and what each could be worth.',
               'هدف الهيئة: رفع متوسط الإقامة من ٤–٥ أيام إلى ٧–٨ أيام، وجذب الزوار من الحرم إلى المواقع التاريخية. ثلاث روافع، وقيمة كل منها.',
             )}
           </p>
@@ -125,16 +125,16 @@ export default function StrategyView({ data }: { data: AppData }) {
           label={t('Average stay today', 'متوسط الإقامة حاليًا')}
           prov={fact('avg_length_of_stay_madinah') ? 'real' : 'reported'}
           value={fact('avg_length_of_stay_madinah') ? `${fmtNum(stayNights, lang)} ${t('nights', 'ليالٍ')}` : t('4–5 days', '٤–٥ أيام')}
-          sub={t('Ministry of Tourism via SPA, H1 2025; MRDA cites 4–5 days', 'وزارة السياحة عبر واس، النصف الأول ٢٠٢٥؛ والهيئة تذكر ٤–٥ أيام')}
+          sub={t('Ministry of Tourism via SPA, H1 2025; regional figures cite 4–5 days', 'وزارة السياحة عبر واس، النصف الأول ٢٠٢٥؛ والهيئة تذكر ٤–٥ أيام')}
         />
-        <Kpi label={t('Target', 'الهدف')} prov="reported" value={t('7–8 days', '٧–٨ أيام')} sub={t('MRDA Smart City Program', 'برنامج المدينة الذكية')} />
+        <Kpi label={t('Target', 'الهدف')} prov="reported" value={t('7–8 days', '٧–٨ أيام')} sub={t('Madinah Smart City Program', 'برنامج المدينة الذكية')} />
         <Kpi label={t('Visitors to Madinah, H1 2025', 'زوار المدينة، النصف الأول ٢٠٢٥')} prov={visitorsH1 ? 'real' : 'pending'} value={fmtCompact(visitorsH1, lang)} sub={`${fmtSar(spendPerNight, lang)} ${t('spent per night', 'إنفاق لكل ليلة')}`} />
         <Kpi label={t('Never leave the Haram area', 'لا يغادرون منطقة الحرم')} prov="illustrative" value={fmtPct(seg['haram-only'].share, lang)} sub={t('visitor–place graph', 'مخطط الزائر–المكان')} />
         <Kpi label={t('Card spend per hour on site', 'الإنفاق لكل ساعة في الموقع')} prov="illustrative" value={fmtSar(spendPerHour, lang)} sub={t('historic sites, excl. Haram', 'المواقع التاريخية دون الحرم')} />
       </div>
 
       <div className="grid-2">
-        <Card title={t('What-if: value of keeping visitors longer', 'ماذا لو: قيمة إبقاء الزوار مدة أطول')} sub={t('Extra card spend per year from each lever. Built on demo data; the method stays when STC data arrives.', 'إنفاق إضافي سنوي من كل رافعة. مبني على بيانات تجريبية؛ ويبقى الأسلوب عند وصول بيانات STC.')} prov="modelled" className="span-2">
+        <Card title={t('What-if: value of keeping visitors longer', 'ماذا لو: قيمة إبقاء الزوار مدة أطول')} sub={t('Extra card spend per year from each lever. Built on demo data; the method stays when telecom data arrives.', 'إنفاق إضافي سنوي من كل رافعة. مبني على بيانات تجريبية؛ ويبقى الأسلوب عند وصول بيانات الاتصالات.')} prov="modelled" className="span-2">
           <div className="scenario">
             <div className="scenario-inputs">
               <Slider label={t('Haram-only visitors who add Quba', 'زوار الحرم فقط الذين يضيفون قباء')} value={convert} min={0} max={30} step={1} unit="%" onChange={setConvert} />
@@ -161,8 +161,8 @@ export default function StrategyView({ data }: { data: AppData }) {
               </div>
               <p className="muted small">
                 {t(
-                  `Longer stays: ${fmtCompact(annualVisitors, lang)} visitors a year × extra nights × ${fmtSar(spendPerNight, lang)} per night (${anchorsReal ? 'real, Ministry of Tourism H1 2025, doubled' : 'placeholder'}). Quba and open-air levers use demo spend per visitor and per hour on site until STC and stc pay data arrive.`,
-                  `الإقامة الأطول: ${fmtCompact(annualVisitors, lang)} زائر سنويًا × الليالي الإضافية × ${fmtSar(spendPerNight, lang)} لكل ليلة (${anchorsReal ? 'حقيقي، وزارة السياحة النصف الأول ٢٠٢٥ مضاعفًا' : 'افتراضي'}). رافعتا قباء والمواقع المكشوفة تستخدمان إنفاقًا تجريبيًا حتى وصول بيانات STC وstc pay.`,
+                  `Longer stays: ${fmtCompact(annualVisitors, lang)} visitors a year × extra nights × ${fmtSar(spendPerNight, lang)} per night (${anchorsReal ? 'real, Ministry of Tourism H1 2025, doubled' : 'placeholder'}). Quba and open-air levers use demo spend per visitor and per hour on site until telecom and mobile-wallet data arrive.`,
+                  `الإقامة الأطول: ${fmtCompact(annualVisitors, lang)} زائر سنويًا × الليالي الإضافية × ${fmtSar(spendPerNight, lang)} لكل ليلة (${anchorsReal ? 'حقيقي، وزارة السياحة النصف الأول ٢٠٢٥ مضاعفًا' : 'افتراضي'}). رافعتا قباء والمواقع المكشوفة تستخدمان إنفاقًا تجريبيًا حتى وصول بيانات الاتصالات والمحافظ الرقمية.`,
                 )}
               </p>
             </div>

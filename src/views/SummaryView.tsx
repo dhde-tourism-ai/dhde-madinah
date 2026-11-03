@@ -20,19 +20,19 @@ export default function SummaryView({ data }: { data: AppData }) {
     { href: '#/sites', icon: 'nodes', en: 'Sites', ar: 'المواقع', den: 'For each site: visitors around the prayers, time on site, who visits, spend, what is nearby', dar: 'لكل موقع: الزوار حول الصلوات، مدة البقاء، من يزور، الإنفاق، وما حوله' },
     { href: '#/networks', icon: 'network', en: 'Networks', ar: 'الشبكات', den: 'How visitors link sites; the visitor–place graph and visitor types', dar: 'كيف يربط الزوار المواقع؛ مخطط الزائر–المكان وأنواع الزوار' },
     { href: '#/strategy', icon: 'strategy', en: 'Strategy', ar: 'الاستراتيجية', den: 'Keeping visitors longer: levers, what-if values, measures of success', dar: 'إبقاء الزوار مدة أطول: الروافع والقيم المتوقعة ومقاييس النجاح' },
-    { href: '#/data', icon: 'data', en: 'Data', ar: 'البيانات', den: 'Every source, its status, and what STC data replaces', dar: 'كل مصدر وحالته وما ستحل محله بيانات STC' },
+    { href: '#/data', icon: 'data', en: 'Data', ar: 'البيانات', den: 'Every source, its status, and what telecom data replaces', dar: 'كل مصدر وحالته وما ستحل محله بيانات الاتصالات' },
   ]
 
   return (
     <div className="page">
       <header className="page-head hero">
         <div>
-          <div className="eyebrow">{t('Madinah visitor-flow pilot · MRDA, STC, Taibah University, University of Fukui', 'مشروع تدفق الزوار في المدينة · الهيئة وSTC وجامعة طيبة وجامعة فوكوي')}</div>
+          <div className="eyebrow">{t('Madinah visitor-flow pilot · Taibah University, University of Fukui', 'مشروع تدفق الزوار في المدينة · جامعة طيبة وجامعة فوكوي')}</div>
           <h1 className="display page-title big">{t('Where visitors go in Madinah, how long they stay, and how to keep them longer', 'أين يذهب الزوار في المدينة، وكم يبقون، وكيف نبقيهم أطول')}</h1>
           <p className="page-lede">
             {t(
-              'Open data for sites, transport and walking reach is real today. Visitor, time-on-site, flow and spend layers run on demo data in the exact shape of the STC request, so the dashboard is ready the day the data arrives.',
-              'بيانات المواقع والنقل ونطاق المشي حقيقية اليوم. أما طبقات الزوار ومدة البقاء والتنقل والإنفاق فتعمل ببيانات تجريبية بنفس صيغة طلب STC، لتكون اللوحة جاهزة يوم وصول البيانات.',
+              'Open data for sites, transport and walking reach is real today. Visitor, time-on-site, flow and spend layers run on demo data in the exact shape of the telecom data request, so the dashboard is ready the day the data arrives.',
+              'بيانات المواقع والنقل ونطاق المشي حقيقية اليوم. أما طبقات الزوار ومدة البقاء والتنقل والإنفاق فتعمل ببيانات تجريبية بنفس صيغة طلب بيانات الاتصالات، لتكون اللوحة جاهزة يوم وصول البيانات.',
             )}
           </p>
         </div>
@@ -102,7 +102,7 @@ export default function SummaryView({ data }: { data: AppData }) {
             })}
           </div>
           <p className="muted small">
-            <Prov kind="real" /> {t('Site list and descriptions: MRDA list, DHDE Madinah prototype.', 'قائمة المواقع ووصفها: قائمة الهيئة ونموذج DHDE للمدينة.')}
+            <Prov kind="real" /> {t('Site list and descriptions: official list, DHDE Madinah prototype.', 'قائمة المواقع ووصفها: قائمة الهيئة ونموذج DHDE للمدينة.')}
           </p>
         </Card>
       </div>
